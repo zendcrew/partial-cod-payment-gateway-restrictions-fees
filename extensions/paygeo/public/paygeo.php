@@ -239,6 +239,9 @@ if ( !class_exists( 'PGEO_PayGeo' ) ) {
             if ( is_admin() ) {
                 return $gateways;
             }
+            
+            $this->store_available_gateways( $gateways );
+            
             $methods = array();
 
             // Returns order available methods
@@ -479,6 +482,39 @@ if ( !class_exists( 'PGEO_PayGeo' ) ) {
             }
 
             WC()->payment_gateways()->get_available_payment_gateways();
+        }
+
+        private function store_available_gateways( $gateways ) {
+
+            if ( !count( $gateways ) ) {
+
+                return;
+            }
+
+            $methods = array();
+
+            foreach ( $gateways as $gateway_id => $gateway ) {
+
+                $methods[ $gateway_id ][ 'id' ] = $gateway->id;
+                $methods[ $gateway_id ][ 'plugin_id' ] = $gateway->plugin_id;
+                $methods[ $gateway_id ][ 'method_title' ] = $gateway->method_title;
+                $methods[ $gateway_id ][ 'title' ] = $gateway->title;
+                $methods[ $gateway_id ][ 'order_button_text' ] = $gateway->order_button_text;
+                $methods[ $gateway_id ][ 'icon' ] = $gateway->icon;
+                $methods[ $gateway_id ] = apply_filters( 'paygeo-admin/get-method-' . $gateway_id . '-props', $methods[ $gateway_id ], $gateway );
+            }
+
+            $stored_methods = get_option( 'pgeo_paygeo_methods', array() );
+
+
+            $stored_hash = md5( wp_json_encode( $stored_methods ) );
+
+            $hash = md5( wp_json_encode( $methods ) );
+
+            if ( $hash != $stored_hash ) {
+
+                update_option( 'pgeo_paygeo_methods', $methods );
+            }
         }
 
     }

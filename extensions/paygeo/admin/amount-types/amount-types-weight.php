@@ -40,21 +40,21 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Weight' ) && !defined( 'PGEO_
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $d_prem_8 = str_replace( '[0]', $weight_unit, esc_html__( 'Discount per weight ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-                $d_prem_9 = str_replace( '[0]', $weight_unit, esc_html__( 'Discount x weight ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+                $d_prem_8 = str_replace( '[0]', $weight_unit, esc_html__( 'Discount per weight ([0]) (Premium)', 'pgeo-paygeo' ) );
+                $d_prem_9 = str_replace( '[0]', $weight_unit, esc_html__( 'Discount x weight ([0]) (Premium)', 'pgeo-paygeo' ) );
 
                 return array(
-                    'per_weights' => esc_html__( 'Discount Per Weight', 'zcpg-woo-paygeo' ),
+                    'per_weights' => esc_html__( 'Discount Per Weight', 'pgeo-paygeo' ),
                     'prem_8' => $d_prem_8,
                     'prem_9' => $d_prem_9,
                 );
             }
 
-            $f_prem_8 = str_replace( '[0]', $weight_unit, esc_html__( 'Fee per weight ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-            $f_prem_9 = str_replace( '[0]', $weight_unit, esc_html__( 'Fee x weight ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+            $f_prem_8 = str_replace( '[0]', $weight_unit, esc_html__( 'Fee per weight ([0]) (Premium)', 'pgeo-paygeo' ) );
+            $f_prem_9 = str_replace( '[0]', $weight_unit, esc_html__( 'Fee x weight ([0]) (Premium)', 'pgeo-paygeo' ) );
 
             return array(
-                'per_weights' => esc_html__( 'Fee Per Weight', 'zcpg-woo-paygeo' ),
+                'per_weights' => esc_html__( 'Fee Per Weight', 'pgeo-paygeo' ),
                 'prem_8' => $f_prem_8,
                 'prem_9' => $f_prem_9,
             );

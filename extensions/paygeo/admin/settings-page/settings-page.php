@@ -47,6 +47,9 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             add_filter( 'reon/sanitize-paygeo_kses_post', array( new self(), 'sanitize_paygeo_kses_post_box' ), 1, 4 );
 
             add_filter( 'plugin_action_links_' . plugin_basename( PGEO_PAYGEO_FILE ), array( new self(), 'get_plugin_links' ), 10, 1 );
+
+            add_action( 'reon/before-save-' . self::$option_name . '-options', array( new self(), 'set_is_admin_page' ), 1 );
+            add_action( 'reon/before-import-' . self::$option_name . '-options', array( new self(), 'set_is_admin_page' ), 1 );
         }
 
         public static function get_option_name() {
@@ -64,6 +67,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             if ( count( self::$methods ) > 0 ) {
 
                 return self::$methods;
+            }
+
+            if ( !self::is_admin_page() ) {
+
+                return array();
             }
 
             ob_start();
@@ -85,6 +93,23 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             }
 
             ob_clean();
+            
+            $stored_methods = get_option( 'pgeo_paygeo_methods', false );
+
+            if ( !$stored_methods ) {
+
+                return self::$methods;
+            }
+
+            foreach ( $stored_methods as $stored_method_id => $stored_method ) {
+
+                if ( isset( self::$methods[ $stored_method_id ] ) ) {
+
+                    continue;
+                }
+
+                self::$methods[ $stored_method_id ] = $stored_method;
+            }
 
             return self::$methods;
         }
@@ -128,11 +153,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
         public static function init_page() {
 
-            $version_text = sprintf( esc_html__( 'Lite v%s', 'zcpg-woo-paygeo' ), PGEO_PAYGEO_VERSION );
+            $version_text = sprintf( esc_html__( 'Lite v%s', 'pgeo-paygeo' ), PGEO_PAYGEO_VERSION );
 
             if ( defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
 
-                $version_text = sprintf( esc_html__( 'Premium v%s', 'zcpg-woo-paygeo' ), PGEO_PAYGEO_VERSION );
+                $version_text = sprintf( esc_html__( 'Premium v%s', 'pgeo-paygeo' ), PGEO_PAYGEO_VERSION );
             }
 
             $args = array(
@@ -148,7 +173,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
                 'display' => array(
                     'enabled' => true,
                     'image' => PGEO_PAYGEO_ASSETS_URL . 'images/aside_logo.png',
-                    'title' => esc_html__( 'PayGeo', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'PayGeo', 'pgeo-paygeo' ),
                     'sub_title' => 'Partial COD, Restrictions & Fees',
                     'version' => $version_text,
                     'styles' => array(
@@ -159,16 +184,16 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
                     ),
                 ),
                 'ajax' => array(
-                    'save_msg' => esc_html__( 'Done!!', 'zcpg-woo-paygeo' ),
-                    'save_error_msg' => esc_html__( 'Unable to save your settings', 'zcpg-woo-paygeo' ),
-                    'reset_msg' => esc_html__( 'Done!!', 'zcpg-woo-paygeo' ),
-                    'reset_error_msg' => esc_html__( 'Unable to reset reset your settings', 'zcpg-woo-paygeo' ),
-                    'nonce_error_msg' => esc_html__( 'invalid nonce', 'zcpg-woo-paygeo' ),
+                    'save_msg' => esc_html__( 'Done!!', 'pgeo-paygeo' ),
+                    'save_error_msg' => esc_html__( 'Unable to save your settings', 'pgeo-paygeo' ),
+                    'reset_msg' => esc_html__( 'Done!!', 'pgeo-paygeo' ),
+                    'reset_error_msg' => esc_html__( 'Unable to reset reset your settings', 'pgeo-paygeo' ),
+                    'nonce_error_msg' => esc_html__( 'invalid nonce', 'pgeo-paygeo' ),
                 ),
                 'menu' => array(
                     'enable' => true,
-                    'title' => esc_html__( 'Partial COD, Restrictions & Fees', 'zcpg-woo-paygeo' ),
-                    'page_title' => esc_html__( 'PayGeo - Partial COD, Restrictions & Fees', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'Partial COD, Gateway Restrictions & Fees', 'pgeo-paygeo' ),
+                    'page_title' => esc_html__( 'PayGeo - Partial COD, Gateway Restrictions & Fees', 'pgeo-paygeo' ),
                     'icon' => 'dashicons-admin-generic',
                     'priority' => '999',
                     'parent' => 'woocommerce',
@@ -177,38 +202,38 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
                 'import_export' => array(
                     'enable' => true,
                     'min_height' => '565px',
-                    'title' => esc_html__( 'Import / Export', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'Import / Export', 'pgeo-paygeo' ),
                     'import' => array(
-                        'title' => esc_html__( 'Import Settings', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'Here you can import new settings. Simply paste the settings url or data on the field below.', 'zcpg-woo-paygeo' ),
-                        'url_button_text' => esc_html__( 'Import from url', 'zcpg-woo-paygeo' ),
-                        'url_textbox_desc' => esc_html__( "Paste the url to another site's settings below and click the 'Import Now' button.", 'zcpg-woo-paygeo' ),
-                        'url_textbox_hint' => esc_html__( "Paste the url to another site's settings here...", 'zcpg-woo-paygeo' ),
-                        'data_button_text' => esc_html__( 'Import Data', 'zcpg-woo-paygeo' ),
-                        'data_textbox_desc' => esc_html__( "Paste your backup settings below and click the 'Import Now' button.", 'zcpg-woo-paygeo' ),
-                        'data_textbox_hint' => esc_html__( 'Paste your backup settings here...', 'zcpg-woo-paygeo' ),
-                        'import_button_text' => esc_html__( 'Import Now', 'zcpg-woo-paygeo' ),
-                        'warn_text' => esc_html__( 'Warning! This will override all existing settings. proceed with caution!', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Import Settings', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'Here you can import new settings. Simply paste the settings url or data on the field below.', 'pgeo-paygeo' ),
+                        'url_button_text' => esc_html__( 'Import from url', 'pgeo-paygeo' ),
+                        'url_textbox_desc' => esc_html__( "Paste the url to another site's settings below and click the 'Import Now' button.", 'pgeo-paygeo' ),
+                        'url_textbox_hint' => esc_html__( "Paste the url to another site's settings here...", 'pgeo-paygeo' ),
+                        'data_button_text' => esc_html__( 'Import Data', 'pgeo-paygeo' ),
+                        'data_textbox_desc' => esc_html__( "Paste your backup settings below and click the 'Import Now' button.", 'pgeo-paygeo' ),
+                        'data_textbox_hint' => esc_html__( 'Paste your backup settings here...', 'pgeo-paygeo' ),
+                        'import_button_text' => esc_html__( 'Import Now', 'pgeo-paygeo' ),
+                        'warn_text' => esc_html__( 'Warning! This will override all existing settings. proceed with caution!', 'pgeo-paygeo' ),
                     ),
                     'export' => array(
-                        'title' => esc_html__( 'Export Settings', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'Here you can backup your current settings. You can later use it to restore your settings.', 'zcpg-woo-paygeo' ),
-                        'download_button_text' => esc_html__( 'Download Data', 'zcpg-woo-paygeo' ),
-                        'url_button_text' => esc_html__( 'Export url', 'zcpg-woo-paygeo' ),
-                        'url_textbox_desc' => esc_html__( 'Copy the url below, use it to transfer the settings from this site.', 'zcpg-woo-paygeo' ),
-                        'data_button_text' => esc_html__( 'Export Data', 'zcpg-woo-paygeo' ),
-                        'data_textbox_desc' => esc_html__( 'Copy the data below, use it as your backup.', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Export Settings', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'Here you can backup your current settings. You can later use it to restore your settings.', 'pgeo-paygeo' ),
+                        'download_button_text' => esc_html__( 'Download Data', 'pgeo-paygeo' ),
+                        'url_button_text' => esc_html__( 'Export url', 'pgeo-paygeo' ),
+                        'url_textbox_desc' => esc_html__( 'Copy the url below, use it to transfer the settings from this site.', 'pgeo-paygeo' ),
+                        'data_button_text' => esc_html__( 'Export Data', 'pgeo-paygeo' ),
+                        'data_textbox_desc' => esc_html__( 'Copy the data below, use it as your backup.', 'pgeo-paygeo' ),
                     ),
                 ),
                 'header_buttons' => array(
-                    'reset_all_text' => esc_html__( 'Reset All', 'zcpg-woo-paygeo' ),
-                    'reset_section_text' => esc_html__( 'Reset Section', 'zcpg-woo-paygeo' ),
-                    'save_section_text' => esc_html__( 'Save Section', 'zcpg-woo-paygeo' ),
+                    'reset_all_text' => esc_html__( 'Reset All', 'pgeo-paygeo' ),
+                    'reset_section_text' => esc_html__( 'Reset Section', 'pgeo-paygeo' ),
+                    'save_section_text' => esc_html__( 'Save Section', 'pgeo-paygeo' ),
                 ),
                 'footer_buttons' => array(
-                    'reset_all_text' => esc_html__( 'Reset All', 'zcpg-woo-paygeo' ),
-                    'reset_section_text' => esc_html__( 'Reset Section', 'zcpg-woo-paygeo' ),
-                    'save_section_text' => esc_html__( 'Save Section', 'zcpg-woo-paygeo' ),
+                    'reset_all_text' => esc_html__( 'Reset All', 'pgeo-paygeo' ),
+                    'reset_section_text' => esc_html__( 'Reset Section', 'pgeo-paygeo' ),
+                    'save_section_text' => esc_html__( 'Save Section', 'pgeo-paygeo' ),
                 ),
                 'page_links' => self::get_page_links(),
                 'social_links' => self::get_social_links(),
@@ -230,7 +255,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
 
             $in_sections[] = array(
-                'title' => esc_html__( 'General Settings', 'zcpg-woo-paygeo' ),
+                'title' => esc_html__( 'General Settings', 'pgeo-paygeo' ),
                 'id' => 'settings',
                 'group' => 1,
             );
@@ -251,7 +276,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             );
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Settings & Restrictions', 'zcpg-woo-paygeo' ),
+                'title' => esc_html__( 'Settings & Restrictions', 'pgeo-paygeo' ),
                 'id' => $method_id . '-rules',
                 'group' => $group_id,
                 'subsection' => true
@@ -261,7 +286,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
             if ( PGEO_PayGeo_Extension::is_risky_method( $method_id ) ) {
                 $in_sections[] = array(
-                    'title' => esc_html__( 'Partial Payments', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'Partial Payments', 'pgeo-paygeo' ),
                     'id' => $method_id . '-riskfree-rules',
                     'group' => $group_id,
                     'subsection' => true
@@ -271,16 +296,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             $group_id++;
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Cart Discounts', 'zcpg-woo-paygeo' ),
-                'id' => $method_id . '-discount-rules',
-                'group' => $group_id,
-                'subsection' => true
-            );
-
-            $group_id++;
-
-            $in_sections[] = array(
-                'title' => esc_html__( 'Handling Fees', 'zcpg-woo-paygeo' ),
+                'title' => esc_html__( 'Gateway Fees', 'pgeo-paygeo' ),
                 'id' => $method_id . '-fee-rules',
                 'group' => $group_id,
                 'subsection' => true
@@ -289,7 +305,16 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             $group_id++;
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Order Autopilots', 'zcpg-woo-paygeo' ),
+                'title' => esc_html__( 'Cart Discounts', 'pgeo-paygeo' ),
+                'id' => $method_id . '-discount-rules',
+                'group' => $group_id,
+                'subsection' => true
+            );
+
+            $group_id++;
+
+            $in_sections[] = array(
+                'title' => esc_html__( 'Order Autopilots', 'pgeo-paygeo' ),
                 'id' => $method_id . '-activitys',
                 'group' => $group_id,
                 'subsection' => true
@@ -316,14 +341,14 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
             $premium_url = "#";
 
-            $message = esc_html__( 'This feature is available on premium version', 'zcpg-woo-paygeo' );
+            $message = esc_html__( 'This feature is available on premium version', 'pgeo-paygeo' );
 
-            $link_text = esc_html__( 'Premium Feature', 'zcpg-woo-paygeo' );
+            $link_text = esc_html__( 'Premium Feature', 'pgeo-paygeo' );
 
 
             switch ( $message_id ) {
                 case 'short_message':
-                    $message = esc_html__( 'Available on premium version', 'zcpg-woo-paygeo' );
+                    $message = esc_html__( 'Available on premium version', 'pgeo-paygeo' );
                     return '<a href="' . $premium_url . '" target="_blank">' . $link_text . '</a> - ' . $message;
 
                 default:
@@ -357,22 +382,22 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
         }
 
         public static function get_disabled_list( $list, $options ) {
-            
+
             if ( defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
-                
+
                 return array();
             }
-            
+
             $d_list = array();
-            
+
             $prem_max = count( $options );
-            
+
             for ( $i = 1; $i <= $prem_max; $i++ ) {
-                
+
                 $d_key = 'prem_' . $i;
-                
+
                 if ( isset( $options[ $d_key ] ) ) {
-                    
+
                     $d_list[] = $d_key;
                 }
             }
@@ -401,15 +426,23 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             return wp_kses_post( $raw_option );
         }
 
+        public static function set_is_admin_page( $instance_id ) {
+
+            if ( !defined( 'PGEO_PAYGEO_IS_ADMIN_PAGE' ) ) {
+
+                define( 'PGEO_PAYGEO_IS_ADMIN_PAGE', true );
+            }
+        }
+
         public static function get_plugin_links( $links ) {
 
             if ( defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
 
                 unset( $links[ 'deactivate' ] );
 
-                $add_on_text = esc_html__( 'PayGeo Premium', 'zcpg-woo-paygeo' );
+                $add_on_text = esc_html__( 'PayGeo Premium', 'pgeo-paygeo' );
 
-                $required_text = sprintf( esc_html__( 'Required by %s', 'zcpg-woo-paygeo' ), $add_on_text );
+                $required_text = sprintf( esc_html__( 'Required by %s', 'pgeo-paygeo' ), $add_on_text );
 
                 $no_deactivate_tag = '<span style="color: #313639">' . $required_text . '</span>';
 
@@ -418,13 +451,13 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
                 return $links;
             }
 
-            $doc_link = '<a href="' . esc_url( 'https://zencrew.freshdesk.com/support/solutions/51000070103' ) . '">' . esc_html__( 'Documentation', 'zcpg-woo-paygeo' ) . '</a>';
+            $doc_link = '<a href="' . esc_url( 'https://zencrew.freshdesk.com/support/solutions/51000070103' ) . '">' . esc_html__( 'Documentation', 'pgeo-paygeo' ) . '</a>';
 
             array_unshift( $links, $doc_link );
 
             $settings_url = admin_url( 'admin.php?page=pgeo-settings' );
 
-            $settings_link = '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'zcpg-woo-paygeo' ) . '</a>';
+            $settings_link = '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'pgeo-paygeo' ) . '</a>';
 
             array_unshift( $links, $settings_link );
 
@@ -510,26 +543,40 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
             foreach ( self::get_all_payment_method_ids() as $method_id ) {
 
-                $setion_titles[] = esc_html__( 'Settings & Restrictions', 'zcpg-woo-paygeo' );
+                $setion_titles[] = esc_html__( 'Settings & Restrictions', 'pgeo-paygeo' );
 
-                $setion_titles[] = esc_html__( 'Settings & Restrictions', 'zcpg-woo-paygeo' );
+                $setion_titles[] = esc_html__( 'Settings & Restrictions', 'pgeo-paygeo' );
 
                 if ( PGEO_PayGeo_Extension::is_risky_method( $method_id ) ) {
-                    $setion_titles[] = esc_html__( 'Partial Payments', 'zcpg-woo-paygeo' );
+                    
+                    $setion_titles[] = esc_html__( 'Partial Payments', 'pgeo-paygeo' );
                 }
 
-                $setion_titles[] = esc_html__( 'Cart Discounts', 'zcpg-woo-paygeo' );
+                $setion_titles[] = esc_html__( 'Gateway Fees', 'pgeo-paygeo' );
 
-                $setion_titles[] = esc_html__( 'Handling Fees', 'zcpg-woo-paygeo' );
+                $setion_titles[] = esc_html__( 'Cart Discounts', 'pgeo-paygeo' );
 
-                $setion_titles[] = esc_html__( 'Order Autopilots', 'zcpg-woo-paygeo' );
+                $setion_titles[] = esc_html__( 'Order Autopilots', 'pgeo-paygeo' );
             }
 
-            $setion_titles[] = esc_html__( 'General Settings', 'zcpg-woo-paygeo' );
+            $setion_titles[] = esc_html__( 'General Settings', 'pgeo-paygeo' );
 
-            $setion_titles[] = esc_html__( 'Import / Export', 'zcpg-woo-paygeo' );
+            $setion_titles[] = esc_html__( 'Import / Export', 'pgeo-paygeo' );
 
             return $setion_titles;
+        }
+
+        private static function is_admin_page() {
+
+            if ( defined( 'PGEO_PAYGEO_IS_ADMIN_PAGE' ) ) {
+
+                return true;
+            }
+
+            if ( isset( $_GET[ 'page' ] ) && $_GET[ 'page' ] == self::get_page_slug() ) {
+
+                return true;
+            }
         }
 
     }

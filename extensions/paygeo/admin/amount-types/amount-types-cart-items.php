@@ -40,22 +40,22 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Per_Items' ) && !defined( 'PG
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'per_items' => esc_html__( 'Discounts Per Items', 'zcpg-woo-paygeo' ),
-                    'prem_3' => esc_html__( 'Discount per cart line (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_4' => esc_html__( 'Discount per item quantity (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_5' => esc_html__( 'Discount per product (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_6' => esc_html__( 'Discount per variation (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_7' => esc_html__( 'Percentage discount per item (Premium)', 'zcpg-woo-paygeo' ),
+                    'per_items' => esc_html__( 'Discounts Per Items', 'pgeo-paygeo' ),
+                    'prem_3' => esc_html__( 'Discount per cart line (Premium)', 'pgeo-paygeo' ),
+                    'prem_4' => esc_html__( 'Discount per item quantity (Premium)', 'pgeo-paygeo' ),
+                    'prem_5' => esc_html__( 'Discount per product (Premium)', 'pgeo-paygeo' ),
+                    'prem_6' => esc_html__( 'Discount per variation (Premium)', 'pgeo-paygeo' ),
+                    'prem_7' => esc_html__( 'Percentage discount per item (Premium)', 'pgeo-paygeo' ),
                 );
             }
 
             return array(
-                'per_items' => esc_html__( 'Fee Per Items', 'zcpg-woo-paygeo' ),
-                'prem_3' => esc_html__( 'Fee per cart lines (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_4' => esc_html__( 'Fee per item quantity (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_5' => esc_html__( 'Fee per product (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_6' => esc_html__( 'Fee per variation (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_7' => esc_html__( 'Percentage fee per item (Premium)', 'zcpg-woo-paygeo' ),
+                'per_items' => esc_html__( 'Fee Per Items', 'pgeo-paygeo' ),
+                'prem_3' => esc_html__( 'Fee per cart lines (Premium)', 'pgeo-paygeo' ),
+                'prem_4' => esc_html__( 'Fee per item quantity (Premium)', 'pgeo-paygeo' ),
+                'prem_5' => esc_html__( 'Fee per product (Premium)', 'pgeo-paygeo' ),
+                'prem_6' => esc_html__( 'Fee per variation (Premium)', 'pgeo-paygeo' ),
+                'prem_7' => esc_html__( 'Percentage fee per item (Premium)', 'pgeo-paygeo' ),
             );
         }
 

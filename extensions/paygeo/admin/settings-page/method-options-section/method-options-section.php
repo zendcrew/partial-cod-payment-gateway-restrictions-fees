@@ -50,8 +50,8 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
                                 'id' => 'mode',
                                 'type' => 'select2',
                                 'column_size' => 1,
-                                'column_title' => esc_html__('Apply Mode', 'zcpg-woo-paygeo'),
-                                'tooltip' => esc_html__('Controls payment method apply mode', 'zcpg-woo-paygeo'),
+                                'column_title' => esc_html__('Apply Mode', 'pgeo-paygeo'),
+                                'tooltip' => esc_html__('Controls payment method apply mode', 'pgeo-paygeo'),
                                 'default' => 'all',
                                 'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                                 'options' => self::get_rules_apply_methods(),
@@ -81,7 +81,7 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
                 'clone_button' => true,
                 'width' => '100%',
                 'max_sections' => $max_sections,
-                'max_sections_msg' => esc_html__('Please upgrade to premium version in order to add more settings', 'zcpg-woo-paygeo'),
+                'max_sections_msg' => esc_html__('Please upgrade to premium version in order to add more settings', 'pgeo-paygeo'),
                 'field_css_class' => array('paygeo_rules'),
                 'css_class' => 'paygeo_gateway_rules',
                 'auto_expand' => array(
@@ -94,7 +94,7 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
                 'template_adder' => array(
                     'position' => 'right',
                     'show_list' => false,
-                    'button_text' => esc_html__('New Settings & Restrictions ', 'zcpg-woo-paygeo'),
+                    'button_text' => esc_html__('New Settings & Restrictions ', 'pgeo-paygeo'),
                 ),
             );
 
@@ -106,7 +106,7 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
 
                 $method = PGEO_PayGeo_Admin_Page::get_payment_method($repeater_args['field_args']);
 
-                $method_text = str_replace('[0]', $method['method_title'], esc_html__('[0] options', 'zcpg-woo-paygeo'));
+                $method_text = str_replace('[0]', $method['method_title'], esc_html__('[0] options', 'pgeo-paygeo'));
 
                 $in_templates[] = array(
                     'id' => 'method_rule',
@@ -150,8 +150,8 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
                         'type' => 'select2',
                         'default' => 'yes',
                         'options' => array(
-                            'yes' => esc_html__('Enable', 'zcpg-woo-paygeo'),
-                            'no' => esc_html__('Disable', 'zcpg-woo-paygeo'),
+                            'yes' => esc_html__('Enable', 'pgeo-paygeo'),
+                            'no' => esc_html__('Disable', 'pgeo-paygeo'),
                         ),
                         'width' => '95px',
                     ),
@@ -164,7 +164,7 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
         }
 
         public static function get_rules_apply_method($in_apply_methods) {
-            $in_apply_methods['no'] = esc_html__('Do not apply any settings', 'zcpg-woo-paygeo');
+            $in_apply_methods['no'] = esc_html__('Do not apply any settings', 'pgeo-paygeo');
             return $in_apply_methods;
         }
 
@@ -210,25 +210,25 @@ if (!class_exists('PGEO_PayGeo_Admin_Rules_Page')) {
 
         private static function get_rules_modes() {
             $rules_modes = array(
-                'with_others' => esc_html__('Apply this and other settings', 'zcpg-woo-paygeo'),
+                'with_others' => esc_html__('Apply this and other settings', 'pgeo-paygeo'),
             );
 
             if (!defined('PGEO_PAYGEO_PREMIUM')) {
-                $rules_modes['prem_1'] = esc_html__('Apply only this settings (Premium)', 'zcpg-woo-paygeo');
-                $rules_modes['prem_2'] = esc_html__('Apply if other settings are valid (Premium)', 'zcpg-woo-paygeo');
-                $rules_modes['prem_3'] = esc_html__('Apply if no other valid settings (Premium)', 'zcpg-woo-paygeo');
+                $rules_modes['prem_1'] = esc_html__('Apply only this settings (Premium)', 'pgeo-paygeo');
+                $rules_modes['prem_2'] = esc_html__('Apply if other settings are valid (Premium)', 'pgeo-paygeo');
+                $rules_modes['prem_3'] = esc_html__('Apply if no other valid settings (Premium)', 'pgeo-paygeo');
             }
             return $rules_modes;
         }
 
         private static function get_rules_apply_methods() {
             $rules_apply_methods = array(
-                'all' => esc_html__('Apply all valid settings', 'zcpg-woo-paygeo'),
+                'all' => esc_html__('Apply all valid settings', 'pgeo-paygeo'),
             );
 
             if (!defined('PGEO_PAYGEO_PREMIUM')) {
-                $rules_apply_methods['prem_1'] = esc_html__('Apply first valid settings (Premium)', 'zcpg-woo-paygeo');
-                $rules_apply_methods['prem_2'] = esc_html__('Apply last valid settings (Premium)', 'zcpg-woo-paygeo');
+                $rules_apply_methods['prem_1'] = esc_html__('Apply first valid settings (Premium)', 'pgeo-paygeo');
+                $rules_apply_methods['prem_2'] = esc_html__('Apply last valid settings (Premium)', 'pgeo-paygeo');
             }
 
             return apply_filters('paygeo-admin/method-options/get-rules-apply-methods', $rules_apply_methods);

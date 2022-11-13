@@ -18,10 +18,10 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Method_Options_Title' ) && !defined( 'PGE
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'title' ] = array(
-                'list_title' => esc_html__( 'Checkout - Title (Premium)', 'zcpg-woo-paygeo' ),
-                'title' => esc_html__( 'Checkout - Title (Premium)', 'zcpg-woo-paygeo' ),
+                'list_title' => esc_html__( 'Checkout - Title (Premium)', 'pgeo-paygeo' ),
+                'title' => esc_html__( 'Checkout - Title (Premium)', 'pgeo-paygeo' ),
                 'group_id' => 'checkout',
-                'tooltip' => esc_html__( 'Controls payment method title on checkout page', 'zcpg-woo-paygeo' ),
+                'tooltip' => esc_html__( 'Controls payment method title on checkout page', 'pgeo-paygeo' ),
             );
             
             return $in_options;

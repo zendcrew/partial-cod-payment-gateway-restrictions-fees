@@ -60,7 +60,7 @@ if ( !class_exists( 'PGEO_PayGeo_Polylang' ) && class_exists( 'Polylang' ) && !d
                 return pll__( $string_value );
             } else if ( function_exists( 'icl_t' ) ) {
 
-                return icl_t( 'zcpg-woo-paygeo', $string_id, $string_value );
+                return icl_t( 'pgeo-paygeo', $string_id, $string_value );
             }
 
             return $string_value;
@@ -70,10 +70,10 @@ if ( !class_exists( 'PGEO_PayGeo_Polylang' ) && class_exists( 'Polylang' ) && !d
 
             if ( function_exists( 'icl_register_string' ) ) {
 
-                icl_register_string( 'zcpg-woo-paygeo', $string_id, $string_value );
+                icl_register_string( 'pgeo-paygeo', $string_id, $string_value );
             } else if ( function_exists( 'pll_register_string' ) ) {
 
-                pll_register_string( $string_id, $string_value, 'zcpg-woo-paygeo', $is_multiline );
+                pll_register_string( $string_id, $string_value, 'pgeo-paygeo', $is_multiline );
             }
         }
 

@@ -24,7 +24,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Cart' ) ) {
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'cart' ] = esc_html__( 'Cart', 'zcpg-woo-paygeo' );
+            $in_groups[ 'cart' ] = esc_html__( 'Cart', 'pgeo-paygeo' );
 
             return $in_groups;
         }
@@ -72,13 +72,13 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Cart' ) ) {
                         'id' => 'shipping_classes',
                         'type' => 'select2',
                         'column_size' => 6,
-                        'column_title' => esc_html__( 'Shipping Classes', 'zcpg-woo-paygeo' ),
-                        'tooltip' => esc_html__( 'Controls which shipping classes should be included', 'zcpg-woo-paygeo' ),
+                        'column_title' => esc_html__( 'Shipping Classes', 'pgeo-paygeo' ),
+                        'tooltip' => esc_html__( 'Controls which shipping classes should be included', 'pgeo-paygeo' ),
                         'default' => '',
                         'multiple' => true,
                         'minimum_input_length' => 1,
                         'minimum_results_forsearch' => 10,
-                        'placeholder' => esc_html__( 'Search shipping classes...', 'zcpg-woo-paygeo' ),
+                        'placeholder' => esc_html__( 'Search shipping classes...', 'pgeo-paygeo' ),
                         'data' => array(
                             'source' => 'wc:shipping_classes',
                             'ajax' => true,
@@ -91,12 +91,12 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Cart' ) ) {
                         'id' => 'compare',
                         'type' => 'select2',
                         'column_size' => 2,
-                        'column_title' => esc_html__( 'Equals To', 'zcpg-woo-paygeo' ),
-                        'tooltip' => esc_html__( 'Controls how the shipping classes should be included', 'zcpg-woo-paygeo' ),
+                        'column_title' => esc_html__( 'Equals To', 'pgeo-paygeo' ),
+                        'tooltip' => esc_html__( 'Controls how the shipping classes should be included', 'pgeo-paygeo' ),
                         'default' => 'in_list',
                         'options' => array(
-                            'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                            'none' => esc_html__( 'Any NOT in the list', 'zcpg-woo-paygeo' ),
+                            'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                            'none' => esc_html__( 'Any NOT in the list', 'pgeo-paygeo' ),
                         ),
                         'width' => '100%',
                     ),
@@ -127,20 +127,20 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Cart' ) ) {
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'cart_fixed' => esc_html__( 'Fixed discount', 'zcpg-woo-paygeo' ),
-                    'cart_shipping_classes' => esc_html__( 'Discount per shipping classes', 'zcpg-woo-paygeo' ),
-                    'prem_1' => esc_html__( 'Discount per categories (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_2' => esc_html__( 'Discount per tags (Premium)', 'zcpg-woo-paygeo' ),
-                    'cart_per' => esc_html__( 'Percentage discount', 'zcpg-woo-paygeo' ),
+                    'cart_fixed' => esc_html__( 'Fixed discount', 'pgeo-paygeo' ),
+                    'cart_shipping_classes' => esc_html__( 'Discount per shipping classes', 'pgeo-paygeo' ),
+                    'prem_1' => esc_html__( 'Discount per categories (Premium)', 'pgeo-paygeo' ),
+                    'prem_2' => esc_html__( 'Discount per tags (Premium)', 'pgeo-paygeo' ),
+                    'cart_per' => esc_html__( 'Percentage discount', 'pgeo-paygeo' ),
                 );
             }
 
             return array(
-                'cart_fixed' => esc_html__( 'Fixed fee', 'zcpg-woo-paygeo' ),
-                'cart_shipping_classes' => esc_html__( 'Fee per shipping classes', 'zcpg-woo-paygeo' ),
-                'prem_1' => esc_html__( 'Fee per categories (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_2' => esc_html__( 'Fee per tags (Premium)', 'zcpg-woo-paygeo' ),
-                'cart_per' => esc_html__( 'Percentage fee', 'zcpg-woo-paygeo' ),
+                'cart_fixed' => esc_html__( 'Fixed fee', 'pgeo-paygeo' ),
+                'cart_shipping_classes' => esc_html__( 'Fee per shipping classes', 'pgeo-paygeo' ),
+                'prem_1' => esc_html__( 'Fee per categories (Premium)', 'pgeo-paygeo' ),
+                'prem_2' => esc_html__( 'Fee per tags (Premium)', 'pgeo-paygeo' ),
+                'cart_per' => esc_html__( 'Percentage fee', 'pgeo-paygeo' ),
             );
         }
 

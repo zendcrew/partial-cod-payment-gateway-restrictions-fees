@@ -38,16 +38,16 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Surface_Area' ) && !defined( 
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'per_surface_areas' => esc_html__( 'Discount Per Surface Area', 'zcpg-woo-paygeo' ),
-                    'prem_16' => esc_html__( 'Discount per surface area (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_17' => esc_html__( 'Discount x surface area (Premium)', 'zcpg-woo-paygeo' ),
+                    'per_surface_areas' => esc_html__( 'Discount Per Surface Area', 'pgeo-paygeo' ),
+                    'prem_16' => esc_html__( 'Discount per surface area (Premium)', 'pgeo-paygeo' ),
+                    'prem_17' => esc_html__( 'Discount x surface area (Premium)', 'pgeo-paygeo' ),
                 );
             }
 
             return array(
-                'per_surface_areas' => esc_html__( 'Fee Per Surface Area', 'zcpg-woo-paygeo' ),
-                'prem_16' => esc_html__( 'Fee per surface area (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_17' => esc_html__( 'Fee x surface area (Premium)', 'zcpg-woo-paygeo' ),
+                'per_surface_areas' => esc_html__( 'Fee Per Surface Area', 'pgeo-paygeo' ),
+                'prem_16' => esc_html__( 'Fee per surface area (Premium)', 'pgeo-paygeo' ),
+                'prem_17' => esc_html__( 'Fee x surface area (Premium)', 'pgeo-paygeo' ),
             );
         }
 

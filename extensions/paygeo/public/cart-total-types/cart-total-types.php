@@ -61,7 +61,7 @@ if ( !class_exists( 'PGEO_PayGeo_Cart_Total_Types' ) ) {
                 $opts = PGEO_PayGeo::get_option( 'cart_discount_cart_totals', $opts );
             } else if ( 'cart-fees' == $args[ 'module' ] ) {
                 $opts = PGEO_PayGeo::get_option( 'cart_fee_cart_totals', $opts );
-            } else if ( 'risk-free' == $args[ 'module' ] ) {
+            } else if ( 'partial-payment' == $args[ 'module' ] ) {
                 $opts = PGEO_PayGeo::get_option( 'riskfree_cart_totals', $opts );
             } else if ( 'method-options' == $args[ 'module' ] ) {
                 $opts = PGEO_PayGeo::get_option( 'method_cart_totals', $opts );

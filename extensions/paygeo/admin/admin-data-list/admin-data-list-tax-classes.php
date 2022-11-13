@@ -14,9 +14,9 @@ if (!class_exists('PGEO_PayGeo_Admin_Data_List_Tax_Classes')) {
 
         public static function get_data_list($result, $data_args) {
 
-            $result['--1'] = esc_html__('Not taxable', 'zcpg-woo-paygeo');
-            $result['--0'] = esc_html__('Based on items tax options', 'zcpg-woo-paygeo');
-            $result[''] = esc_html__('Standard rates', 'zcpg-woo-paygeo');
+            $result['--1'] = esc_html__('Not taxable', 'pgeo-paygeo');
+            $result['--0'] = esc_html__('Based on items tax options', 'pgeo-paygeo');
+            $result[''] = esc_html__('Standard rates', 'pgeo-paygeo');
 
 
             if (!defined('PGEO_PAYGEO_PREMIUM')) {
@@ -26,7 +26,7 @@ if (!class_exists('PGEO_PayGeo_Admin_Data_List_Tax_Classes')) {
 
 
                 for ($i = 0; $i < count($tax_classes); $i++) {
-                    $result['prem_' . ($i + 1)] = $tax_classes[$i] . esc_html__(' (Premium)', 'zcpg-woo-paygeo');
+                    $result['prem_' . ($i + 1)] = $tax_classes[$i] . esc_html__(' (Premium)', 'pgeo-paygeo');
                 }
             }
 

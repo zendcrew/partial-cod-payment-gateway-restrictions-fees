@@ -7,15 +7,14 @@
  * Version: 1.0
  * Author: zendcrew
  * Author URI: https://codecanyon.net/user/zendcrew
- * Text Domain: zendcrew
- * Text Domain: zcpg-woo-paygeo
+ * Text Domain: pgeo-paygeo
  * Domain Path: /languages/
  * Requires at least: 5.8
- * Tested up to: 6.0.2
+ * Tested up to: 6.1
  * Requires PHP: 5.6
  * 
  * WC requires at least: 5.6
- * WC tested up to: 6.8.2
+ * WC tested up to: 7.1
  */
 
 if ( !defined( 'ABSPATH' ) ) {
@@ -55,7 +54,7 @@ if ( !class_exists( 'PGEO_PayGeo_Main' ) ) {
 
             add_action( 'plugins_loaded', array( $this, 'init' ), 1 );
 
-            load_plugin_textdomain( 'zcpg-woo-paygeo', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+            load_plugin_textdomain( 'pgeo-paygeo', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
         }
 
         public function init() {
@@ -71,7 +70,7 @@ if ( !class_exists( 'PGEO_PayGeo_Main' ) ) {
 
         public function missing_notice() {
 
-            echo '<div class="error"><p><strong>' . esc_html__( 'WooCommerce Partial COD - Payment Gateway Restrictions & Fees to be installed and activated.', 'zcpg-woo-paygeo' ) . '</strong></p></div>';
+            echo '<div class="error"><p><strong>' . esc_html__( 'WooCommerce Partial COD - Payment Gateway Restrictions & Fees to be installed and activated.', 'pgeo-paygeo' ) . '</strong></p></div>';
         }
 
     }

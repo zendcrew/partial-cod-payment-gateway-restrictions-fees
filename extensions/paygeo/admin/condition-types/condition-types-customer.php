@@ -17,17 +17,17 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Customer' ) && !defined( 'PGEO
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'customer' ] = esc_html__( 'Customer', 'zcpg-woo-paygeo' );
+            $in_groups[ 'customer' ] = esc_html__( 'Customer', 'pgeo-paygeo' );
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
 
-            $in_list[ 'prem_38' ] = esc_html__( 'Customers (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_39' ] = esc_html__( 'Customer Is Logged In (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'user_roles' ] = esc_html__( 'User Roles', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_41' ] = esc_html__( 'User Capabilities (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_42' ] = esc_html__( 'User Meta Field (Premium)', 'zcpg-woo-paygeo' );
+            $in_list[ 'prem_38' ] = esc_html__( 'Customers (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_39' ] = esc_html__( 'Customer Is Logged In (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'user_roles' ] = esc_html__( 'User Roles', 'pgeo-paygeo' );
+            $in_list[ 'prem_41' ] = esc_html__( 'User Capabilities (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_42' ] = esc_html__( 'User Meta Field (Premium)', 'pgeo-paygeo' );
 
             return $in_list;
         }
@@ -39,11 +39,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Customer' ) && !defined( 'PGEO
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'zcpg-woo-paygeo' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'pgeo-paygeo' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'pgeo-paygeo' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '25%',
@@ -54,7 +54,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Customer' ) && !defined( 'PGEO
                 'type' => 'select2',
                 'multiple' => true,
                 'minimum_input_length' => 1,
-                'placeholder' => esc_html__( 'Search user roles...', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Search user roles...', 'pgeo-paygeo' ),
                 'allow_clear' => true,
                 'minimum_results_forsearch' => 10,
                 'data' => array(

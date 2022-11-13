@@ -101,7 +101,7 @@ if ( !class_exists( 'PGEO_PayGeo_Cart_Discounts_Engine' ) ) {
                 }
 
                 if ( '' == $rule[ 'title' ] ) {
-                    $rule_discount[ 'title' ] = esc_html__( 'Discount', 'zcpg-woo-paygeo' );
+                    $rule_discount[ 'title' ] = esc_html__( 'Discount', 'pgeo-paygeo' );
                 }
 
                 $cart_data = $this->add_rule_discount( $cart_data, $rule_discount, $rule_head );

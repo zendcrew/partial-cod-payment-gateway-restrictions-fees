@@ -30,9 +30,10 @@ if (!class_exists('ReonUtil')) {
                 }
                 $result = $result . esc_attr($key) . '=' . '"' . esc_attr($at_value) . '"';
                 $cnt--;
-                if ($cnt > 0) {
+                if ($cnt >= 0) {
                     $result = $result . ' ';
                 }
+                
             }
             return $result;
         }
@@ -362,5 +363,3 @@ if (!class_exists('ReonUtil')) {
     }
 
 }
-
-ReonUtil::start_session();

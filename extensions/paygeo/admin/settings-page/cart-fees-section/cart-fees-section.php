@@ -50,14 +50,14 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
                                     'id' => 'max_fee_type',
                                     'type' => 'select2',
                                     'column_size' => 2,
-                                    'column_title' => esc_html__( 'Handling Fees Limit', 'zcpg-woo-paygeo' ),
-                                    'tooltip' => esc_html__( 'Controls cart fees limit', 'zcpg-woo-paygeo' ),
+                                    'column_title' => esc_html__( 'Gateway Fees Limit', 'pgeo-paygeo' ),
+                                    'tooltip' => esc_html__( 'Controls gateway fees limit', 'pgeo-paygeo' ),
                                     'default' => 'no',
                                     'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                                     'options' => array(
-                                        'no' => esc_html__( 'No limit', 'zcpg-woo-paygeo' ),
-                                        'prem_1' => esc_html__( 'Fixed amount (Premium)', 'zcpg-woo-paygeo' ),
-                                        'prem_2' => esc_html__( 'Percentage amount (Premium)', 'zcpg-woo-paygeo' ),
+                                        'no' => esc_html__( 'No limit', 'pgeo-paygeo' ),
+                                        'prem_1' => esc_html__( 'Fixed amount (Premium)', 'pgeo-paygeo' ),
+                                        'prem_2' => esc_html__( 'Percentage amount (Premium)', 'pgeo-paygeo' ),
                                     ),
                                     'width' => '100%',
                                 ),
@@ -65,8 +65,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
                                     'id' => 'mode',
                                     'type' => 'select2',
                                     'column_size' => 3,
-                                    'column_title' => esc_html__( 'Apply Mode', 'zcpg-woo-paygeo' ),
-                                    'tooltip' => esc_html__( 'Controls fees apply mode', 'zcpg-woo-paygeo' ),
+                                    'column_title' => esc_html__( 'Apply Mode', 'pgeo-paygeo' ),
+                                    'tooltip' => esc_html__( 'Controls fees apply mode', 'pgeo-paygeo' ),
                                     'default' => 'all',
                                     'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                                     'options' => apply_filters( 'paygeo-admin/cart-fees/get-rules-apply-methods', self::get_rules_apply_methods() ),
@@ -97,7 +97,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
                 'clone_button' => true,
                 'width' => '100%',
                 'max_sections' => $max_sections,
-                'max_sections_msg' => esc_html__( 'Please upgrade to premium version in order to add more fees', 'zcpg-woo-paygeo' ),
+                'max_sections_msg' => esc_html__( 'Please upgrade to premium version in order to add more fees', 'pgeo-paygeo' ),
                 'field_css_class' => array( 'paygeo_rules' ),
                 'css_class' => 'paygeo_gateway_rules',
                 'auto_expand' => array(
@@ -110,7 +110,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
                 'template_adder' => array(
                     'position' => 'right',
                     'show_list' => false,
-                    'button_text' => esc_html__( 'New Handling Fee', 'zcpg-woo-paygeo' ),
+                    'button_text' => esc_html__( 'New Gateway Fee', 'pgeo-paygeo' ),
                 ),
             );
 
@@ -125,7 +125,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
 
                 $method = PGEO_PayGeo_Admin_Page::get_payment_method( $repeater_args[ 'field_args' ] );
 
-                $method_text = str_replace( '[0]', $method[ 'title' ], esc_html__( '[0] handling fee', 'zcpg-woo-paygeo' ) );
+                $method_text = str_replace( '[0]', $method[ 'title' ], esc_html__( '[0] gateway fee', 'pgeo-paygeo' ) );
 
                 $in_templates[] = array(
                     'id' => 'fee_rule',
@@ -170,8 +170,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
                         'type' => 'select2',
                         'default' => 'yes',
                         'options' => array(
-                            'yes' => esc_html__( 'Enable', 'zcpg-woo-paygeo' ),
-                            'no' => esc_html__( 'Disable', 'zcpg-woo-paygeo' ),
+                            'yes' => esc_html__( 'Enable', 'pgeo-paygeo' ),
+                            'no' => esc_html__( 'Disable', 'pgeo-paygeo' ),
                         ),
                         'width' => '95px',
                     ),
@@ -233,29 +233,29 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rules_Page' ) ) {
 
         private static function get_rules_modes() {
             $rules_modes = array(
-                'with_others' => esc_html__( 'Apply this and other fees', 'zcpg-woo-paygeo' ),
+                'with_others' => esc_html__( 'Apply this and other fees', 'pgeo-paygeo' ),
             );
 
             if ( !defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
-                $rules_modes[ 'prem_1' ] = esc_html__( 'Apply only this fee (Premium)', 'zcpg-woo-paygeo' );
-                $rules_modes[ 'prem_2' ] = esc_html__( 'Apply if other fees are valid (Premium)', 'zcpg-woo-paygeo' );
-                $rules_modes[ 'prem_3' ] = esc_html__( 'Apply if no other valid fees (Premium)', 'zcpg-woo-paygeo' );
+                $rules_modes[ 'prem_1' ] = esc_html__( 'Apply only this fee (Premium)', 'pgeo-paygeo' );
+                $rules_modes[ 'prem_2' ] = esc_html__( 'Apply if other fees are valid (Premium)', 'pgeo-paygeo' );
+                $rules_modes[ 'prem_3' ] = esc_html__( 'Apply if no other valid fees (Premium)', 'pgeo-paygeo' );
             }
             return $rules_modes;
         }
 
         private static function get_rules_apply_methods() {
             $rules_apply_methods = array(
-                'all' => esc_html__( 'Apply all valid fees', 'zcpg-woo-paygeo' ),
+                'all' => esc_html__( 'Apply all valid fees', 'pgeo-paygeo' ),
             );
 
             if ( !defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
-                $rules_apply_methods[ 'prem_1' ] = esc_html__( 'Apply first valid fee (Premium)', 'zcpg-woo-paygeo' );
-                $rules_apply_methods[ 'prem_2' ] = esc_html__( 'Apply last valid fee (Premium)', 'zcpg-woo-paygeo' );
-                $rules_apply_methods[ 'prem_3' ] = esc_html__( 'Apply the highest valid fee (Premium)', 'zcpg-woo-paygeo' );
-                $rules_apply_methods[ 'prem_4' ] = esc_html__( 'Apply the lowest valid fee (Premium)', 'zcpg-woo-paygeo' );
+                $rules_apply_methods[ 'prem_1' ] = esc_html__( 'Apply first valid fee (Premium)', 'pgeo-paygeo' );
+                $rules_apply_methods[ 'prem_2' ] = esc_html__( 'Apply last valid fee (Premium)', 'pgeo-paygeo' );
+                $rules_apply_methods[ 'prem_3' ] = esc_html__( 'Apply the highest valid fee (Premium)', 'pgeo-paygeo' );
+                $rules_apply_methods[ 'prem_4' ] = esc_html__( 'Apply the lowest valid fee (Premium)', 'pgeo-paygeo' );
             }
-            $rules_apply_methods[ 'no' ] = esc_html__( 'Do not apply any fee', 'zcpg-woo-paygeo' );
+            $rules_apply_methods[ 'no' ] = esc_html__( 'Do not apply any fee', 'pgeo-paygeo' );
 
             return $rules_apply_methods;
         }

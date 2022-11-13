@@ -112,7 +112,7 @@ if ( !class_exists( 'PGEO_PayGeo_Extension' ) ) {
             self::$risky_method_ids = array(
                 'cod',
             );
-            return apply_filters( 'paygeo/risk-free/get-method-ids', self::$risky_method_ids );
+            return apply_filters( 'paygeo/partial-payment/get-method-ids', self::$risky_method_ids );
         }
 
     }

@@ -21,7 +21,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Cart_Totals' ) ) {
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'cart_totals' ] = esc_html__( 'Cart Totals', 'zcpg-woo-paygeo' );
+            $in_groups[ 'cart_totals' ] = esc_html__( 'Cart Totals', 'pgeo-paygeo' );
             return $in_groups;
         }
 
@@ -55,12 +55,12 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Cart_Totals' ) ) {
                 'type' => 'select2',
                 'default' => '>=',
                 'options' => array(
-                    '>=' => esc_html__( 'More than or equal to', 'zcpg-woo-paygeo' ),
-                    '>' => esc_html__( 'More than', 'zcpg-woo-paygeo' ),
-                    '<=' => esc_html__( 'Less than or equal to', 'zcpg-woo-paygeo' ),
-                    '<' => esc_html__( 'Less than', 'zcpg-woo-paygeo' ),
-                    '==' => esc_html__( 'Equal to', 'zcpg-woo-paygeo' ),
-                    '!=' => esc_html__( 'Not equal to', 'zcpg-woo-paygeo' ),
+                    '>=' => esc_html__( 'More than or equal to', 'pgeo-paygeo' ),
+                    '>' => esc_html__( 'More than', 'pgeo-paygeo' ),
+                    '<=' => esc_html__( 'Less than or equal to', 'pgeo-paygeo' ),
+                    '<' => esc_html__( 'Less than', 'pgeo-paygeo' ),
+                    '==' => esc_html__( 'Equal to', 'pgeo-paygeo' ),
+                    '!=' => esc_html__( 'Not equal to', 'pgeo-paygeo' ),
                 ),
                 'width' => '99%',
                 'box_width' => '50%',
@@ -71,7 +71,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Cart_Totals' ) ) {
                 'type' => 'textbox',
                 'input_type' => 'number',
                 'default' => '0.00',
-                'placeholder' => esc_html__( '0.00', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( '0.00', 'pgeo-paygeo' ),
                 'width' => '100%',
                 'box_width' => '50%',
                 'attributes' => array(
@@ -89,7 +89,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Cart_Totals' ) ) {
                 $options[ $key ] = $option;
             }
 
-            foreach ( self::get_options_by_module( 'risk-free' ) as $key => $option ) {
+            foreach ( self::get_options_by_module( 'partial-payment' ) as $key => $option ) {
                 $options[ $key ] = $option;
             }
             foreach ( self::get_options_by_module( 'cart-fees' ) as $key => $option ) {
@@ -170,8 +170,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Cart_Totals' ) ) {
         private static function get_default_options() {
 
             return array(
-                '2234343' => esc_html__( 'Subtotal including tax', 'zcpg-woo-paygeo' ),
-                '2234344' => esc_html__( 'Subtotal excluding tax', 'zcpg-woo-paygeo' )
+                '2234343' => esc_html__( 'Subtotal including tax', 'pgeo-paygeo' ),
+                '2234344' => esc_html__( 'Subtotal excluding tax', 'pgeo-paygeo' )
             );
         }
 
@@ -182,7 +182,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Cart_Totals' ) ) {
             if ( 'cart-fees' == $module ) {
                 return 'cart_fee_cart_totals';
             }
-            if ( 'risk-free' == $module ) {
+            if ( 'partial-payment' == $module ) {
                 return 'riskfree_cart_totals';
             }
             if ( 'method-options' == $module ) {

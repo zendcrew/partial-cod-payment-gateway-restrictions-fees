@@ -57,7 +57,7 @@ if ( !class_exists( 'PGEO_PayGeo_WPML' ) && function_exists( 'SitePress' ) && !d
 
             if ( function_exists( 'icl_t' ) ) {
 
-                return icl_t( 'zcpg-woo-paygeo', $string_id, $string_value );
+                return icl_t( 'pgeo-paygeo', $string_id, $string_value );
             }
 
             return $string_value;
@@ -67,7 +67,7 @@ if ( !class_exists( 'PGEO_PayGeo_WPML' ) && function_exists( 'SitePress' ) && !d
 
             if ( function_exists( 'icl_register_string' ) ) {
 
-                icl_register_string( 'zcpg-woo-paygeo', $string_id, $string_value );
+                icl_register_string( 'pgeo-paygeo', $string_id, $string_value );
             }
         }
 

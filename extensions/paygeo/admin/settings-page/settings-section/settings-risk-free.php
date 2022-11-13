@@ -9,7 +9,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_RiskFree_Settings' ) ) {
     class PGEO_PayGeo_Admin_RiskFree_Settings {
 
         public static function init() {
-            add_filter( 'paygeo-admin/get-settings-section-fields', array( new self, 'get_fields' ), 50 );
+            add_filter( 'paygeo-admin/get-settings-section-fields', array( new self, 'get_fields' ), 20 );
         }
 
         public static function get_fields( $in_fields ) {
@@ -30,8 +30,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_RiskFree_Settings' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Partial Payments Settings', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'Use these settings to control partial paymants basic settings', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Partial Payments Settings', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'Use these settings to control partial paymants basic settings', 'pgeo-paygeo' ),
                     ),
                     array(
                         'id' => 'is_any',

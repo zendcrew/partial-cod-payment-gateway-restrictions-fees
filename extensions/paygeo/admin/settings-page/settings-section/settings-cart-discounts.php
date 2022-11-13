@@ -24,9 +24,9 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
 
 
             $notify_options = array(
-                'no' => esc_html__( 'No', 'zcpg-woo-paygeo' ),
-                'prem_1' => esc_html__( 'Yes, show once (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_2' => esc_html__( 'Yes, always show (Premium)', 'zcpg-woo-paygeo' ),
+                'no' => esc_html__( 'No', 'pgeo-paygeo' ),
+                'prem_1' => esc_html__( 'Yes, show once (Premium)', 'pgeo-paygeo' ),
+                'prem_2' => esc_html__( 'Yes, always show (Premium)', 'pgeo-paygeo' ),
             );
 
             $max_sections = 2;
@@ -35,8 +35,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
 
                 unset( $notify_options[ 'prem_1' ] );
                 unset( $notify_options[ 'prem_2' ] );
-                $notify_options[ 'yes' ] = esc_html__( 'Yes, show once', 'zcpg-woo-paygeo' );
-                $notify_options[ 'yes_always' ] = esc_html__( 'Yes, always show', 'zcpg-woo-paygeo' );
+                $notify_options[ 'yes' ] = esc_html__( 'Yes, show once', 'pgeo-paygeo' );
+                $notify_options[ 'yes_always' ] = esc_html__( 'Yes, always show', 'pgeo-paygeo' );
             }
 
             $in_fields[] = array(
@@ -53,8 +53,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Cart Discounts Settings', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'Use these settings to control cart discounts basic settings', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Cart Discounts Settings', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'Use these settings to control cart discounts basic settings', 'pgeo-paygeo' ),
                     ),
                     array(
                         'id' => 'cart_discount_settings',
@@ -66,12 +66,12 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                                 'id' => 'show_on_cart',
                                 'type' => 'select2',
                                 'column_size' => 1,
-                                'tooltip' => esc_html__( 'Enables cart discounts on cart page', 'zcpg-woo-paygeo' ),
-                                'column_title' => esc_html__( 'Enable On "Cart" Page', 'zcpg-woo-paygeo' ),
+                                'tooltip' => esc_html__( 'Enables cart discounts on cart page', 'pgeo-paygeo' ),
+                                'column_title' => esc_html__( 'Enable On "Cart" Page', 'pgeo-paygeo' ),
                                 'default' => array( 'no' ),
                                 'options' => array(
-                                    'no' => esc_html__( 'No', 'zcpg-woo-paygeo' ),
-                                    'yes' => esc_html__( 'Yes', 'zcpg-woo-paygeo' ),
+                                    'no' => esc_html__( 'No', 'pgeo-paygeo' ),
+                                    'yes' => esc_html__( 'Yes', 'pgeo-paygeo' ),
                                 ),
                                 'width' => '100%',
                             ),
@@ -79,8 +79,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                                 'id' => 'enable_notifications',
                                 'type' => 'select2',
                                 'column_size' => 1,
-                                'tooltip' => esc_html__( 'Enables cart discount notifications', 'zcpg-woo-paygeo' ),
-                                'column_title' => esc_html__( 'Enable Notifications', 'zcpg-woo-paygeo' ),
+                                'tooltip' => esc_html__( 'Enables cart discount notifications', 'pgeo-paygeo' ),
+                                'column_title' => esc_html__( 'Enable Notifications', 'pgeo-paygeo' ),
                                 'default' => array( 'no' ),
                                 'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                                 'options' => $notify_options,
@@ -90,12 +90,12 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                                 'id' => 'replace_coupon_labels',
                                 'type' => 'select2',
                                 'column_size' => 1,
-                                'tooltip' => esc_html__( 'Replces discount coupon labels', 'zcpg-woo-paygeo' ),
-                                'column_title' => esc_html__( 'Replace Coupon Labels', 'zcpg-woo-paygeo' ),
+                                'tooltip' => esc_html__( 'Replces discount coupon labels', 'pgeo-paygeo' ),
+                                'column_title' => esc_html__( 'Replace Coupon Labels', 'pgeo-paygeo' ),
                                 'default' => array( 'no' ),
                                 'options' => array(
-                                    'no' => esc_html__( 'No', 'zcpg-woo-paygeo' ),
-                                    'yes' => esc_html__( 'Yes', 'zcpg-woo-paygeo' ),
+                                    'no' => esc_html__( 'No', 'pgeo-paygeo' ),
+                                    'yes' => esc_html__( 'Yes', 'pgeo-paygeo' ),
                                 ),
                                 'width' => '100%',
                             ),
@@ -106,8 +106,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Cart Totals Calculations', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'Use these settings to control what are included in the "based on" cart percentage totals &amp; the "cart totals" conditions', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Cart Totals Calculations', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'Use these settings to control what are included in the "based on" cart percentage totals &amp; the "cart totals" conditions', 'pgeo-paygeo' ),
                     ),
                     array(
                         'id' => 'cart_discount_cart_totals',
@@ -119,7 +119,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                         'buttons_sep' => false,
                         'buttons_box_width' => '65px',
                         'max_sections' => $max_sections,
-                        'max_sections_msg' => esc_html__( 'Please upgrade to premium version in order to add more options', 'zcpg-woo-paygeo' ),
+                        'max_sections_msg' => esc_html__( 'Please upgrade to premium version in order to add more options', 'pgeo-paygeo' ),
                         'width' => '100%',
                         'default' => self::get_default_options(),
                         'static_template' => 'calc_default',
@@ -130,7 +130,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                         'template_adder' => array(
                             'position' => 'right',
                             'show_list' => false,
-                            'button_text' => esc_html__( 'Add Option', 'zcpg-woo-paygeo' ),
+                            'button_text' => esc_html__( 'Add Option', 'pgeo-paygeo' ),
                         ),
                     ),
                 ),
@@ -169,8 +169,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
                 $in_fields[] = array(
                     'id' => 'title',
                     'type' => 'textbox',
-                    'default' => esc_html__( 'Cart subtotal', 'zcpg-woo-paygeo' ),
-                    'placeholder' => esc_html__( 'Title here...', 'zcpg-woo-paygeo' ),
+                    'default' => esc_html__( 'Cart subtotal', 'pgeo-paygeo' ),
+                    'placeholder' => esc_html__( 'Title here...', 'pgeo-paygeo' ),
                     'width' => '98%',
                     'box_width' => '36%',
                 );
@@ -193,24 +193,24 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
         public static function get_calc_options() {
 
             $options = array(
-                'subtotal' => esc_html__( 'Add subtotal', 'zcpg-woo-paygeo' ),
-                'subtotal_tax' => esc_html__( 'Add subtotal tax', 'zcpg-woo-paygeo' ),
+                'subtotal' => esc_html__( 'Add subtotal', 'pgeo-paygeo' ),
+                'subtotal_tax' => esc_html__( 'Add subtotal tax', 'pgeo-paygeo' ),
             );
 
             if ( !defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
 
-                $options[ 'prem_1' ] = esc_html__( 'Add coupons (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_2' ] = esc_html__( 'Add coupon taxes (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_3' ] = esc_html__( 'Subtract coupons (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_4' ] = esc_html__( 'Subtract coupon taxes (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_5' ] = esc_html__( 'Add fees (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_6' ] = esc_html__( 'Add fee taxes (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_7' ] = esc_html__( 'Add shipping cost (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_8' ] = esc_html__( 'Add shipping cost tax (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_9' ] = esc_html__( 'Add paygeo discounts (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_10' ] = esc_html__( 'Add paygeo discount taxes (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_11' ] = esc_html__( 'Subtract paygeo discounts (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_12' ] = esc_html__( 'Subtract paygeo discount taxes (Premium)', 'zcpg-woo-paygeo' );
+                $options[ 'prem_1' ] = esc_html__( 'Add coupons (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_2' ] = esc_html__( 'Add coupon taxes (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_3' ] = esc_html__( 'Subtract coupons (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_4' ] = esc_html__( 'Subtract coupon taxes (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_5' ] = esc_html__( 'Add fees (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_6' ] = esc_html__( 'Add fee taxes (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_7' ] = esc_html__( 'Add shipping cost (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_8' ] = esc_html__( 'Add shipping cost tax (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_9' ] = esc_html__( 'Add paygeo discounts (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_10' ] = esc_html__( 'Add paygeo discount taxes (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_11' ] = esc_html__( 'Subtract paygeo discounts (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_12' ] = esc_html__( 'Subtract paygeo discount taxes (Premium)', 'pgeo-paygeo' );
             }
 
             return apply_filters( 'paygeo-admin/cart-discounts/get-cart-totals-options', $options );
@@ -239,13 +239,13 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Discount_Settings' ) ) {
             return array(
                 array(
                     'calc_option_type' => 'calc_default',
-                    'title' => esc_html__( 'Subtotal including tax', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'Subtotal including tax', 'pgeo-paygeo' ),
                     'include' => array( 'subtotal', 'subtotal_tax' ),
                     'option_id' => '2234343',
                 ),
                 array(
                     'calc_option_type' => 'calc_option',
-                    'title' => esc_html__( 'Subtotal excluding tax', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'Subtotal excluding tax', 'pgeo-paygeo' ),
                     'include' => array( 'subtotal' ),
                     'option_id' => '2234344',
                 ),

@@ -73,12 +73,12 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Types' ) ) {
         
         public static function get_amount_add_methods( $args ) {
             $options = array(
-                'add' => esc_html__( 'Add to previous amounts', 'zcpg-woo-paygeo' )
+                'add' => esc_html__( 'Add to previous amounts', 'pgeo-paygeo' )
             );
 
             if ( !defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
-                $options[ 'prem_1' ] = esc_html__( 'Subtract from previous amounts (Premium)', 'zcpg-woo-paygeo' );
-                $options[ 'prem_2' ] = esc_html__( 'Override previous amounts (Premium)', 'zcpg-woo-paygeo' );
+                $options[ 'prem_1' ] = esc_html__( 'Subtract from previous amounts (Premium)', 'pgeo-paygeo' );
+                $options[ 'prem_2' ] = esc_html__( 'Override previous amounts (Premium)', 'pgeo-paygeo' );
             }
 
             return apply_filters( 'paygeo-admin/get-amount-add-methods', $options );

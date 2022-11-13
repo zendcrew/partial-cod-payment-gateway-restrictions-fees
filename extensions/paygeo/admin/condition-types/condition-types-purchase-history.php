@@ -15,17 +15,17 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Purchase_History' ) && !define
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'purchase_history' ] = esc_html__( 'Purchase History', 'zcpg-woo-paygeo' );
+            $in_groups[ 'purchase_history' ] = esc_html__( 'Purchase History', 'pgeo-paygeo' );
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
            
-            $in_list[ 'prem_58' ] = esc_html__( 'Purchased Products (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_59' ] = esc_html__( 'Purchased Variations (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_60' ] = esc_html__( 'Purchased Categories (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_61' ] = esc_html__( 'Purchased Tags (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_62' ] = esc_html__( 'Purchased Attributes (Premium)', 'zcpg-woo-paygeo' );
+            $in_list[ 'prem_58' ] = esc_html__( 'Purchased Products (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_59' ] = esc_html__( 'Purchased Variations (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_60' ] = esc_html__( 'Purchased Categories (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_61' ] = esc_html__( 'Purchased Tags (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_62' ] = esc_html__( 'Purchased Attributes (Premium)', 'pgeo-paygeo' );
             
             return $in_list;
         }

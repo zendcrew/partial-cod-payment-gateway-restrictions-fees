@@ -59,8 +59,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Method_Rule_Panel_Options' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Method Settings', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'List of payment method settings to apply, empty list will not apply any settings', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Method Settings', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'List of payment method settings to apply, empty list will not apply any settings', 'pgeo-paygeo' ),
                     )
                 ),
             );
@@ -95,7 +95,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Method_Rule_Panel_Options' ) ) {
                     'show_list' => true,
                     'list_icon' => 'fa fa-list',
                     'list_width' => $list_width,
-                    'button_text' => esc_html__( 'Add Settings', 'zcpg-woo-paygeo' ),
+                    'button_text' => esc_html__( 'Add Settings', 'pgeo-paygeo' ),
                 ),
             );
 

@@ -22,7 +22,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'billing_address' ] = esc_html__( 'Billing Address', 'zcpg-woo-paygeo' );
+            $in_groups[ 'billing_address' ] = esc_html__( 'Billing Address', 'pgeo-paygeo' );
 
             return $in_groups;
         }
@@ -30,15 +30,15 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
         public static function get_conditions( $in_list, $args ) {
             
             if ( !defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
-                $in_list[ 'prem_3' ] = esc_html__( 'Billing Continents (Premium)', 'zcpg-woo-paygeo' );
+                $in_list[ 'prem_3' ] = esc_html__( 'Billing Continents (Premium)', 'pgeo-paygeo' );
             } else {
-                $in_list[ 'billing_continents' ] = esc_html__( 'Billing Continents', 'zcpg-woo-paygeo' );
+                $in_list[ 'billing_continents' ] = esc_html__( 'Billing Continents', 'pgeo-paygeo' );
             }
             
-            $in_list[ 'billing_countries' ] = esc_html__( 'Billing Countries', 'zcpg-woo-paygeo' );
-            $in_list[ 'billing_states' ] = esc_html__( 'Billing States', 'zcpg-woo-paygeo' );
-            $in_list[ 'billing_cities' ] = esc_html__( 'Billing Cities', 'zcpg-woo-paygeo' );
-            $in_list[ 'billing_postcodes' ] = esc_html__( 'Billing Postcode / ZIP', 'zcpg-woo-paygeo' );
+            $in_list[ 'billing_countries' ] = esc_html__( 'Billing Countries', 'pgeo-paygeo' );
+            $in_list[ 'billing_states' ] = esc_html__( 'Billing States', 'pgeo-paygeo' );
+            $in_list[ 'billing_cities' ] = esc_html__( 'Billing Cities', 'pgeo-paygeo' );
+            $in_list[ 'billing_postcodes' ] = esc_html__( 'Billing Postcode / ZIP', 'pgeo-paygeo' );
 
             return $in_list;
         }
@@ -50,8 +50,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -64,7 +64,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'allow_clear' => true,
                 'minimum_input_length' => 2,
                 'minimum_results_forsearch' => 10,
-                'placeholder' => esc_html__( 'Billing Countries...', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Billing Countries...', 'pgeo-paygeo' ),
                 'ajax_data' => 'wc:countries',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -80,8 +80,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -94,7 +94,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'allow_clear' => true,
                 'minimum_input_length' => 2,
                 'minimum_results_forsearch' => 10,
-                'placeholder' => esc_html__( 'Billing States...', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Billing States...', 'pgeo-paygeo' ),
                 'ajax_data' => 'wc:states',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -110,8 +110,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -122,7 +122,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'type' => 'textbox',
                 'input_type' => 'text',
                 'default' => '',
-                'placeholder' => esc_html__( 'Seperate with comma, (e.g Jakarta, Delhi, Manila)', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Seperate with comma, (e.g Jakarta, Delhi, Manila)', 'pgeo-paygeo' ),
                 'width' => '100%',
                 'box_width' => '74%',
             );
@@ -137,8 +137,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'match' => esc_html__( 'Match', 'zcpg-woo-paygeo' ),
-                    'not_match' => esc_html__( 'Not match', 'zcpg-woo-paygeo' ),
+                    'match' => esc_html__( 'Match', 'pgeo-paygeo' ),
+                    'not_match' => esc_html__( 'Not match', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '22%',
@@ -149,7 +149,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Billing_Address' ) ) {
                 'type' => 'textbox',
                 'input_type' => 'text',
                 'default' => '',
-                'placeholder' => esc_html__( 'e.g 1815, 870*, [1870 - 9999], DSE, LDS', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'e.g 1815, 870*, [1870 - 9999], DSE, LDS', 'pgeo-paygeo' ),
                 'width' => '100%',
                 'box_width' => '78%',
             );

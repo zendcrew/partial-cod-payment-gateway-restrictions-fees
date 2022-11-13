@@ -17,10 +17,10 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Method_Options_Icon_Url' ) && !defined( '
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'icon_url' ] = array(
-                'list_title' => esc_html__( 'Checkout - Icon Url (Premium)', 'zcpg-woo-paygeo' ),
-                'title' => esc_html__( 'Checkout - Icon Url (Premium)', 'zcpg-woo-paygeo' ),
+                'list_title' => esc_html__( 'Checkout - Icon Url (Premium)', 'pgeo-paygeo' ),
+                'title' => esc_html__( 'Checkout - Icon Url (Premium)', 'pgeo-paygeo' ),
                 'group_id' => 'checkout',
-                'tooltip' => esc_html__( 'Controls payment method icon url on checkout page', 'zcpg-woo-paygeo' ),
+                'tooltip' => esc_html__( 'Controls payment method icon url on checkout page', 'pgeo-paygeo' ),
             );
 
             return $in_options;

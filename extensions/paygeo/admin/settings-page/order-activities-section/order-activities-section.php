@@ -43,8 +43,8 @@ if (!class_exists('PGEO_PayGeo_Admin_Order_Activity_Rules_Page')) {
                             'type' => 'paneltitle',
                             'full_width' => true,
                             'center_head' => true,
-                            'title' => esc_html__('Order Autopilots', 'zcpg-woo-paygeo'),
-                            'desc' => esc_html__('Create unlimited number of order autopilots', 'zcpg-woo-paygeo'),
+                            'title' => esc_html__('Order Autopilots', 'pgeo-paygeo'),
+                            'desc' => esc_html__('Create unlimited number of order autopilots', 'pgeo-paygeo'),
                         ),
                         array(
                             'id' => 'is_any',

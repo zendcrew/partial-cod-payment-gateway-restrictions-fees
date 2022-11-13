@@ -21,17 +21,17 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'shipping' ] = esc_html__( 'Shipping', 'zcpg-woo-paygeo' );
+            $in_groups[ 'shipping' ] = esc_html__( 'Shipping', 'pgeo-paygeo' );
 
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
 
-            $in_list[ 'shipping_needed' ] = esc_html__( 'Needs Shipping', 'zcpg-woo-paygeo' );
-            $in_list[ 'shipping_zones' ] = esc_html__( 'Shipping Zones', 'zcpg-woo-paygeo' );
-            $in_list[ 'shipping_methods' ] = esc_html__( 'Shipping Methods', 'zcpg-woo-paygeo' );
-            $in_list[ 'shipping_rates' ] = esc_html__( 'Shipping Rates', 'zcpg-woo-paygeo' );
+            $in_list[ 'shipping_needed' ] = esc_html__( 'Needs Shipping', 'pgeo-paygeo' );
+            $in_list[ 'shipping_zones' ] = esc_html__( 'Shipping Zones', 'pgeo-paygeo' );
+            $in_list[ 'shipping_methods' ] = esc_html__( 'Shipping Methods', 'pgeo-paygeo' );
+            $in_list[ 'shipping_rates' ] = esc_html__( 'Shipping Rates', 'pgeo-paygeo' );
 
             return $in_list;
         }
@@ -43,8 +43,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'yes',
                 'options' => array(
-                    'yes' => esc_html__( 'Yes', 'zcpg-woo-paygeo' ),
-                    'no' => esc_html__( 'No', 'zcpg-woo-paygeo' ),
+                    'yes' => esc_html__( 'Yes', 'pgeo-paygeo' ),
+                    'no' => esc_html__( 'No', 'pgeo-paygeo' ),
                 ),
                 'width' => '100%',
                 'box_width' => '100%',
@@ -61,11 +61,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'zcpg-woo-paygeo' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'pgeo-paygeo' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'pgeo-paygeo' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -76,7 +76,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping zones...', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Shipping zones...', 'pgeo-paygeo' ),
                 'data' => 'wc:shipping_zones',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -90,11 +90,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'zcpg-woo-paygeo' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'pgeo-paygeo' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'pgeo-paygeo' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -105,7 +105,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping methods...', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Shipping methods...', 'pgeo-paygeo' ),
                 'data' => 'wc:shipping_methods',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -120,11 +120,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'zcpg-woo-paygeo' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'zcpg-woo-paygeo' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'zcpg-woo-paygeo' ),
-                    'none' => esc_html__( 'None in the list', 'zcpg-woo-paygeo' ),
+                    'in_list' => esc_html__( 'Any in the list', 'pgeo-paygeo' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'pgeo-paygeo' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'pgeo-paygeo' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'pgeo-paygeo' ),
+                    'none' => esc_html__( 'None in the list', 'pgeo-paygeo' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -135,7 +135,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping rates...', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( 'Shipping rates...', 'pgeo-paygeo' ),
                 'options' => PGEO_PayGeo_Extension::get_shipping_rates( $args ),
                 'width' => '100%',
                 'box_width' => '74%',

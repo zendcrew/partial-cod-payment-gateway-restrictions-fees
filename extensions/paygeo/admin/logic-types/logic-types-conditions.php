@@ -25,13 +25,13 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Logic_Types_Conditions' ) ) {
                     'type' => 'select2',
                     'full_width' => true,
                     'center_head' => true,
-                    'title' => esc_html__( 'Shop Conditions', 'zcpg-woo-paygeo' ),
+                    'title' => esc_html__( 'Shop Conditions', 'pgeo-paygeo' ),
                     'desc' => self::get_conditions_desc( $args ),
                     'default' => 'match_all',
                     'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                     'options' => array(
-                        'match_all' => esc_html__( 'All conditions should match', 'zcpg-woo-paygeo' ),
-                        'prem_1' => esc_html__( 'At least one condition should match (Premium)', 'zcpg-woo-paygeo' ),
+                        'match_all' => esc_html__( 'All conditions should match', 'pgeo-paygeo' ),
+                        'prem_1' => esc_html__( 'At least one condition should match (Premium)', 'pgeo-paygeo' ),
                     ),
                     'width' => '320px',
                 );
@@ -58,7 +58,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Logic_Types_Conditions' ) ) {
                 'template_adder' => array(
                     'position' => 'right',
                     'show_list' => false,
-                    'button_text' => esc_html__( 'Add Condition', 'zcpg-woo-paygeo' ),
+                    'button_text' => esc_html__( 'Add Condition', 'pgeo-paygeo' ),
                 ),
             );
 
@@ -136,29 +136,29 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Logic_Types_Conditions' ) ) {
 
         private static function get_conditions_desc( $args ) {
 
-            $module_text = esc_html__( 'settings', 'zcpg-woo-paygeo' );
+            $module_text = esc_html__( 'settings', 'pgeo-paygeo' );
 
-            if ( 'risk-free' == $args[ 'module' ] ) {
+            if ( 'partial-payment' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'partial payment', 'zcpg-woo-paygeo' );
+                $module_text = esc_html__( 'partial payment', 'pgeo-paygeo' );
             }
 
             if ( 'method-options' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'method settings', 'zcpg-woo-paygeo' );
+                $module_text = esc_html__( 'method settings', 'pgeo-paygeo' );
             }
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'cart discount', 'zcpg-woo-paygeo' );
+                $module_text = esc_html__( 'cart discount', 'pgeo-paygeo' );
             }
 
             if ( 'cart-fees' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'handling fee', 'zcpg-woo-paygeo' );
+                $module_text = esc_html__( 'gateway fee', 'pgeo-paygeo' );
             }
 
-            return sprintf( esc_html__( 'List of conditions in which this %s should apply, empty conditions will apply in all cases', 'zcpg-woo-paygeo' ), $module_text );
+            return sprintf( esc_html__( 'List of conditions in which this %s should apply, empty conditions will apply in all cases', 'pgeo-paygeo' ), $module_text );
         }
 
     }

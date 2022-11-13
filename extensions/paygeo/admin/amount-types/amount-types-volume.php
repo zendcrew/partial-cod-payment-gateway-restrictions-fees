@@ -38,16 +38,16 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Volume' ) && !defined( 'PGEO_
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'per_volumes' => esc_html__( 'Discount Per Volume', 'zcpg-woo-paygeo' ),
-                    'prem_18' => esc_html__( 'Discount per volume (Premium)', 'zcpg-woo-paygeo' ),
-                    'prem_19' => esc_html__( 'Discount x volume (Premium)', 'zcpg-woo-paygeo' ),
+                    'per_volumes' => esc_html__( 'Discount Per Volume', 'pgeo-paygeo' ),
+                    'prem_18' => esc_html__( 'Discount per volume (Premium)', 'pgeo-paygeo' ),
+                    'prem_19' => esc_html__( 'Discount x volume (Premium)', 'pgeo-paygeo' ),
                 );
             }
 
             return array(
-                'per_volumes' => esc_html__( 'Fee Per Volume', 'zcpg-woo-paygeo' ),
-                'prem_18' => esc_html__( 'Fee per volume (Premium)', 'zcpg-woo-paygeo' ),
-                'prem_19' => esc_html__( 'Fee x volume (Premium)', 'zcpg-woo-paygeo' ),
+                'per_volumes' => esc_html__( 'Fee Per Volume', 'pgeo-paygeo' ),
+                'prem_18' => esc_html__( 'Fee per volume (Premium)', 'pgeo-paygeo' ),
+                'prem_19' => esc_html__( 'Fee x volume (Premium)', 'pgeo-paygeo' ),
             );
         }
 

@@ -19,15 +19,15 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Method_Options_Instructions' ) && !define
         }
 
         public static function get_groups( $in_groups, $method_id ) {
-            $in_groups[ 'order' ] = esc_html__( 'Order Settings', 'zcpg-woo-paygeo' );
+            $in_groups[ 'order' ] = esc_html__( 'Order Settings', 'pgeo-paygeo' );
             return $in_groups;
         }
 
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'instructions' ] = array(
-                'list_title' => esc_html__( 'Order - Instructions (Premium)', 'zcpg-woo-paygeo' ),
-                'title' => esc_html__( 'Order - Instructions (Premium)', 'zcpg-woo-paygeo' ),
+                'list_title' => esc_html__( 'Order - Instructions (Premium)', 'pgeo-paygeo' ),
+                'title' => esc_html__( 'Order - Instructions (Premium)', 'pgeo-paygeo' ),
                 'group_id' => 'order',
             );
 

@@ -16,13 +16,13 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Conditions_GeoLocation' ) && !defined( 'P
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'geo_locations' ] = esc_html__( 'GeoIP Locations', 'zcpg-woo-paygeo' );
+            $in_groups[ 'geo_locations' ] = esc_html__( 'GeoIP Locations', 'pgeo-paygeo' );
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
-            $in_list[ 'prem_1' ] = esc_html__( 'GeoIP Continents (Premium)', 'zcpg-woo-paygeo' );
-            $in_list[ 'prem_2' ] = esc_html__( 'GeoIP Countries (Premium)', 'zcpg-woo-paygeo' );
+            $in_list[ 'prem_1' ] = esc_html__( 'GeoIP Continents (Premium)', 'pgeo-paygeo' );
+            $in_list[ 'prem_2' ] = esc_html__( 'GeoIP Countries (Premium)', 'pgeo-paygeo' );
             
             return $in_list;
         }

@@ -53,8 +53,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Fee Amounts', 'zcpg-woo-paygeo' ),
-                        'desc' => esc_html__( 'List of fee amounts to apply, empty list will apply zero fee', 'zcpg-woo-paygeo' ),
+                        'title' => esc_html__( 'Fee Amounts', 'pgeo-paygeo' ),
+                        'desc' => esc_html__( 'List of fee amounts to apply, empty list will apply zero fee', 'pgeo-paygeo' ),
                     )
                 ),
             );
@@ -84,7 +84,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                 ),
                 'template_adder' => array(
                     'position' => 'right',
-                    'button_text' => esc_html__( 'Add Amount', 'zcpg-woo-paygeo' ),
+                    'button_text' => esc_html__( 'Add Amount', 'pgeo-paygeo' ),
                 ),
             );
 
@@ -99,7 +99,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                     'id' => 'fee_amount',
                     'head' => array(
                         'title' => '',
-                        'defaut_title' => esc_html__('Handling fee','zcpg-woo-paygeo' ),
+                        'defaut_title' => esc_html__('Gateway fee','pgeo-paygeo' ),
                         'title_field' => 'amount_type',
                     )
                 );
@@ -138,8 +138,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'id' => 'amount_type',
                         'type' => 'select2',
                         'column_size' => 2,
-                        'column_title' => esc_html__( 'Fee Type', 'zcpg-woo-paygeo' ),
-                        'tooltip' => esc_html__( 'Controls fee amount type', 'zcpg-woo-paygeo' ),
+                        'column_title' => esc_html__( 'Fee Type', 'pgeo-paygeo' ),
+                        'tooltip' => esc_html__( 'Controls fee amount type', 'pgeo-paygeo' ),
                         'disabled_list_filter' => 'paygeo-admin/get-disabled-grouped-list',
                         'default' => apply_filters( 'paygeo-admin/get-amount-types-default', 'cart_fixed', $args ),
                         'options' => $amount_types,
@@ -153,8 +153,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'id' => 'add_type',
                         'type' => 'select2',
                         'column_size' => 2,
-                        'tooltip' => esc_html__( 'Controls how the amount should be added to previously calculated amounts', 'zcpg-woo-paygeo' ),
-                        'column_title' => esc_html__( 'Addition / Subtraction', 'zcpg-woo-paygeo' ),
+                        'tooltip' => esc_html__( 'Controls how the amount should be added to previously calculated amounts', 'pgeo-paygeo' ),
+                        'column_title' => esc_html__( 'Addition / Subtraction', 'pgeo-paygeo' ),
                         'default' => 'add',
                         'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                         'options' => PGEO_PayGeo_Admin_Amount_Types::get_amount_add_methods( $args ),
@@ -164,8 +164,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'id' => 'set_conditions',
                         'type' => 'select2',
                         'column_size' => 1,
-                        'tooltip' => esc_html__( 'Validates amount conditions before amount calculation', 'zcpg-woo-paygeo' ),
-                        'column_title' => esc_html__( 'Apply Conditions', 'zcpg-woo-paygeo' ),
+                        'tooltip' => esc_html__( 'Validates amount conditions before amount calculation', 'pgeo-paygeo' ),
+                        'column_title' => esc_html__( 'Validate Conditions', 'pgeo-paygeo' ),
                         'default' => 'no',
                         'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                         'options' => self::get_set_condition_options(),
@@ -200,11 +200,11 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                 'id' => 'amount',
                 'type' => 'textbox',
                 'input_type' => 'number',
-                'tooltip' => esc_html__( 'Controls the amount to apply, based on fee type', 'zcpg-woo-paygeo' ),
+                'tooltip' => esc_html__( 'Controls the amount to apply, based on fee type', 'pgeo-paygeo' ),
                 'column_size' => 2,
-                'column_title' => esc_html__( 'Amount', 'zcpg-woo-paygeo' ),
+                'column_title' => esc_html__( 'Amount', 'pgeo-paygeo' ),
                 'default' => '0.00',
-                'placeholder' => esc_html__( '0.00', 'zcpg-woo-paygeo' ),
+                'placeholder' => esc_html__( '0.00', 'pgeo-paygeo' ),
                 'width' => '100%',
                 'attributes' => array(
                     'min' => '0',
@@ -222,8 +222,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                 'id' => 'base_on',
                 'type' => 'select2',
                 'column_size' => 4,
-                'column_title' => esc_html__( 'Based On', 'zcpg-woo-paygeo' ),
-                'tooltip' => esc_html__( 'Controls amount based on cart subtotals', 'zcpg-woo-paygeo' ),
+                'column_title' => esc_html__( 'Based On', 'pgeo-paygeo' ),
+                'tooltip' => esc_html__( 'Controls amount based on cart subtotals', 'pgeo-paygeo' ),
                 'default' => '2234343',
                 'data' => 'paygeo:cartfees_carttotals',
                 'width' => '100%',
@@ -242,8 +242,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
                 'id' => 'taxable',
                 'type' => 'select2',
                 'column_size' => 4,
-                'column_title' => esc_html__( 'Taxable', 'zcpg-woo-paygeo' ),
-                'tooltip' => esc_html__( 'Controls fee tax class', 'zcpg-woo-paygeo' ),
+                'column_title' => esc_html__( 'Tax Class', 'pgeo-paygeo' ),
+                'tooltip' => esc_html__( 'Controls fee tax class', 'pgeo-paygeo' ),
                 'default' => '--1',
                 'disabled_list_filter' => 'paygeo-admin/get-disabled-list',
                 'data' => 'paygeo:tax_options',
@@ -256,13 +256,13 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Fee_Rule_Panel_Fees' ) ) {
         private static function get_set_condition_options() {
             if ( !defined( 'PGEO_PAYGEO_PREMIUM' ) ) {
                 return array(
-                    'no' => esc_html__( 'No', 'zcpg-woo-paygeo' ),
-                    'prem_1' => esc_html__( 'Yes (Premium)', 'zcpg-woo-paygeo' ),
+                    'no' => esc_html__( 'No', 'pgeo-paygeo' ),
+                    'prem_1' => esc_html__( 'Yes (Premium)', 'pgeo-paygeo' ),
                 );
             }
             return array(
-                'no' => esc_html__( 'No', 'zcpg-woo-paygeo' ),
-                'yes' => esc_html__( 'Yes', 'zcpg-woo-paygeo' ),
+                'no' => esc_html__( 'No', 'pgeo-paygeo' ),
+                'yes' => esc_html__( 'Yes', 'pgeo-paygeo' ),
             );
         }
 

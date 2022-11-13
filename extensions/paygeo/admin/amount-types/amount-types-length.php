@@ -40,21 +40,21 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Length' ) && !defined( 'PGEO_
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $d_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Discount per length ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-                $d_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Discount x length ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+                $d_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Discount per length ([0]) (Premium)', 'pgeo-paygeo' ) );
+                $d_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Discount x length ([0]) (Premium)', 'pgeo-paygeo' ) );
 
                 return array(
-                    'per_lengths' => esc_html__( 'Discount Per Length', 'zcpg-woo-paygeo' ),
+                    'per_lengths' => esc_html__( 'Discount Per Length', 'pgeo-paygeo' ),
                     'prem_10' => $d_prem_10,
                     'prem_11' => $d_prem_11,
                 );
             }
 
-            $f_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Fee per length ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-            $f_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Fee x length ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+            $f_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Fee per length ([0]) (Premium)', 'pgeo-paygeo' ) );
+            $f_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Fee x length ([0]) (Premium)', 'pgeo-paygeo' ) );
 
             return array(
-                'per_lengths' => esc_html__( 'Fee Per Length', 'zcpg-woo-paygeo' ),
+                'per_lengths' => esc_html__( 'Fee Per Length', 'pgeo-paygeo' ),
                 'prem_10' => $f_prem_10,
                 'prem_11' => $f_prem_11,
             );

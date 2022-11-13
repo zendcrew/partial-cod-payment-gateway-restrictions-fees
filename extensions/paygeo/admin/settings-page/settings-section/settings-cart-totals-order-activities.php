@@ -9,7 +9,7 @@ if (!class_exists('PGEO_PayGeo_Admin_Order_Activity_Rules_Cart_Totals')) {
     class PGEO_PayGeo_Admin_Order_Activity_Rules_Cart_Totals {
 
         public static function init() {
-            add_filter('paygeo-admin/get-settings-section-fields', array(new self, 'get_fields'), 40);
+            add_filter('paygeo-admin/get-settings-section-fields', array(new self, 'get_fields'), 50);
         }
 
         public static function get_fields($in_fields) {
@@ -28,8 +28,8 @@ if (!class_exists('PGEO_PayGeo_Admin_Order_Activity_Rules_Cart_Totals')) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__('Orders Cron Tasks', 'zcpg-woo-paygeo'),
-                        'desc' => esc_html__('Order autopilots can be triggered from cron tasks, use these settings to create those cron tasks.', 'zcpg-woo-paygeo'),
+                        'title' => esc_html__('Orders Cron Tasks', 'pgeo-paygeo'),
+                        'desc' => esc_html__('Order autopilots can be triggered from cron tasks, use these settings to create those cron tasks.', 'pgeo-paygeo'),
                     ),
                     array(
                         'id' => 'is_any',

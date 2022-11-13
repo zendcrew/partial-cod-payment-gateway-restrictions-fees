@@ -99,7 +99,7 @@ if ( !class_exists( 'PGEO_PayGeo_Cart_Fees_Engine' ) ) {
 
 
                 if ( '' == $rule[ 'title' ] ) {
-                    $rule_fee[ 'title' ] = esc_html__( 'Fee', 'zcpg-woo-paygeo' );
+                    $rule_fee[ 'title' ] = esc_html__( 'Fee', 'pgeo-paygeo' );
                 }
 
                 $cart_data = $this->add_rule_fee( $cart_data, $rule_fee, $rule_head );

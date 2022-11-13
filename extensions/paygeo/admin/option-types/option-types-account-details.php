@@ -18,8 +18,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Method_Options_Account_Details' ) && !def
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'account_details' ] = array(
-                'list_title' => esc_html__( 'Order - Account Details (Premium)', 'zcpg-woo-paygeo' ),
-                'title' => esc_html__( 'Order - Account Details (Premium)', 'zcpg-woo-paygeo' ),
+                'list_title' => esc_html__( 'Order - Account Details (Premium)', 'pgeo-paygeo' ),
+                'title' => esc_html__( 'Order - Account Details (Premium)', 'pgeo-paygeo' ),
                 'group_id' => 'order',
             );
 

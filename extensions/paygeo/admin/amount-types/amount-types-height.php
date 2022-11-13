@@ -40,21 +40,21 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Height' ) && !defined( 'PGEO_
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $d_prem_14 = str_replace( '[0]', $height_unit, esc_html__( 'Discount per height ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-                $d_prem_15 = str_replace( '[0]', $height_unit, esc_html__( 'Discount x height ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+                $d_prem_14 = str_replace( '[0]', $height_unit, esc_html__( 'Discount per height ([0]) (Premium)', 'pgeo-paygeo' ) );
+                $d_prem_15 = str_replace( '[0]', $height_unit, esc_html__( 'Discount x height ([0]) (Premium)', 'pgeo-paygeo' ) );
 
                 return array(
-                    'per_heights' => esc_html__( 'Discount Per Height', 'zcpg-woo-paygeo' ),
+                    'per_heights' => esc_html__( 'Discount Per Height', 'pgeo-paygeo' ),
                     'prem_14' => $d_prem_14,
                     'prem_15' => $d_prem_15,
                 );
             }
 
-            $f_prem_14 = str_replace( '[0]', $height_unit, esc_html__( 'Fee per height ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-            $f_prem_15 = str_replace( '[0]', $height_unit, esc_html__( 'Fee x height ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+            $f_prem_14 = str_replace( '[0]', $height_unit, esc_html__( 'Fee per height ([0]) (Premium)', 'pgeo-paygeo' ) );
+            $f_prem_15 = str_replace( '[0]', $height_unit, esc_html__( 'Fee x height ([0]) (Premium)', 'pgeo-paygeo' ) );
 
             return array(
-                'per_heights' => esc_html__( 'Fee Per Height', 'zcpg-woo-paygeo' ),
+                'per_heights' => esc_html__( 'Fee Per Height', 'pgeo-paygeo' ),
                 'prem_14' => $f_prem_14,
                 'prem_15' => $f_prem_15,
             );

@@ -40,21 +40,21 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Amount_Type_Width' ) && !defined( 'PGEO_P
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $d_prem_12 = str_replace( '[0]', $width_unit, esc_html__( 'Discount per width ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-                $d_prem_13 = str_replace( '[0]', $width_unit, esc_html__( 'Discount x width ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+                $d_prem_12 = str_replace( '[0]', $width_unit, esc_html__( 'Discount per width ([0]) (Premium)', 'pgeo-paygeo' ) );
+                $d_prem_13 = str_replace( '[0]', $width_unit, esc_html__( 'Discount x width ([0]) (Premium)', 'pgeo-paygeo' ) );
 
                 return array(
-                    'per_widths' => esc_html__( 'Discount Per Width', 'zcpg-woo-paygeo' ),
+                    'per_widths' => esc_html__( 'Discount Per Width', 'pgeo-paygeo' ),
                     'prem_12' => $d_prem_12,
                     'prem_13' => $d_prem_13,
                 );
             }
 
-            $f_prem_12 = str_replace( '[0]', $width_unit, esc_html__( 'Fee per width ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
-            $f_prem_13 = str_replace( '[0]', $width_unit, esc_html__( 'Fee x width ([0]) (Premium)', 'zcpg-woo-paygeo' ) );
+            $f_prem_12 = str_replace( '[0]', $width_unit, esc_html__( 'Fee per width ([0]) (Premium)', 'pgeo-paygeo' ) );
+            $f_prem_13 = str_replace( '[0]', $width_unit, esc_html__( 'Fee x width ([0]) (Premium)', 'pgeo-paygeo' ) );
 
             return array(
-                'per_widths' => esc_html__( 'Fee Per Width', 'zcpg-woo-paygeo' ),
+                'per_widths' => esc_html__( 'Fee Per Width', 'pgeo-paygeo' ),
                 'prem_12' => $f_prem_12,
                 'prem_13' => $f_prem_13,
             );
