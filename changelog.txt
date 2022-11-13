@@ -1,15 +1,2 @@
-
-
-
-Free plugin name: Not available yet
-
-To-Do List
-==========
-
-
-
-
-
-
-    
-
+--/--/2022 version 1.0
+- Initial Release
