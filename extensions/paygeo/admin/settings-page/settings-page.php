@@ -47,9 +47,6 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             add_filter( 'reon/sanitize-paygeo_kses_post', array( new self(), 'sanitize_paygeo_kses_post_box' ), 1, 4 );
 
             add_filter( 'plugin_action_links_' . plugin_basename( PGEO_PAYGEO_FILE ), array( new self(), 'get_plugin_links' ), 10, 1 );
-
-            add_action( 'reon/before-save-' . self::$option_name . '-options', array( new self(), 'set_is_admin_page' ), 1 );
-            add_action( 'reon/before-import-' . self::$option_name . '-options', array( new self(), 'set_is_admin_page' ), 1 );
         }
 
         public static function get_option_name() {
@@ -93,7 +90,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
             }
 
             ob_clean();
-            
+
             $stored_methods = get_option( 'pgeo_paygeo_methods', false );
 
             if ( !$stored_methods ) {
@@ -423,15 +420,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
         }
 
         public static function sanitize_paygeo_kses_post_box( $sanitized_option, $raw_option, $field_id, $children ) {
+            
             return wp_kses_post( $raw_option );
-        }
-
-        public static function set_is_admin_page( $instance_id ) {
-
-            if ( !defined( 'PGEO_PAYGEO_IS_ADMIN_PAGE' ) ) {
-
-                define( 'PGEO_PAYGEO_IS_ADMIN_PAGE', true );
-            }
         }
 
         public static function get_plugin_links( $links ) {
@@ -548,7 +538,7 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
                 $setion_titles[] = esc_html__( 'Settings & Restrictions', 'pgeo-paygeo' );
 
                 if ( PGEO_PayGeo_Extension::is_risky_method( $method_id ) ) {
-                    
+
                     $setion_titles[] = esc_html__( 'Partial Payments', 'pgeo-paygeo' );
                 }
 
@@ -568,8 +558,15 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
         private static function is_admin_page() {
 
-            if ( defined( 'PGEO_PAYGEO_IS_ADMIN_PAGE' ) ) {
+            $options_name = '';
 
+            if ( isset( $_POST[ 'option_name' ] ) ) {
+
+                $options_name = sanitize_key( $_POST[ 'option_name' ] );
+            }
+
+            if ( self::get_option_name() == $options_name ) {
+                
                 return true;
             }
 
@@ -577,6 +574,8 @@ if ( !class_exists( 'PGEO_PayGeo_Admin_Page' ) ) {
 
                 return true;
             }
+
+            return false;
         }
 
     }
