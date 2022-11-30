@@ -1,0 +1,1964 @@
+# Copyright (C) 2022 zendcrew
+# This file is distributed under the same license as the WooCommerce Partial COD - Payment Gateway Restrictions & Fees plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Partial COD - Payment Gateway Restrictions & Fees 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/partial-cod-payment-gateway-restrictions-fees\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-11-25T22:24:25+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: woopcd-partialcod\n"
+
+#. Plugin Name of the plugin
+msgid "WooCommerce Partial COD - Payment Gateway Restrictions & Fees"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew"
+msgstr ""
+
+#. Description of the plugin
+msgid "A powerful, flexible and easy-to-use WooCommerce extention that can be used to manage payment availability and other gateway options based on product rules and conditions."
+msgstr ""
+
+#. Author of the plugin
+msgid "zendcrew"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://codecanyon.net/user/zendcrew?ref=zendcrew"
+msgstr ""
+
+#: main/admin/admin-data-list/admin-data-list-tax-classes.php:17
+msgid "Not taxable"
+msgstr ""
+
+#: main/admin/admin-data-list/admin-data-list-tax-classes.php:18
+msgid "Based on items tax options"
+msgstr ""
+
+#: main/admin/admin-data-list/admin-data-list-tax-classes.php:19
+msgid "Standard rates"
+msgstr ""
+
+#: main/admin/admin-data-list/admin-data-list-tax-classes.php:29
+msgid " (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:43
+msgid "Discounts Per Items"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:44
+msgid "Discount per cart line (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:45
+msgid "Discount per item quantity (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:46
+msgid "Discount per product (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:47
+msgid "Discount per variation (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:48
+msgid "Percentage discount per item (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:53
+msgid "Fee Per Items"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:54
+msgid "Fee per cart lines (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:55
+msgid "Fee per item quantity (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:56
+msgid "Fee per product (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:57
+msgid "Fee per variation (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart-items.php:58
+msgid "Percentage fee per item (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:27
+#: main/admin/condition-types/condition-types-cart.php:18
+msgid "Cart"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:75
+msgid "Shipping Classes"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:76
+msgid "Controls which shipping classes should be included"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:81
+msgid "Search shipping classes..."
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:94
+msgid "Equals To"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:95
+msgid "Controls how the shipping classes should be included"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:98
+#: main/admin/condition-types/condition-types-billing-address.php:53
+#: main/admin/condition-types/condition-types-billing-address.php:83
+#: main/admin/condition-types/condition-types-billing-address.php:113
+#: main/admin/condition-types/condition-types-cart-items.php:51
+#: main/admin/condition-types/condition-types-cart-items.php:88
+#: main/admin/condition-types/condition-types-cart-items.php:125
+#: main/admin/condition-types/condition-types-customer.php:42
+#: main/admin/condition-types/condition-types-shipping-address.php:53
+#: main/admin/condition-types/condition-types-shipping-address.php:83
+#: main/admin/condition-types/condition-types-shipping-address.php:113
+#: main/admin/condition-types/condition-types-shipping.php:64
+#: main/admin/condition-types/condition-types-shipping.php:93
+#: main/admin/condition-types/condition-types-shipping.php:123
+msgid "Any in the list"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:99
+msgid "Any NOT in the list"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:130
+msgid "Fixed discount"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:131
+msgid "Discount per shipping classes"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:132
+msgid "Discount per categories (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:133
+msgid "Discount per tags (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:134
+msgid "Percentage discount"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:139
+msgid "Fixed fee"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:140
+msgid "Fee per shipping classes"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:141
+msgid "Fee per categories (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:142
+msgid "Fee per tags (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-cart.php:143
+msgid "Percentage fee"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-height.php:43
+msgid "Discount per height ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-height.php:44
+msgid "Discount x height ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-height.php:47
+msgid "Discount Per Height"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-height.php:53
+msgid "Fee per height ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-height.php:54
+msgid "Fee x height ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-height.php:57
+msgid "Fee Per Height"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-length.php:43
+msgid "Discount per length ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-length.php:44
+msgid "Discount x length ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-length.php:47
+msgid "Discount Per Length"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-length.php:53
+msgid "Fee per length ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-length.php:54
+msgid "Fee x length ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-length.php:57
+msgid "Fee Per Length"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-surface-area.php:41
+msgid "Discount Per Surface Area"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-surface-area.php:42
+msgid "Discount per surface area (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-surface-area.php:43
+msgid "Discount x surface area (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-surface-area.php:48
+msgid "Fee Per Surface Area"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-surface-area.php:49
+msgid "Fee per surface area (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-surface-area.php:50
+msgid "Fee x surface area (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-volume.php:41
+msgid "Discount Per Volume"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-volume.php:42
+msgid "Discount per volume (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-volume.php:43
+msgid "Discount x volume (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-volume.php:48
+msgid "Fee Per Volume"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-volume.php:49
+msgid "Fee per volume (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-volume.php:50
+msgid "Fee x volume (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-weight.php:43
+msgid "Discount per weight ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-weight.php:44
+msgid "Discount x weight ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-weight.php:47
+msgid "Discount Per Weight"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-weight.php:53
+msgid "Fee per weight ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-weight.php:54
+msgid "Fee x weight ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-weight.php:57
+msgid "Fee Per Weight"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-width.php:43
+msgid "Discount per width ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-width.php:44
+msgid "Discount x width ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-width.php:47
+msgid "Discount Per Width"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-width.php:53
+msgid "Fee per width ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-width.php:54
+msgid "Fee x width ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types-width.php:57
+msgid "Fee Per Width"
+msgstr ""
+
+#: main/admin/amount-types/amount-types.php:76
+msgid "Add to previous amounts"
+msgstr ""
+
+#: main/admin/amount-types/amount-types.php:80
+msgid "Subtract from previous amounts (Premium)"
+msgstr ""
+
+#: main/admin/amount-types/amount-types.php:81
+msgid "Override previous amounts (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:25
+msgid "Billing Address"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:33
+msgid "Billing Continents (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:35
+msgid "Billing Continents"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:38
+msgid "Billing Countries"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:39
+msgid "Billing States"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:40
+msgid "Billing Cities"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:41
+msgid "Billing Postcode / ZIP"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:54
+#: main/admin/condition-types/condition-types-billing-address.php:84
+#: main/admin/condition-types/condition-types-billing-address.php:114
+#: main/admin/condition-types/condition-types-cart-items.php:55
+#: main/admin/condition-types/condition-types-cart-items.php:92
+#: main/admin/condition-types/condition-types-cart-items.php:129
+#: main/admin/condition-types/condition-types-customer.php:46
+#: main/admin/condition-types/condition-types-shipping-address.php:54
+#: main/admin/condition-types/condition-types-shipping-address.php:84
+#: main/admin/condition-types/condition-types-shipping-address.php:114
+#: main/admin/condition-types/condition-types-shipping.php:68
+#: main/admin/condition-types/condition-types-shipping.php:97
+#: main/admin/condition-types/condition-types-shipping.php:127
+msgid "None in the list"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:67
+msgid "Billing Countries..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:97
+msgid "Billing States..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:125
+#: main/admin/condition-types/condition-types-shipping-address.php:125
+msgid "Seperate with comma, (e.g Jakarta, Delhi, Manila)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:140
+#: main/admin/condition-types/condition-types-shipping-address.php:140
+msgid "Match"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:141
+#: main/admin/condition-types/condition-types-shipping-address.php:141
+msgid "Not match"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-billing-address.php:152
+#: main/admin/condition-types/condition-types-shipping-address.php:152
+msgid "e.g 1815, 870*, [1870 - 9999], DSE, LDS"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:20
+msgid "Cart Item Quantity"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:27
+msgid "Products Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:28
+msgid "Variations Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:29
+msgid "Categories Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:30
+msgid "Tags Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:31
+msgid "Attributes Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:32
+msgid "Virtual Products Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:33
+msgid "Tax Classes Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:34
+msgid "Shipping Classes Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-quantity.php:35
+msgid "Product Meta Fields Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:20
+msgid "Cart Item Subtotals"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:27
+msgid "Products Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:28
+msgid "Variations Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:29
+msgid "Categories Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:30
+msgid "Tags Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:31
+msgid "Attributes Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:32
+msgid "Virtual Products Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:33
+msgid "Tax Classes Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:34
+msgid "Shipping Classes Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items-subtotals.php:35
+msgid "Product Meta Fields Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:24
+msgid "Items In Cart"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:31
+msgid "Products In Cart"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:32
+msgid "Variations In Cart (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:33
+msgid "Categories In Cart"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:34
+msgid "Tags In Cart (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:35
+msgid "Attributes In Cart (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:36
+msgid "Virtual Products In Cart (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:37
+msgid "Tax Classes In Cart (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:38
+msgid "Shipping Classes In Cart"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:39
+msgid "Product Meta Fields In Cart (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:52
+#: main/admin/condition-types/condition-types-cart-items.php:89
+#: main/admin/condition-types/condition-types-cart-items.php:126
+#: main/admin/condition-types/condition-types-customer.php:43
+#: main/admin/condition-types/condition-types-shipping.php:65
+#: main/admin/condition-types/condition-types-shipping.php:94
+#: main/admin/condition-types/condition-types-shipping.php:124
+msgid "All in the list"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:53
+#: main/admin/condition-types/condition-types-cart-items.php:90
+#: main/admin/condition-types/condition-types-cart-items.php:127
+#: main/admin/condition-types/condition-types-customer.php:44
+#: main/admin/condition-types/condition-types-shipping.php:66
+#: main/admin/condition-types/condition-types-shipping.php:95
+#: main/admin/condition-types/condition-types-shipping.php:125
+msgid "Only in the list"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:54
+#: main/admin/condition-types/condition-types-cart-items.php:91
+#: main/admin/condition-types/condition-types-cart-items.php:128
+#: main/admin/condition-types/condition-types-customer.php:45
+#: main/admin/condition-types/condition-types-shipping.php:67
+#: main/admin/condition-types/condition-types-shipping.php:96
+#: main/admin/condition-types/condition-types-shipping.php:126
+msgid "Only all in the list"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:66
+msgid "Search products..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:103
+msgid "Search categories..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-items.php:139
+msgid "Select shipping classes..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:24
+msgid "Cart Totals"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:58
+msgid "More than or equal to"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:59
+msgid "More than"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:60
+msgid "Less than or equal to"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:61
+msgid "Less than"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:62
+msgid "Equal to"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:63
+msgid "Not equal to"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:74
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:207
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:207
+msgid "0.00"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:173
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:242
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:229
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:165
+msgid "Subtotal including tax"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart-totals.php:174
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:248
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:235
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:171
+msgid "Subtotal excluding tax"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart.php:23
+msgid "Cart Total Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart.php:25
+msgid "Cart Total Weight ([0])  (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart.php:28
+msgid "Number Of Cart Items (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart.php:31
+msgid "Applied Coupons (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-cart.php:34
+msgid "Partial Payment Method (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:18
+msgid "Customer Value"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:26
+msgid "Coupons Used (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:27
+msgid "Totals Spent ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:28
+msgid "Last Order Date (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:29
+msgid "Last Order Amount ([0]) (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:31
+msgid "Average ([0]) Per Order (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:32
+msgid "Maximum ([0]) Per Order (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:33
+msgid "Minimum ([0]) Per Order (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:35
+msgid "Number Of Orders (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer-value.php:36
+msgid "Number Of Reviews (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:20
+msgid "Customer"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:26
+msgid "Customers (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:27
+msgid "Customer Is Logged In (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:28
+msgid "User Roles"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:29
+msgid "User Capabilities (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:30
+msgid "User Meta Field (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-customer.php:57
+msgid "Search user roles..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:18
+msgid "Date &amp; Time"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:24
+msgid "Date (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:25
+msgid "Time (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:26
+msgid "Date &amp; Time (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:27
+msgid "Days Of Week (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:28
+msgid "Days Of Month (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-datetime.php:29
+msgid "Months Of Year (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-geolocation.php:19
+msgid "GeoIP Locations"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-geolocation.php:24
+msgid "GeoIP Continents (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-geolocation.php:25
+msgid "GeoIP Countries (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-quantity.php:19
+msgid "Purchase History Quantities"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-quantity.php:26
+msgid "Purchased Products Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-quantity.php:27
+msgid "Purchased Variations Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-quantity.php:28
+msgid "Purchased Categories Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-quantity.php:29
+msgid "Purchased Tags Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-quantity.php:30
+msgid "Purchased Attributes Quantity (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-subtotal.php:19
+msgid "Purchase History Subtotal"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-subtotal.php:26
+msgid "Purchased Products Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-subtotal.php:27
+msgid "Purchased Variations Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-subtotal.php:28
+msgid "Purchased Categories Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-subtotal.php:29
+msgid "Purchased Tags Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history-subtotal.php:30
+msgid "Purchased Attributes Subtotal (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history.php:18
+msgid "Purchase History"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history.php:24
+msgid "Purchased Products (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history.php:25
+msgid "Purchased Variations (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history.php:26
+msgid "Purchased Categories (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history.php:27
+msgid "Purchased Tags (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-purchase-history.php:28
+msgid "Purchased Attributes (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:25
+msgid "Shipping Address"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:33
+msgid "Shipping Continents (Premium)"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:35
+msgid "Shipping Continents"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:38
+msgid "Shipping Countries"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:39
+msgid "Shipping States"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:40
+msgid "Shipping Cities"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:41
+msgid "Shipping Postcode / ZIP"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:67
+msgid "Shipping Countries..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping-address.php:97
+msgid "Shipping States..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:24
+msgid "Shipping"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:31
+msgid "Needs Shipping"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:32
+msgid "Shipping Zones"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:33
+msgid "Shipping Methods"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:34
+msgid "Shipping Rates"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:46
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:272
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:72
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:265
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:74
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:98
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:72
+msgid "Yes"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:47
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:266
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:271
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:71
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:259
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:264
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:27
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:73
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:97
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:24
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:71
+msgid "No"
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:79
+msgid "Shipping zones..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:108
+msgid "Shipping methods..."
+msgstr ""
+
+#: main/admin/condition-types/condition-types-shipping.php:138
+msgid "Shipping rates..."
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:28
+msgid "Shop Conditions"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:33
+msgid "All conditions should match"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:34
+msgid "At least one condition should match (Premium)"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:61
+msgid "Add Condition"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:139
+msgid "settings"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:143
+msgid "partial payment"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:148
+msgid "method settings"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:153
+msgid "cart discount"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:158
+msgid "gateway fee"
+msgstr ""
+
+#: main/admin/logic-types/logic-types-conditions.php:161
+msgid "List of conditions in which this %s should apply, empty conditions will apply in all cases"
+msgstr ""
+
+#: main/admin/notices/notices-view-pro.php:2
+#: main/admin/notices/notices-view.php:2
+msgid "Hey, I noticed you having been using <strong>Paygeo - WooCommerce Partial COD - Gateway Restrictions & Fees</strong>, that’s awesome! Could you please do me a favor and give it a 5-star rating to help us spread the word?"
+msgstr ""
+
+#: main/admin/notices/notices-view-pro.php:4
+#: main/admin/notices/notices-view.php:4
+msgid "Yes! You deserve it"
+msgstr ""
+
+#: main/admin/notices/notices-view-pro.php:5
+#: main/admin/notices/notices-view.php:5
+msgid "Nah, maybe later"
+msgstr ""
+
+#: main/admin/notices/notices-view-pro.php:6
+#: main/admin/notices/notices-view.php:6
+msgid "I already did"
+msgstr ""
+
+#: main/admin/option-types/option-types-account-details.php:21
+#: main/admin/option-types/option-types-account-details.php:22
+msgid "Order - Account Details (Premium)"
+msgstr ""
+
+#: main/admin/option-types/option-types-button-text.php:20
+#: main/admin/option-types/option-types-button-text.php:21
+msgid "Checkout - Button Text (Premium)"
+msgstr ""
+
+#: main/admin/option-types/option-types-button-text.php:23
+#: main/admin/option-types/option-types-checkout-all.php:87
+msgid "Controls payment method order button text on checkout page"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:22
+msgid "Checkout Settings"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:29
+#: main/admin/option-types/option-types-checkout-all.php:30
+msgid "Checkout - All Settings"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:54
+msgid "Restriction"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:55
+#: main/admin/option-types/option-types-restriction.php:23
+msgid "Controls payment method availability on checkout page"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:58
+msgid "Is available"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:59
+msgid "Is restricted"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:68
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:28
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:27
+msgid "Title"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:69
+#: main/admin/option-types/option-types-title.php:24
+msgid "Controls payment method title on checkout page"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:86
+msgid "Place Order Button Text"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:113
+msgid "Icon Url"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:114
+#: main/admin/option-types/option-types-icon-url.php:23
+msgid "Controls payment method icon url on checkout page"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:139
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:58
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:57
+msgid "Description"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:140
+#: main/admin/option-types/option-types-description.php:22
+msgid "Controls payment method description on checkout page"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:156
+msgid "Restriction Message"
+msgstr ""
+
+#: main/admin/option-types/option-types-checkout-all.php:157
+msgid "Controls payment method the restriction message on checkout page"
+msgstr ""
+
+#: main/admin/option-types/option-types-description.php:19
+#: main/admin/option-types/option-types-description.php:20
+msgid "Checkout - Description (Premium)"
+msgstr ""
+
+#: main/admin/option-types/option-types-icon-url.php:20
+#: main/admin/option-types/option-types-icon-url.php:21
+msgid "Checkout - Icon Url (Premium)"
+msgstr ""
+
+#: main/admin/option-types/option-types-instructions.php:22
+msgid "Order Settings"
+msgstr ""
+
+#: main/admin/option-types/option-types-instructions.php:29
+#: main/admin/option-types/option-types-instructions.php:30
+msgid "Order - Instructions (Premium)"
+msgstr ""
+
+#: main/admin/option-types/option-types-restriction.php:20
+#: main/admin/option-types/option-types-restriction.php:21
+msgid "Checkout - Restriction (Premium)"
+msgstr ""
+
+#: main/admin/option-types/option-types-title.php:21
+#: main/admin/option-types/option-types-title.php:22
+msgid "Checkout - Title (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:57
+msgid "Discount Amounts"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:58
+msgid "List of discount amounts to apply, empty list will apply zero discount"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:88
+msgid "Add Discount"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:103
+#: main/public/modules/cart-discounts/cart-discounts-engine.php:104
+msgid "Discount"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:143
+msgid "Discount Type"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:144
+msgid "Controls discount amount type"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:158
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:156
+msgid "Controls how the amount should be added to previously calculated amounts"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:159
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:157
+msgid "Addition / Subtraction"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:169
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:167
+msgid "Validates amount conditions before amount calculation"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:170
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:168
+msgid "Validate Conditions"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:203
+msgid "Controls the amount to apply, based on discount type"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:205
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:205
+msgid "Amount"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:225
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:225
+msgid "Based On"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:226
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:226
+msgid "Controls amount based on cart subtotals"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:244
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:245
+msgid "Tax Class"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:245
+msgid "Controls discount tax class"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:267
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:260
+msgid "Yes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-min-max.php:50
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:54
+msgid "Discounts Limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-min-max.php:51
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:55
+msgid "Controls cart discounts limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-min-max.php:55
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:59
+#: main/admin/settings-page/cart-fees-section/cart-fees-panel-min-max.php:52
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:58
+msgid "No limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-min-max.php:56
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:60
+#: main/admin/settings-page/cart-fees-section/cart-fees-panel-min-max.php:53
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:59
+msgid "Fixed amount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-min-max.php:57
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:61
+#: main/admin/settings-page/cart-fees-section/cart-fees-panel-min-max.php:54
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:60
+msgid "Percentage amount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:26
+msgid "Controls discount titles on cart and checkout pages"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:30
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:40
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:60
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:29
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:39
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:59
+#: main/admin/settings-page/method-options-section/method-options-rule-panel.php:55
+#: main/admin/settings-page/settings-section/settings-custom-css.php:36
+msgid "Type here..."
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:36
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:35
+#: main/admin/settings-page/method-options-section/method-options-rule-panel.php:51
+msgid "Adds a private note for reference purposes"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:38
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:37
+#: main/admin/settings-page/method-options-section/method-options-rule-panel.php:53
+msgid "Admin Note"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:56
+msgid "Controls discount description on cart and checkout pages"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:67
+msgid "Apply As Coupon"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:68
+msgid "Applies cart discount as coupon on to the cart"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:80
+msgid "Applies coupon code to the cart"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:82
+msgid "Coupon Code"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:84
+msgid "xxx-xxxxx"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:109
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:66
+msgid "Tax Calculation"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:110
+msgid "Determines how cart discount taxes should be calculated"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:113
+msgid "Apply discount exclusive of taxes"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:114
+msgid "Apply discount inclusive of taxes"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:140
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:90
+msgid "Checkout Notification"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-options.php:141
+msgid "Controls discount notifications on cart and checkout pages"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:69
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:68
+#: main/admin/settings-page/method-options-section/method-options-section.php:54
+msgid "Apply Mode"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:70
+msgid "Controls discounts apply mode"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:100
+msgid "Please upgrade to premium version in order to add more discounts"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:113
+msgid "New Cart Discount"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:125
+msgid "[0] discount"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:172
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:173
+#: main/admin/settings-page/method-options-section/method-options-section.php:154
+msgid "Enable"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:173
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:174
+#: main/admin/settings-page/method-options-section/method-options-section.php:155
+msgid "Disable"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:236
+msgid "Apply this and other discounts"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:240
+msgid "Apply only this discount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:241
+msgid "Apply if other discounts are valid (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:242
+msgid "Apply if no other valid discounts (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:249
+msgid "Apply all valid discounts"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:253
+msgid "Apply first valid discount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:254
+msgid "Apply last valid discount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:255
+msgid "Apply the highest valid discount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:256
+msgid "Apply the lowest valid lower discount (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-discounts-section/cart-discounts-section.php:258
+msgid "Do not apply any discount"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-panel-min-max.php:47
+msgid "Fees Limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-panel-min-max.php:48
+msgid "Controls cart fees limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:56
+msgid "Fee Amounts"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:57
+msgid "List of fee amounts to apply, empty list will apply zero fee"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:87
+msgid "Add Amount"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:102
+msgid "Gateway fee"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:141
+msgid "Fee Type"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:142
+msgid "Controls fee amount type"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:203
+msgid "Controls the amount to apply, based on fee type"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:246
+msgid "Controls fee tax class"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:25
+msgid "Controls gateway fee titles on cart and checkout pages"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:55
+msgid "Controls gateway fee description on cart and checkout pages"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:67
+msgid "Determines how gateway fee taxes should be calculated"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:70
+msgid "Apply fee exclusive of taxes"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:71
+msgid "Apply fee inclusive of taxes"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-options.php:91
+msgid "Controls gateway fee notifications on cart and checkout pages"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:53
+msgid "Gateway Fees Limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:54
+msgid "Controls gateway fees limit"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:69
+msgid "Controls fees apply mode"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:100
+msgid "Please upgrade to premium version in order to add more fees"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:113
+msgid "New Gateway Fee"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:128
+msgid "[0] gateway fee"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:236
+msgid "Apply this and other fees"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:240
+msgid "Apply only this fee (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:241
+msgid "Apply if other fees are valid (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:242
+msgid "Apply if no other valid fees (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:249
+msgid "Apply all valid fees"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:253
+msgid "Apply first valid fee (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:254
+msgid "Apply last valid fee (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:255
+msgid "Apply the highest valid fee (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:256
+msgid "Apply the lowest valid fee (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/cart-fees-section/cart-fees-section.php:258
+msgid "Do not apply any fee"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-rule-panel-options.php:62
+msgid "Method Settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-rule-panel-options.php:63
+msgid "List of payment method settings to apply, empty list will not apply any settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-rule-panel-options.php:98
+msgid "Add Settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:55
+msgid "Controls payment method apply mode"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:85
+msgid "Please upgrade to premium version in order to add more settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:98
+msgid "New Settings & Restrictions "
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:110
+msgid "[0] options"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:168
+msgid "Do not apply any settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:214
+msgid "Apply this and other settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:218
+msgid "Apply only this settings (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:219
+msgid "Apply if other settings are valid (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:220
+msgid "Apply if no other valid settings (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:227
+msgid "Apply all valid settings"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:231
+msgid "Apply first valid settings (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/method-options-section/method-options-section.php:232
+msgid "Apply last valid settings (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/order-activities-section/order-activities-section.php:46
+#: main/admin/settings-page/settings-page.php:314
+#: main/admin/settings-page/settings-page.php:551
+msgid "Order Autopilots"
+msgstr ""
+
+#: main/admin/settings-page/order-activities-section/order-activities-section.php:47
+msgid "Create unlimited number of order autopilots"
+msgstr ""
+
+#: main/admin/settings-page/risk-free-section/risk-free-section.php:43
+#: main/admin/settings-page/settings-page.php:286
+#: main/admin/settings-page/settings-page.php:544
+msgid "Partial Payments"
+msgstr ""
+
+#: main/admin/settings-page/risk-free-section/risk-free-section.php:44
+msgid "Create unlimited number of partial payments"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:153
+msgid "Lite v%s"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:157
+msgid "Premium v%s"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:173
+msgid "Partial COD"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:184
+#: main/admin/settings-page/settings-page.php:186
+msgid "Done!!"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:185
+msgid "Unable to save your settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:187
+msgid "Unable to reset reset your settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:188
+msgid "invalid nonce"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:192
+msgid "Partial COD - Gateway Restrictions & Fees"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:193
+msgid "Partial COD - Payment Gateway Restrictions & Fees"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:202
+#: main/admin/settings-page/settings-page.php:556
+msgid "Import / Export"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:204
+msgid "Import Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:205
+msgid "Here you can import new settings. Simply paste the settings url or data on the field below."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:206
+msgid "Import from url"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:207
+msgid "Paste the url to another site's settings below and click the 'Import Now' button."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:208
+msgid "Paste the url to another site's settings here..."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:209
+msgid "Import Data"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:210
+msgid "Paste your backup settings below and click the 'Import Now' button."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:211
+msgid "Paste your backup settings here..."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:212
+msgid "Import Now"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:213
+msgid "Warning! This will override all existing settings. proceed with caution!"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:216
+msgid "Export Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:217
+msgid "Here you can backup your current settings. You can later use it to restore your settings."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:218
+msgid "Download Data"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:219
+msgid "Export url"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:220
+msgid "Copy the url below, use it to transfer the settings from this site."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:221
+msgid "Export Data"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:222
+msgid "Copy the data below, use it as your backup."
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:226
+#: main/admin/settings-page/settings-page.php:231
+msgid "Reset All"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:227
+#: main/admin/settings-page/settings-page.php:232
+msgid "Reset Section"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:228
+#: main/admin/settings-page/settings-page.php:233
+msgid "Save Section"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:255
+#: main/admin/settings-page/settings-page.php:554
+msgid "General Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:276
+#: main/admin/settings-page/settings-page.php:538
+#: main/admin/settings-page/settings-page.php:540
+msgid "Settings & Restrictions"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:296
+#: main/admin/settings-page/settings-page.php:547
+msgid "Gateway Fees"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:305
+#: main/admin/settings-page/settings-page.php:549
+msgid "Cart Discounts"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:341
+msgid "This feature is available on premium version"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:343
+msgid "Premium Feature"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:348
+msgid "Available on premium version"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:435
+msgid "WooCommerce Partial COD - Premium (Add-On)"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:437
+msgid "Required by %s"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:446
+msgid "Documentation"
+msgstr ""
+
+#: main/admin/settings-page/settings-page.php:452
+msgid "Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:28
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:25
+msgid "Yes, show once (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:29
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:26
+msgid "Yes, always show (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:38
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:36
+msgid "Yes, show once"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:39
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:37
+msgid "Yes, always show"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:56
+msgid "Cart Discounts Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:57
+msgid "Use these settings to control cart discounts basic settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:69
+msgid "Enables cart discounts on cart page"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:70
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:68
+msgid "Enable On \"Cart\" Page"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:82
+msgid "Enables cart discount notifications"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:83
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:81
+msgid "Enable Notifications"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:93
+msgid "Replces discount coupon labels"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:94
+msgid "Replace Coupon Labels"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:109
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:94
+msgid "Cart Totals Calculations"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:110
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:95
+msgid "Use these settings to control what are included in the \"based on\" cart percentage totals &amp; the \"cart totals\" conditions"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:122
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:107
+msgid "Please upgrade to premium version in order to add more options"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:133
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:118
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:60
+msgid "Add Option"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:172
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:157
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:99
+msgid "Cart subtotal"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:173
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:158
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:100
+msgid "Title here..."
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:196
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:181
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:123
+msgid "Add subtotal"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:197
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:124
+msgid "Add subtotal tax"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:202
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:187
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:129
+msgid "Add coupons (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:203
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:188
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:130
+msgid "Add coupon taxes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:204
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:189
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:131
+msgid "Subtract coupons (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:205
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:190
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:132
+msgid "Subtract coupon taxes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:206
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:191
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:133
+msgid "Add fees (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:207
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:192
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:134
+msgid "Add fee taxes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:208
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:193
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:135
+msgid "Add shipping cost (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:209
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:194
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:136
+msgid "Add shipping cost tax (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:210
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:195
+msgid "Add partialcod discounts (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:211
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:196
+msgid "Add partialcod discount taxes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:212
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:197
+msgid "Subtract partialcod discounts (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-discounts.php:213
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:198
+msgid "Subtract partialcod discount taxes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:54
+msgid "Gateway Fees Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:55
+msgid "Use these settings to control gateway fees basic settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:67
+msgid "Enables gateway fees on cart page"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:80
+msgid "Enables gateway fee notifications"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:182
+msgid "Add subtotal Tax"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:199
+msgid "Add partialcod fees (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-fees.php:200
+msgid "Add partialcod fee taxes (Premium)"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:38
+msgid "Settings & Restrictions - Cart Totals Calculations"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:39
+msgid "Use these settings to control what are included in the \"cart totals\" conditions"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-totals-order-activities.php:31
+msgid "Orders Cron Tasks"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-cart-totals-order-activities.php:32
+msgid "Order autopilots can be triggered from cron tasks, use these settings to create those cron tasks."
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-custom-css.php:33
+msgid "Custom CSS"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-custom-css.php:34
+msgid "Additional css for discounts and fees html"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-risk-free.php:33
+msgid "Partial Payments Settings"
+msgstr ""
+
+#: main/admin/settings-page/settings-section/settings-risk-free.php:34
+msgid "Use these settings to control partial paymants basic settings"
+msgstr ""
+
+#: main/public/modules/cart-fees/cart-fees-engine.php:102
+msgid "Fee"
+msgstr ""
+
+#: partial-cod-payment-gateway-restrictions-fees.php:72
+msgid "WooCommerce Partial COD - Payment Gateway Restrictions & Fees to be installed and activated."
+msgstr ""

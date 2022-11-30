@@ -1,5 +1,5 @@
-=== Partial COD - Payment Gateway Restrictions & Fees ===
-Contributors: sundayfanz 
+=== WooCommerce Partial COD - Payment Gateway Restrictions & Fees ===
+Contributors: zendcrew, sundayfanz 
 Donate link: 
 Tags: Partial COD, Risk free COD, Cash on Delivery, COD, Payment Gateway Restrictions, Payment Method Restrictions, Cart Fees, Cart Discounts, COD Extra Fee, Smart COD, WooCommerce COD, ecommerce, WooCommerce
 Requires at least: 5.8

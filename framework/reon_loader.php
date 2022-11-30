@@ -5,9 +5,9 @@ if (!defined('ABSPATH')) {
 }
 
 
-if (!class_exists('PGEO_PayGeo_Framework_Loader')) {
+if (!class_exists('WOOPCD_PartialCOD_Framework_Loader')) {
 
-    class PGEO_PayGeo_Framework_Loader {
+    class WOOPCD_PartialCOD_Framework_Loader {
 
         public static function init() {
             add_filter('load_reon', array(new self(), 'get_framework'));
@@ -48,5 +48,5 @@ if (!class_exists('PGEO_PayGeo_Framework_Loader')) {
 
     }
 
-    PGEO_PayGeo_Framework_Loader::init();
+    WOOPCD_PartialCOD_Framework_Loader::init();
 }

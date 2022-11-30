@@ -12,7 +12,7 @@
         if (isset($template['head']['title'])) {
             $title = $template['head']['title'];
             if (isset($template['head']['subtitle'])) {
-                $title = wp_kses_post($title . '<span>' . $template['head']['subtitle'] . '</span>');
+                $title = wp_kses($title . '<span>' . $template['head']['subtitle'] . '</span>', ReonUtil::get_allow_html());
             }
             $default_title = '';
             if (isset($template['head']['defaut_title'])) {
@@ -30,7 +30,7 @@
                 $tooltip = '<span class="rn-tips" title="' . esc_attr($template['head']['tooltip']) . '"></span>';
             }
             ?>
-            <div class="rn-repeater-head-title"<?php echo wp_kses_post($default_title . $default_subtitle); ?>><?php echo wp_kses_post($title . $tooltip); ?></div>
+            <div class="rn-repeater-head-title"<?php echo wp_kses($default_title . $default_subtitle, ReonUtil::get_allow_html()); ?>><?php echo wp_kses($title . $tooltip, ReonUtil::get_allow_html()); ?></div>
             <?php
         }
 

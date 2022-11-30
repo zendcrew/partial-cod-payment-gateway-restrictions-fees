@@ -236,10 +236,10 @@ if (!class_exists('ReonOptionPage')) {
 
                 ReonCore::save_options($option_args, $options, false, $field_ids);
                 $output['status'] = 200;
-                $output['status_message'] = wp_kses_post( $option_args['ajax']['save_msg']);
+                $output['status_message'] = wp_kses( $option_args['ajax']['save_msg'],ReonUtil::get_allow_html());
             } else {
                 $output['status'] = 400;
-                $output['status_message'] = wp_kses_post( $option_args['ajax']['save_error_msg']);
+                $output['status_message'] = wp_kses( $option_args['ajax']['save_error_msg'],ReonUtil::get_allow_html());
             }
 
             header("Access-Control-Allow-Origin: *");
@@ -267,10 +267,10 @@ if (!class_exists('ReonOptionPage')) {
             if ($is_valid_nonce) {
                 ReonCore::reset_options($option_args, $field_ids);
                 $output['status'] = 200;
-                $output['status_message'] = wp_kses_post($option_args['ajax']['reset_msg']);
+                $output['status_message'] = wp_kses($option_args['ajax']['reset_msg'],ReonUtil::get_allow_html());
             } else {
                 $output['status'] = 400;
-                $output['status_message'] = wp_kses_post($option_args['ajax']['reset_error_msg']);
+                $output['status_message'] = wp_kses($option_args['ajax']['reset_error_msg'],ReonUtil::get_allow_html());
             }
 
             header("Access-Control-Allow-Origin: *");
@@ -305,10 +305,10 @@ if (!class_exists('ReonOptionPage')) {
                 
                 ReonCore::save_options($option_args, $opt, false);
                 $output['status'] = 200;
-                $output['status_message'] = wp_kses_post($option_args['ajax']['reset_msg']);
+                $output['status_message'] = wp_kses($option_args['ajax']['reset_msg'],ReonUtil::get_allow_html());
             } else {
                 $output['status'] = 400;
-                $output['status_message'] = wp_kses_post($option_args['ajax']['reset_error_msg']);
+                $output['status_message'] = wp_kses($option_args['ajax']['reset_error_msg'],ReonUtil::get_allow_html());
             }
 
             header("Access-Control-Allow-Origin: *");

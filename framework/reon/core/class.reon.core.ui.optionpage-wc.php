@@ -206,8 +206,8 @@ if (!class_exists('ReonOptionPageWC')) {
                     ?>
                     <th scope="row" class="titledesc">
                         <label for="<?php echo esc_attr($page_field['id']); ?>"><?php echo esc_html($page_field['title']); ?></label>
-                        <?php echo wp_kses_post($description['tooltip_html']); ?>
-                        &lrm; <p class="rn_wc_desc"><?php echo wp_kses_post($page_field['description']); ?></p>
+                        <?php echo wp_kses($description['tooltip_html'], ReonUtil::get_allow_html()); ?>
+                        &lrm; <p class="rn_wc_desc"><?php echo wp_kses($page_field['description'], ReonUtil::get_allow_html()); ?></p>
                     </th>
                     <td class="forminp forminp-<?php echo esc_attr(sanitize_title($page_field['type'])); ?>">
                         <?php

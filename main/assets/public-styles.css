@@ -1,0 +1,11 @@
+.partialcod-cart-desc {
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.partialcod-desc-mv {
+    display: none;
+    visibility: hidden;
+}

@@ -186,7 +186,7 @@ if ( !function_exists( 'reon_render_field_head' ) ) {
         <?php if ( $field[ 'desc' ] != '' ) {
             ?>
             <p class="rn-ui-head-desc">
-                <?php echo wp_kses_post( $field[ 'desc' ] ); ?>
+                <?php echo wp_kses( $field[ 'desc' ], ReonUtil::get_allow_html() ); ?>
             </p>
             <?php
         }
@@ -212,12 +212,12 @@ if ( !function_exists( 'reon_render_control_label' ) ) {
             if ( isset( $label[ 'single' ] ) && $label[ 'single' ] == true ) {
                 ?>
                 <label class="rn-field rn-single<?php echo esc_attr((isset( $label[ 'no-space' ] ) && $label[ 'no-space' ] == true) ? ' rn-no-space' : ''); ?>">
-                    <span class="rn-label<?php echo esc_attr(($title == '') ? ' rn-icon-label' : ''); ?>"<?php echo (isset( $label[ 'style' ] )) ? ' style="' .  ReonUtil::array_to_styles( $label[ 'style' ] ) . '"' : '';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo wp_kses_post($icon . $title); ?></span>
+                    <span class="rn-label<?php echo esc_attr(($title == '') ? ' rn-icon-label' : ''); ?>"<?php echo (isset( $label[ 'style' ] )) ? ' style="' .  ReonUtil::array_to_styles( $label[ 'style' ] ) . '"' : '';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo wp_kses($icon . $title, ReonUtil::get_allow_html()); ?></span>
                 </label>
                 <?php
             } else {
                 ?>
-                <span class="rn-label<?php echo esc_attr(($title == '') ? ' rn-icon-label' : ''); ?>"<?php echo (isset( $label[ 'style' ] )) ? ' style="' . ReonUtil::array_to_styles( $label[ 'style' ] ) . '"' : '';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo wp_kses_post($icon . $title); ?></span>
+                <span class="rn-label<?php echo esc_attr(($title == '') ? ' rn-icon-label' : ''); ?>"<?php echo (isset( $label[ 'style' ] )) ? ' style="' . ReonUtil::array_to_styles( $label[ 'style' ] ) . '"' : '';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo wp_kses($icon . $title, ReonUtil::get_allow_html()); ?></span>
                 <?php
             }
         }

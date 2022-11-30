@@ -85,7 +85,7 @@ if (!class_exists('ReonUtil')) {
                 $result = ' ' . esc_attr($type) . '="' . esc_attr($type) . '"';
             }
             if ($echo) {
-                echo wp_kses_post($result);
+                echo wp_kses($result,self::get_allow_html());
             }
             return $result;
         }
@@ -341,6 +341,46 @@ if (!class_exists('ReonUtil')) {
                 }
             }
             return $field_types;
+        }
+        
+        public static function get_allow_html( ) {
+            
+            $allowed_html = array(
+                'div' => array(
+                    'id' => true,
+                    'title' => true,
+                    'class' => true,
+                ),
+                'span' => array(
+                    'id' => true,
+                    'title' => true,
+                    'class' => true,
+                ),
+                'a' => array(
+                    'id' => true,
+                    'href' => true,
+                    'title' => true,
+                    'class' => true,
+                    'target' => true,
+                ),
+                'strong' => array(
+                    'id' => true,
+                    'title' => true,
+                    'class' => true,
+                ),
+                'b' => array(
+                    'id' => true,
+                    'title' => true,
+                    'class' => true,
+                ),
+                'i' => array(
+                    'id' => true,
+                    'title' => true,
+                    'class' => true,
+                ),
+            );
+
+            $allowed_html;
         }
 
         public static function recursive_require( $dir, $ingore_list = array(), $subdirs = array() ) {

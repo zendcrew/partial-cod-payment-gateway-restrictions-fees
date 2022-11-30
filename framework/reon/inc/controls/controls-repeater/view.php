@@ -60,7 +60,7 @@
                                 }
                                 ?>
                                 <label class="rn-field rn-single rn-no-space">
-                                    <span class="rn-label"><?php echo wp_kses_post($list_icon) . esc_html($list_label); ?></span>           
+                                    <span class="rn-label"><?php echo wp_kses($list_icon, ReonUtil::get_allow_html()) . esc_html($list_label); ?></span>           
                                 </label>
                                 <?php
                             }
