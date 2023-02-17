@@ -42,7 +42,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart' ) ) {
                 self::$method_ids = array_keys( $method_ids );
                 return self::$method_ids;
             }
-         
+
             // get method ids from wc save it into transient database
             ob_start();
             foreach ( WC()->payment_gateways()->payment_gateways() as $method ) {
@@ -51,11 +51,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart' ) ) {
                 }
                 $method_ids[] = $method->id;
             }
-            
+
             ob_clean();
 
             self::$method_ids = $method_ids;
-            
+
             return self::$method_ids;
         }
 
@@ -225,6 +225,28 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart' ) ) {
                 $cart_data[ 'method_ids' ] = apply_filters( 'woopcd_partialcod/get-cart-method-ids', $cart_data[ 'method_ids' ], $cart_data[ 'source' ], $cart );
             }
 
+            return self::get_customer( $cart_data, $cart );
+        }
+
+        private static function get_customer( $cart_data, $cart ) {
+
+            $cart_data[ 'customer' ] = array();
+
+            $customer = WC()->session->get( 'customer', false );
+
+            if ( $customer ) {
+
+                $cart_data[ 'customer' ] = array(
+                    'id' => $customer[ 'id' ],
+                    'email' => $customer[ 'email' ],
+                );
+            }
+
+            if ( has_filter( 'woopcd_partialcod/get-cart-customer' ) ) {
+
+                $cart_data[ 'customer' ] = apply_filters( 'woopcd_partialcod/get-cart-customer', $cart_data[ 'customer' ], $cart );
+            }
+           
             return $cart_data;
         }
 

@@ -481,10 +481,9 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 );
             } else {
 
-                $prm_link_text = esc_html__( 'Premium Version', 'table-rate-shipping-rates' );
                 $page_links[] = array(
                     'id' => 'woopcd_get_premium',
-                    'title' => '<span>' . $prm_link_text . '</span>',
+                    'title' => esc_html__( 'Premium Version', 'table-rate-shipping-rates' ),
                     'icon' => 'fa fa-file-text-o',
                     'href' => esc_url( 'https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew' ),
                     'target' => '_blank',

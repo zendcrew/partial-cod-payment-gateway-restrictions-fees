@@ -281,7 +281,7 @@
     top: 0px;
     position: relative;
     font-size: 14px;
-    margin-right: 9px;
+    margin-right: 7px;
 }
 
 #woopcd_partialcod_page .rn-option-page-tabs-list>li>a::before {
@@ -298,7 +298,7 @@
     font: var(--fa-font-solid);
 }
 
-#woopcd_get_premium span {
+#woopcd_get_premium {
     font-weight: 600;
     color: red;
 }

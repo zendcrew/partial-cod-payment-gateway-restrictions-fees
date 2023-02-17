@@ -10,10 +10,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Customer' ) && !defined( 'WOOP
 
         public function __construct() {
 
-            add_filter( 'woopcd_partialcod/validate-user_roles-condition', array( $this, 'validate_user_roles' ), 10 );
+            add_filter( 'woopcd_partialcod/validate-user_roles-condition', array( $this, 'validate_user_roles' ), 10, 2 );
         }
 
-        public function validate_user_roles( $condition ) {
+        public function validate_user_roles( $condition, $cart_data ) {
 
             if ( !isset( $condition[ 'user_roles' ] ) ) {
                 return false;
@@ -26,7 +26,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Customer' ) && !defined( 'WOOP
             }
 
 
-            $user_roles = WOOPCD_PartialCOD_Customer_Util::get_user_roles();
+            $user_roles = WOOPCD_PartialCOD_Customer_Util::get_user_roles( $cart_data );
 
             if ( !count( $user_roles ) ) {
                 return false;
