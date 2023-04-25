@@ -1,5 +1,7 @@
-1.1 – 17/02/2023
+= 1.2 - 26/04/2023 =
+- Updated admin page
+= 1.1 - 17/02/2023 =
 - Updated "Customers" conditions
 - Updated admin page
-1.0 27/11/2022
+= 1.0 - 27/11/2022 =
 - Initial Release
