@@ -1,6 +1,5 @@
+"use strict";
 jQuery(document).ready(function($) {
-    "use strict";
-
 
     setTimeout(function() {
         init_shipped_notice();
@@ -51,7 +50,7 @@ jQuery(document).ready(function($) {
 
                     if (!btn_is_wp) {
 
-                        obj.animate({ height: '0px', opacity: 0 }, 300, 'swing', function() {
+                        obj.animate({height: '0px', opacity: 0}, 300, 'swing', function() {
 
                             obj.remove();
                         });

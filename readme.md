@@ -3,8 +3,8 @@ Contributors: zendcrew, sundayfanz
 Donate link: 
 Tags: WooCommerce, Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce COD, Multiple Fees, Partial COD, Risk Free COD
 Requires at least: 5.8
-Tested up to: 6.2
-Stable tag: 1.2
+Tested up to: 6.2.2
+Stable tag: 1.2.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,10 +53,17 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 
 == Changelog ==
 
+= 1.2.1 - 07/06/2023 =
+[Fix] - Fixed payment gateway selection issue
+[Update] - Updated admin page
+[Update] - Updated Framework
+
 = 1.2 - 26/04/2023 =
-- Updated admin page
+[Update] - Updated admin page
+
 = 1.1 - 17/02/2023 =
-- Updated "Customers" conditions
-- Updated admin page
+[Update] - Updated "Customers" conditions
+[Update] - Updated admin page
+
 = 1.0 - 27/11/2022 =
-- Initial Release
+[Release] - Initial Release

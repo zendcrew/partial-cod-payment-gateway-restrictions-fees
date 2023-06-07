@@ -1,6 +1,6 @@
+"use strict";
 jQuery(document).ready(function($) {
-    "use strict";
-
+    
     if ('' != woopcd_partialcod.update_triggers) {
         $('form.checkout').on('change', woopcd_partialcod.update_triggers, function() {
             update_checkout();

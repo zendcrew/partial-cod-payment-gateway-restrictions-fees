@@ -217,9 +217,19 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart' ) ) {
 
         private static function get_payment_method( $cart_data, $cart ) {
 
-            $cart_data[ 'method_ids' ] = array(
-                'method_id' => WC()->session->get( 'chosen_payment_method', '' )
-            );
+            if ( class_exists( 'WOOPCD_PartialCOD_Cart_Session' ) ) {
+
+                $cart_session = WOOPCD_PartialCOD_Cart_Session::get_instance();
+
+                $cart_data[ 'method_ids' ] = array(
+                    'method_id' => $cart_session->get_payment_method_id()
+                );
+            } else {
+
+                $cart_data[ 'method_ids' ] = array(
+                    'method_id' => WC()->session->get( 'chosen_payment_method', '' )
+                );
+            }
 
             if ( has_filter( 'woopcd_partialcod/get-cart-method-ids' ) ) {
                 $cart_data[ 'method_ids' ] = apply_filters( 'woopcd_partialcod/get-cart-method-ids', $cart_data[ 'method_ids' ], $cart_data[ 'source' ], $cart );
@@ -246,7 +256,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart' ) ) {
 
                 $cart_data[ 'customer' ] = apply_filters( 'woopcd_partialcod/get-cart-customer', $cart_data[ 'customer' ], $cart );
             }
-           
+
             return $cart_data;
         }
 

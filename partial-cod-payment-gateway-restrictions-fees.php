@@ -4,17 +4,17 @@
  * Plugin Name: WooCommerce Partial COD - Payment Gateway Restrictions & Fees
  * Plugin URI: https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew
  * Description: A powerful, flexible and easy-to-use WooCommerce extention that can be used to manage payment availability and other gateway options based on product rules and conditions.
- * Version: 1.2
+ * Version: 1.2.1
  * Author: zendcrew
  * Author URI: https://codecanyon.net/user/zendcrew?ref=zendcrew
  * Text Domain: woopcd-partialcod
  * Domain Path: /languages/
  * Requires at least: 5.8
- * Tested up to: 6.2
+ * Tested up to: 6.2.2
  * Requires PHP: 5.6
  * 
  * WC requires at least: 5.6
- * WC tested up to: 7.1
+ * WC tested up to: 7.7
  */
 
 if ( !defined( 'ABSPATH' ) ) {
@@ -28,7 +28,7 @@ if ( is_admin() ) {
 
 if ( !defined( 'WOOPCD_PARTIALCOD_VERSION' ) ) {
 
-    define( 'WOOPCD_PARTIALCOD_VERSION', '1.2' );
+    define( 'WOOPCD_PARTIALCOD_VERSION', '1.2.1' );
 }
 
 if ( !defined( 'WOOPCD_PARTIALCOD_FILE' ) ) {

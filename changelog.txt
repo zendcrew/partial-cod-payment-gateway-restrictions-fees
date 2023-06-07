@@ -1,7 +1,14 @@
+= 1.2.1 - 07/06/2023 =
+[Fix] - Fixed payment gateway selection issue
+[Update] - Updated admin page
+[Update] - Updated Framework
+
 = 1.2 - 26/04/2023 =
-- Updated admin page
+[Update] - Updated admin page
+
 = 1.1 - 17/02/2023 =
-- Updated "Customers" conditions
-- Updated admin page
+[Update] - Updated "Customers" conditions
+[Update] - Updated admin page
+
 = 1.0 - 27/11/2022 =
-- Initial Release
+[Release] - Initial Release

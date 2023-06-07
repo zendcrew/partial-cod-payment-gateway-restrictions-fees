@@ -1,13 +1,13 @@
-# Copyright (C) 2022 zendcrew
+# Copyright (C) 2023 zendcrew
 # This file is distributed under the same license as the WooCommerce Partial COD - Payment Gateway Restrictions & Fees plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Partial COD - Payment Gateway Restrictions & "
-"Fees 1.0\n"
+"Fees 1.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/partial-cod-"
 "payment-gateway-restrictions-fees\n"
-"POT-Creation-Date: 2022-11-25T22:24:25+01:00\n"
-"PO-Revision-Date: 2022-11-25 22:26+0100\n"
+"POT-Creation-Date: 2023-06-07T01:37:33+02:00\n"
+"PO-Revision-Date: 2023-06-07 00:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Domain: woopcd-partialcod\n"
 
 #. Plugin Name of the plugin
@@ -968,9 +968,9 @@ msgstr ""
 #: main/admin/notices/notices-view-pro.php:2
 #: main/admin/notices/notices-view.php:2
 msgid ""
-"Hey, I noticed you having been using <strong>Paygeo - WooCommerce Partial "
-"COD - Gateway Restrictions & Fees</strong>, that’s awesome! Could you please "
-"do me a favor and give it a 5-star rating to help us spread the word?"
+"Hey, I noticed you having been using <strong>WooCommerce Partial COD - "
+"Gateway Restrictions & Fees</strong>, that’s awesome! Could you please do me "
+"a favor and give it a 5-star rating to help us spread the word?"
 msgstr ""
 
 #: main/admin/notices/notices-view-pro.php:4
@@ -1554,7 +1554,7 @@ msgstr ""
 
 #: main/admin/settings-page/order-activities-section/order-activities-section.php:46
 #: main/admin/settings-page/settings-page.php:314
-#: main/admin/settings-page/settings-page.php:551
+#: main/admin/settings-page/settings-page.php:550
 msgid "Order Autopilots"
 msgstr ""
 
@@ -1564,7 +1564,7 @@ msgstr ""
 
 #: main/admin/settings-page/risk-free-section/risk-free-section.php:43
 #: main/admin/settings-page/settings-page.php:286
-#: main/admin/settings-page/settings-page.php:544
+#: main/admin/settings-page/settings-page.php:543
 msgid "Partial Payments"
 msgstr ""
 
@@ -1610,7 +1610,7 @@ msgid "Partial COD - Payment Gateway Restrictions & Fees"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:202
-#: main/admin/settings-page/settings-page.php:556
+#: main/admin/settings-page/settings-page.php:555
 msgid "Import / Export"
 msgstr ""
 
@@ -1705,23 +1705,23 @@ msgid "Save Section"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:255
-#: main/admin/settings-page/settings-page.php:554
+#: main/admin/settings-page/settings-page.php:553
 msgid "General Settings"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:276
-#: main/admin/settings-page/settings-page.php:538
-#: main/admin/settings-page/settings-page.php:540
+#: main/admin/settings-page/settings-page.php:537
+#: main/admin/settings-page/settings-page.php:539
 msgid "Settings & Restrictions"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:296
-#: main/admin/settings-page/settings-page.php:547
+#: main/admin/settings-page/settings-page.php:546
 msgid "Gateway Fees"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:305
-#: main/admin/settings-page/settings-page.php:549
+#: main/admin/settings-page/settings-page.php:548
 msgid "Cart Discounts"
 msgstr ""
 
@@ -1991,6 +1991,6 @@ msgstr ""
 
 #: partial-cod-payment-gateway-restrictions-fees.php:72
 msgid ""
-"WooCommerce Partial COD - Payment Gateway Restrictions & Fees to be "
-"installed and activated."
+"WooCommerce Partial COD - Payment Gateway Restrictions & Fees requires "
+"WooCommerce to be installed and activated."
 msgstr ""

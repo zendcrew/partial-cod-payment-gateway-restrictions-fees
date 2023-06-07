@@ -8,7 +8,9 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( !class_exists( 'WOOPCD_PartialCOD' ) ) {
 
     require_once dirname( __FILE__ ) . '/utils/utils.php';
+    require_once dirname( __FILE__ ) . '/partialcod-session.php';
     require_once dirname( __FILE__ ) . '/partialcod-cart.php';
+
 
     require_once dirname( __FILE__ ) . '/modules/method-options/method-options.php';
     require_once dirname( __FILE__ ) . '/modules/cart-discounts/cart-discounts.php';
@@ -239,9 +241,9 @@ if ( !class_exists( 'WOOPCD_PartialCOD' ) ) {
             if ( is_admin() ) {
                 return $gateways;
             }
-            
+
             $this->store_available_gateways( $gateways );
-            
+
             $methods = array();
 
             // Returns order available methods
