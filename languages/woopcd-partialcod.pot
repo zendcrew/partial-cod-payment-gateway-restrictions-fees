@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the WooCommerce Partial COD - Payment Gateway Restrictions & Fees plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Partial COD - Payment Gateway Restrictions & Fees 1.2.1\n"
+"Project-Id-Version: WooCommerce Partial COD - Payment Gateway Restrictions & Fees 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/partial-cod-payment-gateway-restrictions-fees\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-07T01:37:33+02:00\n"
+"POT-Creation-Date: 2023-07-28T02:36:03+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: woopcd-partialcod\n"
@@ -950,6 +950,7 @@ msgstr ""
 msgid "gateway fee"
 msgstr ""
 
+#. translators: 1: module name
 #: main/admin/logic-types/logic-types-conditions.php:161
 msgid "List of conditions in which this %s should apply, empty conditions will apply in all cases"
 msgstr ""
@@ -1555,10 +1556,12 @@ msgstr ""
 msgid "Create unlimited number of partial payments"
 msgstr ""
 
+#. translators: 1: plugin version
 #: main/admin/settings-page/settings-page.php:153
 msgid "Lite v%s"
 msgstr ""
 
+#. translators: 1: plugin version
 #: main/admin/settings-page/settings-page.php:157
 msgid "Premium v%s"
 msgstr ""
@@ -1717,6 +1720,7 @@ msgstr ""
 msgid "WooCommerce Partial COD - Premium (Add-On)"
 msgstr ""
 
+#. translators: 1: plugin name
 #: main/admin/settings-page/settings-page.php:437
 msgid "Required by %s"
 msgstr ""
@@ -1959,6 +1963,6 @@ msgstr ""
 msgid "Fee"
 msgstr ""
 
-#: partial-cod-payment-gateway-restrictions-fees.php:72
+#: partial-cod-payment-gateway-restrictions-fees.php:86
 msgid "WooCommerce Partial COD - Payment Gateway Restrictions & Fees requires WooCommerce to be installed and activated."
 msgstr ""

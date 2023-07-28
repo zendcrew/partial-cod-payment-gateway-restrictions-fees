@@ -28,10 +28,6 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Customer' ) && !defined( 'WOOP
 
             $user_roles = WOOPCD_PartialCOD_Customer_Util::get_user_roles( $cart_data );
 
-            if ( !count( $user_roles ) ) {
-                return false;
-            }
-
             $rule_compare = $condition[ 'compare' ];
 
             return WOOPCD_PartialCOD_Validation_Util::validate_list_list( $user_roles, $rule_user_roles, $rule_compare );

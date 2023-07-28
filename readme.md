@@ -4,7 +4,7 @@ Donate link:
 Tags: WooCommerce, Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce COD, Multiple Fees, Partial COD, Risk Free COD
 Requires at least: 5.8
 Tested up to: 6.2.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,9 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 4. WooCommerce Partial COD - General Settings
 
 == Changelog ==
+
+= 1.2.2 - 28/07/2023 =
+[Update] - WooCommerce 7.9 &amp; HPOS update
 
 = 1.2.1 - 07/06/2023 =
 [Fix] - Fixed payment gateway selection issue

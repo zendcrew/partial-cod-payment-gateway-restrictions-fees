@@ -4,7 +4,7 @@
  * Plugin Name: WooCommerce Partial COD - Payment Gateway Restrictions & Fees
  * Plugin URI: https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew
  * Description: A powerful, flexible and easy-to-use WooCommerce extention that can be used to manage payment availability and other gateway options based on product rules and conditions.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: zendcrew
  * Author URI: https://codecanyon.net/user/zendcrew?ref=zendcrew
  * Text Domain: woopcd-partialcod
@@ -14,7 +14,7 @@
  * Requires PHP: 5.6
  * 
  * WC requires at least: 5.6
- * WC tested up to: 7.7
+ * WC tested up to: 7.9
  */
 
 if ( !defined( 'ABSPATH' ) ) {
@@ -28,7 +28,7 @@ if ( is_admin() ) {
 
 if ( !defined( 'WOOPCD_PARTIALCOD_VERSION' ) ) {
 
-    define( 'WOOPCD_PARTIALCOD_VERSION', '1.2.1' );
+    define( 'WOOPCD_PARTIALCOD_VERSION', '1.2.2' );
 }
 
 if ( !defined( 'WOOPCD_PARTIALCOD_FILE' ) ) {
@@ -53,8 +53,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
         public function __construct() {
 
             add_action( 'plugins_loaded', array( $this, 'plugin_loaded' ), 1 );
+            
+            add_action( 'before_woocommerce_init', array( $this, 'before_woocommerce_init' ) );
 
-            load_plugin_textdomain( 'woopcd-partialcod', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+            load_plugin_textdomain( 'woopcd-partialcod', false, dirname( plugin_basename( WOOPCD_PARTIALCOD_FILE ) ) . '/languages/' );
         }
 
         public function plugin_loaded() {
@@ -65,6 +67,18 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
 
                 add_action( 'admin_notices', array( $this, 'missing_notice' ) );
             }
+        }
+
+        public function before_woocommerce_init() {
+
+            // Check for HPOS
+            if ( !class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+
+                return;
+            }
+
+            // Adds support for HPOS
+            \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', WOOPCD_PARTIALCOD_FILE, true );
         }
 
         public function missing_notice() {

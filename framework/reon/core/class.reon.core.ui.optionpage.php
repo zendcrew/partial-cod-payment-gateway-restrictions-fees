@@ -20,7 +20,7 @@ if (!class_exists('ReonOptionPage')) {
 
         public static function init() {
             add_action('after_setup_theme', array(new self(), 'init_options'));
-            add_action("admin_menu", array(new self(), 'init_menu'));
+            add_action("admin_menu", array(new self(), 'init_menu'), 100);
             ReonAjax::add_action('rn_save_option', array(new self(), 'save_option')); //export_option
             ReonAjax::add_action('rn_reset_option', array(new self(), 'reset_option'));
             ReonAjax::add_action('rn_import_option', array(new self(), 'import_option'));
@@ -108,7 +108,8 @@ if (!class_exists('ReonOptionPage')) {
                 add_menu_page($rn_page_title, $rn_menu_title, $rn_capability, $rn_menu_slug, array(new self(), 'render'), $rn_icon_url, $rn_position);
             } else {
                 $rn_parent_slug = $args['menu_parent'];
-                add_submenu_page($rn_parent_slug, $rn_page_title, $rn_menu_title, $rn_capability, $rn_menu_slug, array(new self(), 'render'));
+                $rn_position = $args[ 'menu_priority' ] ? $args[ 'menu_priority' ] : null;
+                add_submenu_page($rn_parent_slug, $rn_page_title, $rn_menu_title, $rn_capability, $rn_menu_slug, array(new self(), 'render'), $rn_position);
             }
 
 

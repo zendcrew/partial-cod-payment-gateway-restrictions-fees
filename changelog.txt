@@ -1,3 +1,6 @@
+= 1.2.2 - 28/07/2023 =
+[Update] - WooCommerce 7.9 &amp; HPOS update
+
 = 1.2.1 - 07/06/2023 =
 [Fix] - Fixed payment gateway selection issue
 [Update] - Updated admin page

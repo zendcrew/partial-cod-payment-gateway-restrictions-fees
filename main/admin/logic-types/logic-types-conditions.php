@@ -157,7 +157,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Logic_Types_Conditions' ) ) {
 
                 $module_text = esc_html__( 'gateway fee', 'woopcd-partialcod' );
             }
-
+            /* translators: 1: module name */
             return sprintf( esc_html__( 'List of conditions in which this %s should apply, empty conditions will apply in all cases', 'woopcd-partialcod' ), $module_text );
         }
 

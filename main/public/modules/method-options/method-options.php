@@ -73,15 +73,35 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Method_Options' ) ) {
         }
 
         public function add_order_method_ids( $order_id, $method_ids ) {
-            update_post_meta( $order_id, 'woopcd_partialcod_methods', $method_ids );
+
+            $order = wc_get_order( $order_id );
+
+            if ( !$order ) {
+
+                return;
+            }
+
+            $order->update_meta_data( 'woopcd_partialcod_methods', $method_ids );
+
+            $order->save_meta_data();
         }
 
         public function get_order_method_ids( $order_id ) {
 
-            $method_ids = get_post_meta( $order_id, 'woopcd_partialcod_methods', true );
+            $order = wc_get_order( $order_id );
+
+            if ( !$order ) {
+
+                return array();
+            }
+
+            $method_ids = $order->get_meta( 'woopcd_partialcod_methods', true );
+
             if ( $method_ids ) {
+
                 return $method_ids;
             }
+
             return array();
         }
 
@@ -106,10 +126,20 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Method_Options' ) ) {
 
             //get the available method ids from order metadata
             if ( !count( $woopcd_partialcod_methods ) && isset( $data[ 'id' ] ) ) {
+
                 $order_id = $data[ 'id' ];
 
-                $partialcod_methods = get_post_meta( $order_id, 'woopcd_partialcod_methods', true );
+                $order = wc_get_order( $order_id );
+
+                $partialcod_methods = false;
+
+                if ( $order ) {
+
+                    $partialcod_methods = $order->get_meta( 'woopcd_partialcod_methods', true );
+                }
+
                 if ( $partialcod_methods ) {
+
                     $woopcd_partialcod_methods = $partialcod_methods;
                 }
             }

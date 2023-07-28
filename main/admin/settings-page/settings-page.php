@@ -149,11 +149,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
         }
 
         public static function init_page() {
-
+            /* translators: 1: plugin version */
             $version_text = sprintf( esc_html__( 'Lite v%s', 'woopcd-partialcod' ), WOOPCD_PARTIALCOD_VERSION );
 
             if ( defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
-
+                /* translators: 1: plugin version */
                 $version_text = sprintf( esc_html__( 'Premium v%s', 'woopcd-partialcod' ), WOOPCD_PARTIALCOD_VERSION );
             }
 
@@ -192,7 +192,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                     'title' => esc_html__( 'Partial COD - Gateway Restrictions & Fees', 'woopcd-partialcod' ),
                     'page_title' => esc_html__( 'Partial COD - Payment Gateway Restrictions & Fees', 'woopcd-partialcod' ),
                     'icon' => 'dashicons-admin-generic',
-                    'priority' => '999',
+                    'priority' => 2,
                     'parent' => 'woocommerce',
                     'capability' => 'manage_woocommerce',
                 ),
@@ -433,7 +433,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 unset( $links[ 'deactivate' ] );
 
                 $add_on_text = esc_html__( 'WooCommerce Partial COD - Premium (Add-On)', 'woopcd-partialcod' );
-
+                /* translators: 1: plugin name */
                 $required_text = sprintf( esc_html__( 'Required by %s', 'woopcd-partialcod' ), $add_on_text );
 
                 $no_deactivate_tag = '<span style="color: #313639">' . $required_text . '</span>';
