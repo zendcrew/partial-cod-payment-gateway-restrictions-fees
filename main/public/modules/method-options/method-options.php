@@ -83,7 +83,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Method_Options' ) ) {
 
             $order->update_meta_data( 'woopcd_partialcod_methods', $method_ids );
 
-            $order->save_meta_data();
+            $order->save();
         }
 
         public function get_order_method_ids( $order_id ) {
