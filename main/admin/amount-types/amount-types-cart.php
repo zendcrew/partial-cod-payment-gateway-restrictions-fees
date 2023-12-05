@@ -29,7 +29,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Cart' ) ) {
             return $in_groups;
         }
 
-        public static function get_types( $in_types = array(), $args ) {
+        public static function get_types( $in_types, $args ) {
 
             $types_data = self::get_amount_type_data( $args );
 
@@ -45,7 +45,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Cart' ) ) {
             return $in_types;
         }
 
-        public static function get_types2( $in_types = array(), $args ) {
+        public static function get_types2( $in_types, $args ) {
 
             $types_data = self::get_amount_type_data( $args );
 

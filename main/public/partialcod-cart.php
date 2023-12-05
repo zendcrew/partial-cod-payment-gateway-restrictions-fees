@@ -89,8 +89,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart' ) ) {
             );
 
             if ( has_filter( 'woopcd_partialcod/get-cart-item' ) ) {
+                
                 $item = apply_filters( 'woopcd_partialcod/get-cart-item', $item, $cart_item );
             }
+            
             return $item;
         }
 

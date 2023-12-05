@@ -3,8 +3,8 @@ Contributors: zendcrew, sundayfanz
 Donate link: 
 Tags: WooCommerce, Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce COD, Multiple Fees, Partial COD, Risk Free COD
 Requires at least: 5.8
-Tested up to: 6.3
-Stable tag: 1.3
+Tested up to: 6.4
+Stable tag: 1.3.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,12 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 4. WooCommerce Partial COD - General Settings
 
 == Changelog ==
+
+= 1.3.1 - 05/12/2023 =
+[Fix] - Fixed order datetime related bugs
+[Fix] - Fixed Deprecated PHP related bugs
+[Update] - Updated framework
+[Check] - WooCommerce 8.2 compatibility check
 
 = 1.3 - 22/09/2023 =
 [New] - Added fixed partial payment amount per item
