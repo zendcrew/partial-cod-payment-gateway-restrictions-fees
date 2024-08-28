@@ -1,3 +1,7 @@
+= 1.3.2 - 28/08/2024 =
+[Check] - WordPress 6.6 compatibility check
+[Check] - WooCommerce 9.2 compatibility check
+
 = 1.3.1 - 05/12/2023 =
 [Fix] - Fixed order datetime related bugs
 [Fix] - Fixed Deprecated PHP related bugs

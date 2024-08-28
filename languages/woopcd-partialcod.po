@@ -1,45 +1,51 @@
-# Copyright (C) 2023 zendcrew
-# This file is distributed under the same license as the WooCommerce Partial COD - Payment Gateway Restrictions & Fees plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Partial COD - Payment Gateway Restrictions & "
-"Fees 1.3.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/partial-cod-"
-"payment-gateway-restrictions-fees\n"
-"POT-Creation-Date: 2023-12-05T05:47:31+01:00\n"
-"PO-Revision-Date: 2023-12-05 05:52+0100\n"
+"Project-Id-Version: WooCommerce Partial COD - Payment Gateway Restrictions & Fees 1.3.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/partial-cod-payment-gateway-restrictions-fees\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-05T05:47:31+01:00\n"
+"PO-Revision-Date: 2023-12-05 05:52+0100\n"
+"Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 "X-Domain: woopcd-partialcod\n"
 
 #. Plugin Name of the plugin
+#: D:\My
+#: Projects\Website
+#: Projects\CodeCanyon\partial-cod-payment-gateway-restrictions-fees\partial-cod-payment-gateway-restrictions-fees.php
 msgid "WooCommerce Partial COD - Payment Gateway Restrictions & Fees"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid ""
-"https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-"
-"restrictions-fees/41741012?ref=zendcrew"
+#: D:\My
+#: Projects\Website
+#: Projects\CodeCanyon\partial-cod-payment-gateway-restrictions-fees\partial-cod-payment-gateway-restrictions-fees.php
+msgid "https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew"
 msgstr ""
 
 #. Description of the plugin
-msgid ""
-"A powerful, flexible and easy-to-use WooCommerce extention that can be used "
-"to manage payment availability and other gateway options based on product "
-"rules and conditions."
+#: D:\My
+#: Projects\Website
+#: Projects\CodeCanyon\partial-cod-payment-gateway-restrictions-fees\partial-cod-payment-gateway-restrictions-fees.php
+msgid "A powerful, flexible and easy-to-use WooCommerce extention that can be used to manage payment availability and other gateway options based on product rules and conditions."
 msgstr ""
 
 #. Author of the plugin
+#: D:\My
+#: Projects\Website
+#: Projects\CodeCanyon\partial-cod-payment-gateway-restrictions-fees\partial-cod-payment-gateway-restrictions-fees.php
 msgid "zendcrew"
 msgstr ""
 
 #. Author URI of the plugin
+#: D:\My
+#: Projects\Website
+#: Projects\CodeCanyon\partial-cod-payment-gateway-restrictions-fees\partial-cod-payment-gateway-restrictions-fees.php
 msgid "https://codecanyon.net/user/zendcrew?ref=zendcrew"
 msgstr ""
 
@@ -961,17 +967,12 @@ msgstr ""
 
 #. translators: 1: module name
 #: main/admin/logic-types/logic-types-conditions.php:161
-msgid ""
-"List of conditions in which this %s should apply, empty conditions will "
-"apply in all cases"
+msgid "List of conditions in which this %s should apply, empty conditions will apply in all cases"
 msgstr ""
 
 #: main/admin/notices/notices-view-pro.php:2
 #: main/admin/notices/notices-view.php:2
-msgid ""
-"Hey, I noticed you having been using <strong>WooCommerce Partial COD - "
-"Gateway Restrictions & Fees</strong>, that’s awesome! Could you please do me "
-"a favor and give it a 5-star rating to help us spread the word?"
+msgid "Hey, I noticed you having been using <strong>WooCommerce Partial COD - Gateway Restrictions & Fees</strong>, that’s awesome! Could you please do me a favor and give it a 5-star rating to help us spread the word?"
 msgstr ""
 
 #: main/admin/notices/notices-view-pro.php:4
@@ -1129,8 +1130,7 @@ msgstr ""
 
 #: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:158
 #: main/admin/settings-page/cart-fees-section/cart-fees-rule-panel-fees.php:156
-msgid ""
-"Controls how the amount should be added to previously calculated amounts"
+msgid "Controls how the amount should be added to previously calculated amounts"
 msgstr ""
 
 #: main/admin/settings-page/cart-discounts-section/cart-discounts-rule-panel-discounts.php:159
@@ -1496,9 +1496,7 @@ msgid "Method Settings"
 msgstr ""
 
 #: main/admin/settings-page/method-options-section/method-options-rule-panel-options.php:63
-msgid ""
-"List of payment method settings to apply, empty list will not apply any "
-"settings"
+msgid "List of payment method settings to apply, empty list will not apply any settings"
 msgstr ""
 
 #: main/admin/settings-page/method-options-section/method-options-rule-panel-options.php:98
@@ -1622,9 +1620,7 @@ msgid "Import Settings"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:205
-msgid ""
-"Here you can import new settings. Simply paste the settings url or data on "
-"the field below."
+msgid "Here you can import new settings. Simply paste the settings url or data on the field below."
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:206
@@ -1632,9 +1628,7 @@ msgid "Import from url"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:207
-msgid ""
-"Paste the url to another site's settings below and click the 'Import Now' "
-"button."
+msgid "Paste the url to another site's settings below and click the 'Import Now' button."
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:208
@@ -1658,8 +1652,7 @@ msgid "Import Now"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:213
-msgid ""
-"Warning! This will override all existing settings. proceed with caution!"
+msgid "Warning! This will override all existing settings. proceed with caution!"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:216
@@ -1667,9 +1660,7 @@ msgid "Export Settings"
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:217
-msgid ""
-"Here you can backup your current settings. You can later use it to restore "
-"your settings."
+msgid "Here you can backup your current settings. You can later use it to restore your settings."
 msgstr ""
 
 #: main/admin/settings-page/settings-page.php:218
@@ -1818,9 +1809,7 @@ msgstr ""
 
 #: main/admin/settings-page/settings-section/settings-cart-discounts.php:110
 #: main/admin/settings-page/settings-section/settings-cart-fees.php:95
-msgid ""
-"Use these settings to control what are included in the \"based on\" cart "
-"percentage totals &amp; the \"cart totals\" conditions"
+msgid "Use these settings to control what are included in the \"based on\" cart percentage totals &amp; the \"cart totals\" conditions"
 msgstr ""
 
 #: main/admin/settings-page/settings-section/settings-cart-discounts.php:122
@@ -1958,9 +1947,7 @@ msgid "Settings & Restrictions - Cart Totals Calculations"
 msgstr ""
 
 #: main/admin/settings-page/settings-section/settings-cart-totals-method-options.php:39
-msgid ""
-"Use these settings to control what are included in the \"cart totals\" "
-"conditions"
+msgid "Use these settings to control what are included in the \"cart totals\" conditions"
 msgstr ""
 
 #: main/admin/settings-page/settings-section/settings-cart-totals-order-activities.php:31
@@ -1968,9 +1955,7 @@ msgid "Orders Cron Tasks"
 msgstr ""
 
 #: main/admin/settings-page/settings-section/settings-cart-totals-order-activities.php:32
-msgid ""
-"Order autopilots can be triggered from cron tasks, use these settings to "
-"create those cron tasks."
+msgid "Order autopilots can be triggered from cron tasks, use these settings to create those cron tasks."
 msgstr ""
 
 #: main/admin/settings-page/settings-section/settings-custom-css.php:33
@@ -1994,7 +1979,5 @@ msgid "Fee"
 msgstr ""
 
 #: partial-cod-payment-gateway-restrictions-fees.php:86
-msgid ""
-"WooCommerce Partial COD - Payment Gateway Restrictions & Fees requires "
-"WooCommerce to be installed and activated."
+msgid "WooCommerce Partial COD - Payment Gateway Restrictions & Fees requires WooCommerce to be installed and activated."
 msgstr ""
