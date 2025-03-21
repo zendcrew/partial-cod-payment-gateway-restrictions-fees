@@ -1978,6 +1978,6 @@ msgstr ""
 msgid "Fee"
 msgstr ""
 
-#: partial-cod-payment-gateway-restrictions-fees.php:86
+#: partial-cod-payment-gateway-restrictions-fees.php:91
 msgid "WooCommerce Partial COD - Payment Gateway Restrictions & Fees requires WooCommerce to be installed and activated."
 msgstr ""
