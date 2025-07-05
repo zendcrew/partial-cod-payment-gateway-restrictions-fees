@@ -3,8 +3,8 @@ Contributors: zendcrew, sundayfanz
 Donate link: 
 Tags: WooCommerce, Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce COD, Multiple Fees, Partial COD, Risk Free COD
 Requires at least: 5.8
-Tested up to: 6.7
-Stable tag: 1.3.3
+Tested up to: 6.8
+Stable tag: 1.3.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ WooCommerce Partial COD, WooCommerce Payment Method Restrictions, WooCommerce Ca
 
 This plugin includes some powerful features that can be used to control **gateway restrictions**, add **extra cart fees/discounts** (per payment gateway) and implement **partial cod** (i.e risk-free cod). These features are grouped into 5 modules, the modules comprise **Settings & Restrictions**, **Partial Payments** (i.e **Partial COD** or **Risk-Free COD**), **Cart Discounts**, **Handling Fees** and **Order Autopilots**.
 
-[TRY LIVE DEMO](https://demo.zendcrew.cc/partial-cod/) | [DOCUMENTATION](https://zencrew.freshdesk.com/support/solutions/51000070103) | [HELP CENTER](https://zencrew.freshdesk.com/support/tickets)
+[TRY LIVE DEMO](https://demo.zendcrew.cc/partial-cod/) | [DOCUMENTATION](https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees) | [HELP CENTER](https://support.zendcrew.cc/portal/en/newticket)
 
 ### Settings & Restrictions
 Create/Manage dynamic payment gateway options such as **Restrictions**, **Method Title**, **Description**, **Button Text** and other gateways-related settings **based on conditions**.
@@ -52,6 +52,11 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 4. WooCommerce Partial COD - General Settings
 
 == Changelog ==
+
+= 1.3.4 - 05/07/2025 =
+[Update] - Updated documentation links
+[Check] - WordPress 6.8 compatibility check
+[Check] - WooCommerce 9.9 compatibility check
 
 = 1.3.3 - 21/03/2025 =
 [Check] - WordPress 6.7 compatibility check

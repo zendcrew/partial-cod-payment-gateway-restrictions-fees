@@ -302,3 +302,16 @@
     font-weight: 600;
     color: red;
 }
+
+.woocommerce_page_partialcod-settings .zd-launcher-button{
+    
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.woocommerce_page_partialcod-settings .zd-asap-newradio-inputradio,
+.woocommerce_page_partialcod-settings .zd-asap-kbfeedbackfooter-dislike__count,
+.woocommerce_page_partialcod-settings .zd-asap-kbfeedbackfooter-like__count{
+    
+    display: none!important;
+}

@@ -443,7 +443,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 return $links;
             }
 
-            $doc_link = '<a href="' . esc_url( 'https://zencrew.freshdesk.com/support/solutions/51000070103' ) . '">' . esc_html__( 'Documentation', 'woopcd-partialcod' ) . '</a>';
+            $doc_link = '<a href="' . esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ) . '" target="_blank">' . esc_html__( 'Documentation', 'woopcd-partialcod' ) . '</a>';
 
             array_unshift( $links, $doc_link );
 
@@ -463,7 +463,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                     'id' => 'woopcd_documentation',
                     'title' => esc_html__( 'Documentation', 'table-rate-shipping-rates' ),
                     'icon' => 'fa fa-file-text',
-                    'href' => esc_url( 'https://zencrew.freshdesk.com/support/solutions/51000070103' ),
+                    'href' => esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ),
                     'target' => '_blank',
                     'show_in' => 'both'
                 ),
@@ -475,7 +475,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                     'id' => 'woopcd_help',
                     'title' => esc_html__( 'Help', 'table-rate-shipping-rates' ),
                     'icon' => 'fa fa-question-circle',
-                    'href' => esc_url( 'https://zencrew.freshdesk.com/support/tickets' ),
+                    'href' => esc_url( 'https://support.zendcrew.cc/portal/en/newticket' ),
                     'target' => '_blank',
                     'show_in' => 'both'
                 );
