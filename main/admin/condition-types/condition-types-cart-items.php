@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -21,22 +25,22 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'cart_items' ] = esc_html__( 'Items In Cart', 'woopcd-partialcod' );
+            $in_groups[ 'cart_items' ] = esc_html__( 'Items In Cart', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
 
-            $in_list[ 'cart_item_products' ] = esc_html__( 'Products In Cart', 'woopcd-partialcod' );
-            $in_list[ 'prem_12' ] = esc_html__( 'Variations In Cart (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'cart_item_categories' ] = esc_html__( 'Categories In Cart', 'woopcd-partialcod' );
-            $in_list[ 'prem_14' ] = esc_html__( 'Tags In Cart (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_15' ] = esc_html__( 'Attributes In Cart (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_16' ] = esc_html__( 'Virtual Products In Cart (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_17' ] = esc_html__( 'Tax Classes In Cart (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'cart_item_shipping_classes' ] = esc_html__( 'Shipping Classes In Cart', 'woopcd-partialcod' );
-            $in_list[ 'prem_19' ] = esc_html__( 'Product Meta Fields In Cart (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'cart_item_products' ] = esc_html__( 'Products In Cart', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_12' ] = esc_html__( 'Variations In Cart (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'cart_item_categories' ] = esc_html__( 'Categories In Cart', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_14' ] = esc_html__( 'Tags In Cart (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_15' ] = esc_html__( 'Attributes In Cart (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_16' ] = esc_html__( 'Virtual Products In Cart (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_17' ] = esc_html__( 'Tax Classes In Cart (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'cart_item_shipping_classes' ] = esc_html__( 'Shipping Classes In Cart', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_19' ] = esc_html__( 'Product Meta Fields In Cart (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_list;
         }
@@ -48,11 +52,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'woopcd-partialcod' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'woopcd-partialcod' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '99%',
                 'box_width' => '29%',
@@ -63,7 +67,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
                 'type' => 'select2',
                 'multiple' => true,
                 'minimum_input_length' => 2,
-                'placeholder' => esc_html__( 'Search products...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Search products...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'allow_clear' => true,
                 'minimum_results_forsearch' => 10,
                 'data' => array(
@@ -85,11 +89,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'woopcd-partialcod' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'woopcd-partialcod' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '99%',
                 'box_width' => '29%',
@@ -100,7 +104,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
                 'type' => 'select2',
                 'multiple' => true,
                 'minimum_input_length' => 1,
-                'placeholder' => esc_html__( 'Search categories...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Search categories...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'allow_clear' => true,
                 'minimum_results_forsearch' => 10,
                 'data' => array(
@@ -122,11 +126,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'woopcd-partialcod' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'woopcd-partialcod' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '99%',
                 'box_width' => '29%',
@@ -136,7 +140,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Items' ) && !define
                 'id' => 'shipping_classes',
                 'type' => 'select2',
                 'multiple' => true,
-                'placeholder' => esc_html__( 'Select shipping classes...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Select shipping classes...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'allow_clear' => true,
                 'minimum_results_forsearch' => 10,
                 'data' => array(

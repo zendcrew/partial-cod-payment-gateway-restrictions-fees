@@ -1,4 +1,9 @@
 <?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 $import_export = $page['import_export'];
 $section_styles = array();
 if (isset($page['default_min_height'])) {

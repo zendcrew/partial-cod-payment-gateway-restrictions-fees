@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -30,10 +34,10 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Settings_Custom_CSS')) {
                         'type' => 'textarea',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__('Custom CSS', 'woopcd-partialcod'),
-                        'desc' => esc_html__('Additional css for discounts and fees html', 'woopcd-partialcod'),
+                        'title' => esc_html__('Custom CSS', 'partial-cod-payment-gateway-restrictions-fees'),
+                        'desc' => esc_html__('Additional css for discounts and fees html', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => $custom_css,
-                        'placeholder' => esc_html__('Type here...', 'woopcd-partialcod'),
+                        'placeholder' => esc_html__('Type here...', 'partial-cod-payment-gateway-restrictions-fees'),
                         'width' => '100%',
                         'cols' => '80',
                         'rows' => '5',

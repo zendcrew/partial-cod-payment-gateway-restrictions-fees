@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -15,17 +19,17 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Purchase_History' ) && !
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'purchase_history' ] = esc_html__( 'Purchase History', 'woopcd-partialcod' );
+            $in_groups[ 'purchase_history' ] = esc_html__( 'Purchase History', 'partial-cod-payment-gateway-restrictions-fees' );
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
            
-            $in_list[ 'prem_58' ] = esc_html__( 'Purchased Products (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_59' ] = esc_html__( 'Purchased Variations (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_60' ] = esc_html__( 'Purchased Categories (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_61' ] = esc_html__( 'Purchased Tags (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_62' ] = esc_html__( 'Purchased Attributes (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_58' ] = esc_html__( 'Purchased Products (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_59' ] = esc_html__( 'Purchased Variations (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_60' ] = esc_html__( 'Purchased Categories (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_61' ] = esc_html__( 'Purchased Tags (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_62' ] = esc_html__( 'Purchased Attributes (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             
             return $in_list;
         }

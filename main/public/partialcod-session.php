@@ -31,9 +31,9 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart_Session' ) ) {
 
         public function init() {
 
-            if ( isset( $_POST[ 'payment_method' ] ) ) {
+            if ( isset( $_POST[ 'payment_method' ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 
-                $this->payment_method_id = sanitize_key( $_POST[ 'payment_method' ] );
+                $this->payment_method_id = sanitize_key( wp_unslash( $_POST[ 'payment_method' ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
             }
         }
 

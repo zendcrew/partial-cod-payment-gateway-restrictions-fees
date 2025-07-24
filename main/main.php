@@ -18,7 +18,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Main' ) ) {
             }
 
             if ( is_admin() ) {
-                add_action( 'reon/init', array( new self(), 'load_admin_page' ) );
+                add_action( 'init', array( new self(), 'load_admin_page' ) );
                 add_action( 'admin_enqueue_scripts', array( new self(), 'enqueue_admin_scripts' ), 20 );
             } else {
                 add_action( 'wp_enqueue_scripts', array( new self(), 'enqueue_public_scripts' ), 20 );

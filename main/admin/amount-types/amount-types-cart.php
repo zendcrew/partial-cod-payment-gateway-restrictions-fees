@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -24,7 +28,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Cart' ) ) {
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'cart' ] = esc_html__( 'Cart', 'woopcd-partialcod' );
+            $in_groups[ 'cart' ] = esc_html__( 'Cart', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_groups;
         }
@@ -72,13 +76,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Cart' ) ) {
                         'id' => 'shipping_classes',
                         'type' => 'select2',
                         'column_size' => 6,
-                        'column_title' => esc_html__( 'Shipping Classes', 'woopcd-partialcod' ),
-                        'tooltip' => esc_html__( 'Controls which shipping classes should be included', 'woopcd-partialcod' ),
+                        'column_title' => esc_html__( 'Shipping Classes', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'tooltip' => esc_html__( 'Controls which shipping classes should be included', 'partial-cod-payment-gateway-restrictions-fees' ),
                         'default' => '',
                         'multiple' => true,
                         'minimum_input_length' => 1,
                         'minimum_results_forsearch' => 10,
-                        'placeholder' => esc_html__( 'Search shipping classes...', 'woopcd-partialcod' ),
+                        'placeholder' => esc_html__( 'Search shipping classes...', 'partial-cod-payment-gateway-restrictions-fees' ),
                         'data' => array(
                             'source' => 'wc:shipping_classes',
                             'ajax' => true,
@@ -91,12 +95,12 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Cart' ) ) {
                         'id' => 'compare',
                         'type' => 'select2',
                         'column_size' => 2,
-                        'column_title' => esc_html__( 'Equals To', 'woopcd-partialcod' ),
-                        'tooltip' => esc_html__( 'Controls how the shipping classes should be included', 'woopcd-partialcod' ),
+                        'column_title' => esc_html__( 'Equals To', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'tooltip' => esc_html__( 'Controls how the shipping classes should be included', 'partial-cod-payment-gateway-restrictions-fees' ),
                         'default' => 'in_list',
                         'options' => array(
-                            'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                            'none' => esc_html__( 'Any NOT in the list', 'woopcd-partialcod' ),
+                            'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                            'none' => esc_html__( 'Any NOT in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                         ),
                         'width' => '100%',
                     ),
@@ -127,20 +131,20 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Cart' ) ) {
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'cart_fixed' => esc_html__( 'Fixed discount', 'woopcd-partialcod' ),
-                    'cart_shipping_classes' => esc_html__( 'Discount per shipping classes', 'woopcd-partialcod' ),
-                    'prem_1' => esc_html__( 'Discount per categories (Premium)', 'woopcd-partialcod' ),
-                    'prem_2' => esc_html__( 'Discount per tags (Premium)', 'woopcd-partialcod' ),
-                    'cart_per' => esc_html__( 'Percentage discount', 'woopcd-partialcod' ),
+                    'cart_fixed' => esc_html__( 'Fixed discount', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'cart_shipping_classes' => esc_html__( 'Discount per shipping classes', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_1' => esc_html__( 'Discount per categories (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_2' => esc_html__( 'Discount per tags (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'cart_per' => esc_html__( 'Percentage discount', 'partial-cod-payment-gateway-restrictions-fees' ),
                 );
             }
 
             return array(
-                'cart_fixed' => esc_html__( 'Fixed fee', 'woopcd-partialcod' ),
-                'cart_shipping_classes' => esc_html__( 'Fee per shipping classes', 'woopcd-partialcod' ),
-                'prem_1' => esc_html__( 'Fee per categories (Premium)', 'woopcd-partialcod' ),
-                'prem_2' => esc_html__( 'Fee per tags (Premium)', 'woopcd-partialcod' ),
-                'cart_per' => esc_html__( 'Percentage fee', 'woopcd-partialcod' ),
+                'cart_fixed' => esc_html__( 'Fixed fee', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'cart_shipping_classes' => esc_html__( 'Fee per shipping classes', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_1' => esc_html__( 'Fee per categories (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_2' => esc_html__( 'Fee per tags (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'cart_per' => esc_html__( 'Percentage fee', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
         }
 

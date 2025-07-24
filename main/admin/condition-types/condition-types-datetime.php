@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -15,18 +19,18 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_DateTime' ) && !defined(
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'datetime' ] = esc_html__( 'Date &amp; Time', 'woopcd-partialcod' );
+            $in_groups[ 'datetime' ] = esc_html__( 'Date &amp; Time', 'partial-cod-payment-gateway-restrictions-fees' );
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
 
-            $in_list[ 'prem_52' ] = esc_html__( 'Date (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_53' ] = esc_html__( 'Time (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_54' ] = esc_html__( 'Date &amp; Time (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_55' ] = esc_html__( 'Days Of Week (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_56' ] = esc_html__( 'Days Of Month (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_57' ] = esc_html__( 'Months Of Year (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_52' ] = esc_html__( 'Date (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_53' ] = esc_html__( 'Time (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_54' ] = esc_html__( 'Date &amp; Time (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_55' ] = esc_html__( 'Days Of Week (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_56' ] = esc_html__( 'Days Of Month (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_57' ] = esc_html__( 'Months Of Year (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_list;
         }

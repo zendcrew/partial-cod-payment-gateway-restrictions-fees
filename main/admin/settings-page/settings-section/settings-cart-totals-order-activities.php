@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -28,8 +32,8 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Order_Activity_Rules_Cart_Totals')) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__('Orders Cron Tasks', 'woopcd-partialcod'),
-                        'desc' => esc_html__('Order autopilots can be triggered from cron tasks, use these settings to create those cron tasks.', 'woopcd-partialcod'),
+                        'title' => esc_html__('Orders Cron Tasks', 'partial-cod-payment-gateway-restrictions-fees'),
+                        'desc' => esc_html__('Order autopilots can be triggered from cron tasks, use these settings to create those cron tasks.', 'partial-cod-payment-gateway-restrictions-fees'),
                     ),
                     array(
                         'id' => 'is_any',

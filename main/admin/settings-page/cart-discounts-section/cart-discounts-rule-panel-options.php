@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -23,21 +27,21 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Discount_Rule_Panel_Options')) {
                     array(
                         'id' => 'title',
                         'type' => 'textbox',
-                        'tooltip' => esc_html__('Controls discount titles on cart and checkout pages', 'woopcd-partialcod'),
+                        'tooltip' => esc_html__('Controls discount titles on cart and checkout pages', 'partial-cod-payment-gateway-restrictions-fees'),
                         'column_size' => 1,
-                        'column_title' => esc_html__('Title', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Title', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => '',
-                        'placeholder' => esc_html__('Type here...', 'woopcd-partialcod'),
+                        'placeholder' => esc_html__('Type here...', 'partial-cod-payment-gateway-restrictions-fees'),
                         'width' => '100%',
                     ),
                     array(
                         'id' => 'admin_note',
                         'type' => 'textbox',
-                        'tooltip' => esc_html__('Adds a private note for reference purposes', 'woopcd-partialcod'),
+                        'tooltip' => esc_html__('Adds a private note for reference purposes', 'partial-cod-payment-gateway-restrictions-fees'),
                         'column_size' => 1,
-                        'column_title' => esc_html__('Admin Note', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Admin Note', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => '',
-                        'placeholder' => esc_html__('Type here...', 'woopcd-partialcod'),
+                        'placeholder' => esc_html__('Type here...', 'partial-cod-payment-gateway-restrictions-fees'),
                         'width' => '100%',
                     ),
                 ),
@@ -53,23 +57,23 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Discount_Rule_Panel_Options')) {
                     array(
                         'id' => 'desc',
                         'type' => 'textbox',
-                        'tooltip' => esc_html__('Controls discount description on cart and checkout pages', 'woopcd-partialcod'),
+                        'tooltip' => esc_html__('Controls discount description on cart and checkout pages', 'partial-cod-payment-gateway-restrictions-fees'),
                         'column_size' => 3,
-                        'column_title' => esc_html__('Description', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Description', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => '',
-                        'placeholder' => esc_html__('Type here...', 'woopcd-partialcod'),
+                        'placeholder' => esc_html__('Type here...', 'partial-cod-payment-gateway-restrictions-fees'),
                         'width' => '100%',
                     ),
                     array(
                         'id' => 'apply_as_coupon',
                         'type' => 'select2',
                         'column_size' => 1,
-                        'column_title' => esc_html__('Apply As Coupon', 'woopcd-partialcod'),
-                        'tooltip' => esc_html__('Applies cart discount as coupon on to the cart', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Apply As Coupon', 'partial-cod-payment-gateway-restrictions-fees'),
+                        'tooltip' => esc_html__('Applies cart discount as coupon on to the cart', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => 'no',
                         'options' => array(
-                            'no' => esc_html__('No', 'woopcd-partialcod'),
-                            'yes' => esc_html__('Yes', 'woopcd-partialcod'),
+                            'no' => esc_html__('No', 'partial-cod-payment-gateway-restrictions-fees'),
+                            'yes' => esc_html__('Yes', 'partial-cod-payment-gateway-restrictions-fees'),
                         ),
                         'width' => '100%',
                         'fold_id' => 'apply_as_coupon',
@@ -77,11 +81,11 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Discount_Rule_Panel_Options')) {
                     array(
                         'id' => 'coupon_code',
                         'type' => 'textbox',
-                        'tooltip' => esc_html__('Applies coupon code to the cart', 'woopcd-partialcod'),
+                        'tooltip' => esc_html__('Applies coupon code to the cart', 'partial-cod-payment-gateway-restrictions-fees'),
                         'column_size' => 1,
-                        'column_title' => esc_html__('Coupon Code', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Coupon Code', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => '',
-                        'placeholder' => esc_html__('xxx-xxxxx', 'woopcd-partialcod'),
+                        'placeholder' => esc_html__('xxx-xxxxx', 'partial-cod-payment-gateway-restrictions-fees'),
                         'width' => '100%',
                         'fold' => array(
                             'target' => 'apply_as_coupon',
@@ -106,12 +110,12 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Discount_Rule_Panel_Options')) {
                         'id' => 'inclusive_tax',
                         'type' => 'select2',
                         'column_size' => 1,
-                        'column_title' => esc_html__('Tax Calculation', 'woopcd-partialcod'),
-                        'tooltip' => esc_html__('Determines how cart discount taxes should be calculated', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Tax Calculation', 'partial-cod-payment-gateway-restrictions-fees'),
+                        'tooltip' => esc_html__('Determines how cart discount taxes should be calculated', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => 'yes',
                         'options' => array(
-                            'no' => esc_html__('Apply discount exclusive of taxes', 'woopcd-partialcod'),
-                            'yes' => esc_html__('Apply discount inclusive of taxes', 'woopcd-partialcod'),
+                            'no' => esc_html__('Apply discount exclusive of taxes', 'partial-cod-payment-gateway-restrictions-fees'),
+                            'yes' => esc_html__('Apply discount inclusive of taxes', 'partial-cod-payment-gateway-restrictions-fees'),
                         ),
                         'width' => '100%',                        
                     ),
@@ -137,8 +141,8 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Discount_Rule_Panel_Options')) {
                             'type' => 'textblock',
                             'show_box' => true,
                             'column_size' => 1,
-                            'column_title' => esc_html__('Checkout Notification', 'woopcd-partialcod'),
-                            'tooltip' => esc_html__('Controls discount notifications on cart and checkout pages', 'woopcd-partialcod'),
+                            'column_title' => esc_html__('Checkout Notification', 'partial-cod-payment-gateway-restrictions-fees'),
+                            'tooltip' => esc_html__('Controls discount notifications on cart and checkout pages', 'partial-cod-payment-gateway-restrictions-fees'),
                             'text' => WOOPCD_PartialCOD_Admin_Page::get_premium_messages('short_message'),
                             'width' => '100%',
                             'css_class' => array('partialcod-big-message'),

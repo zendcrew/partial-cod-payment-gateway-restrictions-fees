@@ -1,4 +1,10 @@
-<div <?php echo wp_kses_post(ReonUtil::array_to_attributes($wrapper_attr)); ?>>
+<?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+?><div <?php echo wp_kses_post(ReonUtil::array_to_attributes($wrapper_attr)); ?>>
     <?php
     if ($show_box == true) {
         ?>

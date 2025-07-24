@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -38,16 +42,16 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Volume' ) && !defined( 
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'per_volumes' => esc_html__( 'Discount Per Volume', 'woopcd-partialcod' ),
-                    'prem_18' => esc_html__( 'Discount per volume (Premium)', 'woopcd-partialcod' ),
-                    'prem_19' => esc_html__( 'Discount x volume (Premium)', 'woopcd-partialcod' ),
+                    'per_volumes' => esc_html__( 'Discount Per Volume', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_18' => esc_html__( 'Discount per volume (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_19' => esc_html__( 'Discount x volume (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 );
             }
 
             return array(
-                'per_volumes' => esc_html__( 'Fee Per Volume', 'woopcd-partialcod' ),
-                'prem_18' => esc_html__( 'Fee per volume (Premium)', 'woopcd-partialcod' ),
-                'prem_19' => esc_html__( 'Fee x volume (Premium)', 'woopcd-partialcod' ),
+                'per_volumes' => esc_html__( 'Fee Per Volume', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_18' => esc_html__( 'Fee per volume (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_19' => esc_html__( 'Fee x volume (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
         }
 

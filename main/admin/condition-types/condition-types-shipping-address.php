@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -22,7 +26,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'shipping_address' ] = esc_html__( 'Shipping Address', 'woopcd-partialcod' );
+            $in_groups[ 'shipping_address' ] = esc_html__( 'Shipping Address', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_groups;
         }
@@ -30,15 +34,15 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
         public static function get_conditions( $in_list, $args ) {
 
             if ( !defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
-                $in_list[ 'prem_4' ] = esc_html__( 'Shipping Continents (Premium)', 'woopcd-partialcod' );
+                $in_list[ 'prem_4' ] = esc_html__( 'Shipping Continents (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             } else {
-                $in_list[ 'shipping_continents' ] = esc_html__( 'Shipping Continents', 'woopcd-partialcod' );
+                $in_list[ 'shipping_continents' ] = esc_html__( 'Shipping Continents', 'partial-cod-payment-gateway-restrictions-fees' );
             }
             
-            $in_list[ 'shipping_countries' ] = esc_html__( 'Shipping Countries', 'woopcd-partialcod' );
-            $in_list[ 'shipping_states' ] = esc_html__( 'Shipping States', 'woopcd-partialcod' );
-            $in_list[ 'shipping_cities' ] = esc_html__( 'Shipping Cities', 'woopcd-partialcod' );
-            $in_list[ 'shipping_postcodes' ] = esc_html__( 'Shipping Postcode / ZIP', 'woopcd-partialcod' );
+            $in_list[ 'shipping_countries' ] = esc_html__( 'Shipping Countries', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'shipping_states' ] = esc_html__( 'Shipping States', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'shipping_cities' ] = esc_html__( 'Shipping Cities', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'shipping_postcodes' ] = esc_html__( 'Shipping Postcode / ZIP', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_list;
         }
@@ -50,8 +54,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -64,7 +68,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'allow_clear' => true,
                 'minimum_input_length' => 2,
                 'minimum_results_forsearch' => 10,
-                'placeholder' => esc_html__( 'Shipping Countries...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Shipping Countries...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'ajax_data' => 'wc:countries',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -80,8 +84,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -94,7 +98,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'allow_clear' => true,
                 'minimum_input_length' => 2,
                 'minimum_results_forsearch' => 10,
-                'placeholder' => esc_html__( 'Shipping States...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Shipping States...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'ajax_data' => 'wc:states',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -110,8 +114,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -122,7 +126,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'type' => 'textbox',
                 'input_type' => 'text',
                 'default' => '',
-                'placeholder' => esc_html__( 'Seperate with comma, (e.g Jakarta, Delhi, Manila)', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Seperate with comma, (e.g Jakarta, Delhi, Manila)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'width' => '100%',
                 'box_width' => '74%',
             );
@@ -137,8 +141,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'match' => esc_html__( 'Match', 'woopcd-partialcod' ),
-                    'not_match' => esc_html__( 'Not match', 'woopcd-partialcod' ),
+                    'match' => esc_html__( 'Match', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'not_match' => esc_html__( 'Not match', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '22%',
@@ -149,7 +153,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping_Address' ) ) {
                 'type' => 'textbox',
                 'input_type' => 'text',
                 'default' => '',
-                'placeholder' => esc_html__( 'e.g 1815, 870*, [1870 - 9999], DSE, LDS', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'e.g 1815, 870*, [1870 - 9999], DSE, LDS', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'width' => '100%',
                 'box_width' => '78%',
             );

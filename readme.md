@@ -1,19 +1,19 @@
-=== WooCommerce Partial COD - Payment Gateway Restrictions & Fees ===
+=== PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce ===
 Contributors: zendcrew, sundayfanz 
 Donate link: 
-Tags: WooCommerce, Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce COD, Multiple Fees, Partial COD, Risk Free COD
+Tags: Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce
 Requires at least: 5.8
 Tested up to: 6.8
-Stable tag: 1.3.4
+Stable tag: 1.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Partial COD, WooCommerce Payment Method Restrictions, WooCommerce Cart Fees, WooCommerce Cart Discounts
+Advanced Partial COD, Payment Method Restrictions, Cart Fees & Cart Discounts for WooCommerce
 
 == Description ==
 
-[WooCommerce Partial COD - Payment Gateway Restrictions & Fees](https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew) is a powerful, flexible and easy-to-use WooCommerce extension that can be used to manage payment availability and other gateway-related cart settings based on product rules and conditions.
+[PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce](https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew) is a powerful, flexible and easy-to-use WooCommerce extension that can be used to manage payment availability and other gateway-related cart settings based on product rules and conditions.
 
 This plugin includes some powerful features that can be used to control **gateway restrictions**, add **extra cart fees/discounts** (per payment gateway) and implement **partial cod** (i.e risk-free cod). These features are grouped into 5 modules, the modules comprise **Settings & Restrictions**, **Partial Payments** (i.e **Partial COD** or **Risk-Free COD**), **Cart Discounts**, **Handling Fees** and **Order Autopilots**.
 
@@ -37,7 +37,7 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 
 ### YOU MAY ALSO NEED THESE OTHER PLUGINS
 
-&#9989;&nbsp;[WooCommerce Catalog Mode – Pricing, Enquiry Forms & Promotions](https://wordpress.org/plugins/catalog-mode-pricing-enquiry-forms-promotions): Easily set up **catalog modes**,  **prices and marketing** strategies on your **WooCommerce** store.
+&#9989;&nbsp;[wModes - Catalog Mode, Product Pricing, Enquiry Forms & Promotions](https://wordpress.org/plugins/catalog-mode-pricing-enquiry-forms-promotions): Easily set up **catalog modes**,  **prices and marketing** strategies on your **WooCommerce** store.
 
 &#9989;&nbsp;[Table Rate Shipping Method for WooCommerce by Shipped – WooCommerce Table Rate Shipping](https://wordpress.org/plugins/table-rate-shipping-rates): A powerful, flexible and easy-to-use shipping plugin for **WooCommerce**, it can be used to create multiple shipping rates based on product rules and conditions.
 
@@ -46,12 +46,18 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 &#9989;&nbsp;[WooCommerce Smart Pack - Gift Card, Wallet, Refund & Reward](https://codecanyon.net/item/woocommerce-smart-pack-gift-card-wallet-refund-reward/20265145?ref=zendcrew): A WordPress plugin that allows merchants to implement a wallet system, reward or refund customers and sell an unlimited number of gift card products on their website. These features are grouped into four different extensions, the extensions include **WooCommerce Wallets**, **WooCommerce Refunds**, **WooCommerce Rewards** and **WooCommerce Gift Cards**. Each of these extensions can be enabled or disabled depending on what features are needed on a website.
 
 == Screenshots ==
-1. WooCommerce Partial COD - Settings & Restriction
-2. WooCommerce Partial COD - Cart Fees - Gateway Fees
-3. WooCommerce Partial COD - Cart Discounts
-4. WooCommerce Partial COD - General Settings
+1. PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce - Settings & Restriction
+2. PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce - Cart Fees - Gateway Fees
+3. PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce - Cart Discounts
+4. PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce - General Settings
 
 == Changelog ==
+
+= 1.4 - 22/07/2025 =
+[Update] - Updated Framework
+[Tweaks] - Changed Plugin name and banner
+[Check] - WordPress 6.8 compatibility check
+[Check] - Full security check using Plugin Check (PCP)
 
 = 1.3.4 - 05/07/2025 =
 [Update] - Updated documentation links

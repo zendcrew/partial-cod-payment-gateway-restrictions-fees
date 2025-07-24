@@ -1,4 +1,10 @@
-<div class="rn-option-page-tool">
+<?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+?><div class="rn-option-page-tool">
     <?php include 'option-page-content-header-title.php'; ?>
     <?php
     if (count($page['page_links']) > 0) {

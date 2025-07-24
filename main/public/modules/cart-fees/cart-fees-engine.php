@@ -99,7 +99,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Cart_Fees_Engine' ) ) {
 
 
                 if ( '' == $rule[ 'title' ] ) {
-                    $rule_fee[ 'title' ] = esc_html__( 'Fee', 'woopcd-partialcod' );
+                    $rule_fee[ 'title' ] = esc_html__( 'Fee', 'partial-cod-payment-gateway-restrictions-fees' );
                 }
 
                 $cart_data = $this->add_rule_fee( $cart_data, $rule_fee, $rule_head );

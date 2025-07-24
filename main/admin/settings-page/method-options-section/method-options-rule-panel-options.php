@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -59,8 +63,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Method_Rule_Panel_Options' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Method Settings', 'woopcd-partialcod' ),
-                        'desc' => esc_html__( 'List of payment method settings to apply, empty list will not apply any settings', 'woopcd-partialcod' ),
+                        'title' => esc_html__( 'Method Settings', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'desc' => esc_html__( 'List of payment method settings to apply, empty list will not apply any settings', 'partial-cod-payment-gateway-restrictions-fees' ),
                     )
                 ),
             );
@@ -95,7 +99,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Method_Rule_Panel_Options' ) ) {
                     'show_list' => true,
                     'list_icon' => 'fa fa-list',
                     'list_width' => $list_width,
-                    'button_text' => esc_html__( 'Add Settings', 'woopcd-partialcod' ),
+                    'button_text' => esc_html__( 'Add Settings', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
             );
 

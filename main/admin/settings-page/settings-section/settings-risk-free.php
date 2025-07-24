@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -30,8 +34,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_RiskFree_Settings' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Partial Payments Settings', 'woopcd-partialcod' ),
-                        'desc' => esc_html__( 'Use these settings to control partial paymants basic settings', 'woopcd-partialcod' ),
+                        'title' => esc_html__( 'Partial Payments Settings', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'desc' => esc_html__( 'Use these settings to control partial paymants basic settings', 'partial-cod-payment-gateway-restrictions-fees' ),
                     ),
                     array(
                         'id' => 'is_any',

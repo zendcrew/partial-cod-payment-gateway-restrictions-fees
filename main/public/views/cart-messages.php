@@ -1,4 +1,10 @@
-<div id="partialcod_msgs" style="display: none;">
+<?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+?><div id="partialcod_msgs" style="display: none;">
     <?php
     
     $allowed_html = WOOPCD_PartialCOD_Main::get_allow_html();

@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -38,7 +42,6 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             WOOPCD_PartialCOD_Admin_Settings_Page::init();
 
             add_filter( 'reon/get-option-page-' . self::$option_name . '-sections', array( new self(), 'config_all_sections' ), 10 );
-            add_filter( 'reon/get-option-page-' . self::$option_name . '-section-title', array( new self(), 'get_page_title' ), 10, 2 );
 
             add_filter( 'woopcd_partialcod-admin/get-disabled-list', array( new self(), 'get_disabled_list' ), 10, 2 );
             add_filter( 'woopcd_partialcod-admin/get-disabled-grouped-list', array( new self(), 'get_grouped_disabled_list' ), 10, 2 );
@@ -150,11 +153,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
 
         public static function init_page() {
             /* translators: 1: plugin version */
-            $version_text = sprintf( esc_html__( 'Lite v%s', 'woopcd-partialcod' ), WOOPCD_PARTIALCOD_VERSION );
+            $version_text = sprintf( esc_html__( 'Lite v%s', 'partial-cod-payment-gateway-restrictions-fees' ), WOOPCD_PARTIALCOD_VERSION );
 
             if ( defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
                 /* translators: 1: plugin version */
-                $version_text = sprintf( esc_html__( 'Premium v%s', 'woopcd-partialcod' ), WOOPCD_PARTIALCOD_VERSION );
+                $version_text = sprintf( esc_html__( 'Premium v%s', 'partial-cod-payment-gateway-restrictions-fees' ), WOOPCD_PARTIALCOD_VERSION );
             }
 
             $args = array(
@@ -170,7 +173,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 'display' => array(
                     'enabled' => true,
                     'image' => WOOPCD_PARTIALCOD_ASSETS_URL . 'images/aside_logo.png',
-                    'title' => esc_html__( 'Partial COD', 'woopcd-partialcod' ),
+                    'title' => esc_html__( 'Partial COD', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'sub_title' => 'Gateway Restrictions & Fees',
                     'version' => $version_text,
                     'styles' => array(
@@ -181,16 +184,16 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                     ),
                 ),
                 'ajax' => array(
-                    'save_msg' => esc_html__( 'Done!!', 'woopcd-partialcod' ),
-                    'save_error_msg' => esc_html__( 'Unable to save your settings', 'woopcd-partialcod' ),
-                    'reset_msg' => esc_html__( 'Done!!', 'woopcd-partialcod' ),
-                    'reset_error_msg' => esc_html__( 'Unable to reset reset your settings', 'woopcd-partialcod' ),
-                    'nonce_error_msg' => esc_html__( 'invalid nonce', 'woopcd-partialcod' ),
+                    'save_msg' => esc_html__( 'Done!!', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'save_error_msg' => esc_html__( 'Unable to save your settings', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'reset_msg' => esc_html__( 'Done!!', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'reset_error_msg' => esc_html__( 'Unable to reset reset your settings', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'nonce_error_msg' => esc_html__( 'invalid nonce', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'menu' => array(
                     'enable' => true,
-                    'title' => esc_html__( 'Partial COD - Gateway Restrictions & Fees', 'woopcd-partialcod' ),
-                    'page_title' => esc_html__( 'Partial COD - Payment Gateway Restrictions & Fees', 'woopcd-partialcod' ),
+                    'title' => esc_html__( 'Partial COD - Gateway Restrictions & Fees', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'page_title' => esc_html__( 'Partial COD - Payment Gateway Restrictions & Fees', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'dashicons-admin-generic',
                     'priority' => 2,
                     'parent' => 'woocommerce',
@@ -199,38 +202,39 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 'import_export' => array(
                     'enable' => true,
                     'min_height' => '565px',
-                    'title' => esc_html__( 'Import / Export', 'woopcd-partialcod' ),
+                    'title' => esc_html__( 'Import / Export', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'header_title' => esc_html__( 'Import / Export', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'import' => array(
-                        'title' => esc_html__( 'Import Settings', 'woopcd-partialcod' ),
-                        'desc' => esc_html__( 'Here you can import new settings. Simply paste the settings url or data on the field below.', 'woopcd-partialcod' ),
-                        'url_button_text' => esc_html__( 'Import from url', 'woopcd-partialcod' ),
-                        'url_textbox_desc' => esc_html__( "Paste the url to another site's settings below and click the 'Import Now' button.", 'woopcd-partialcod' ),
-                        'url_textbox_hint' => esc_html__( "Paste the url to another site's settings here...", 'woopcd-partialcod' ),
-                        'data_button_text' => esc_html__( 'Import Data', 'woopcd-partialcod' ),
-                        'data_textbox_desc' => esc_html__( "Paste your backup settings below and click the 'Import Now' button.", 'woopcd-partialcod' ),
-                        'data_textbox_hint' => esc_html__( 'Paste your backup settings here...', 'woopcd-partialcod' ),
-                        'import_button_text' => esc_html__( 'Import Now', 'woopcd-partialcod' ),
-                        'warn_text' => esc_html__( 'Warning! This will override all existing settings. proceed with caution!', 'woopcd-partialcod' ),
+                        'title' => esc_html__( 'Import Settings', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'desc' => esc_html__( 'Here you can import new settings. Simply paste the settings url or data on the field below.', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'url_button_text' => esc_html__( 'Import from url', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'url_textbox_desc' => esc_html__( "Paste the url to another site's settings below and click the 'Import Now' button.", 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'url_textbox_hint' => esc_html__( "Paste the url to another site's settings here...", 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'data_button_text' => esc_html__( 'Import Data', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'data_textbox_desc' => esc_html__( "Paste your backup settings below and click the 'Import Now' button.", 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'data_textbox_hint' => esc_html__( 'Paste your backup settings here...', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'import_button_text' => esc_html__( 'Import Now', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'warn_text' => esc_html__( 'Warning! This will override all existing settings. proceed with caution!', 'partial-cod-payment-gateway-restrictions-fees' ),
                     ),
                     'export' => array(
-                        'title' => esc_html__( 'Export Settings', 'woopcd-partialcod' ),
-                        'desc' => esc_html__( 'Here you can backup your current settings. You can later use it to restore your settings.', 'woopcd-partialcod' ),
-                        'download_button_text' => esc_html__( 'Download Data', 'woopcd-partialcod' ),
-                        'url_button_text' => esc_html__( 'Export url', 'woopcd-partialcod' ),
-                        'url_textbox_desc' => esc_html__( 'Copy the url below, use it to transfer the settings from this site.', 'woopcd-partialcod' ),
-                        'data_button_text' => esc_html__( 'Export Data', 'woopcd-partialcod' ),
-                        'data_textbox_desc' => esc_html__( 'Copy the data below, use it as your backup.', 'woopcd-partialcod' ),
+                        'title' => esc_html__( 'Export Settings', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'desc' => esc_html__( 'Here you can backup your current settings. You can later use it to restore your settings.', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'download_button_text' => esc_html__( 'Download Data', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'url_button_text' => esc_html__( 'Export url', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'url_textbox_desc' => esc_html__( 'Copy the url below, use it to transfer the settings from this site.', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'data_button_text' => esc_html__( 'Export Data', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'data_textbox_desc' => esc_html__( 'Copy the data below, use it as your backup.', 'partial-cod-payment-gateway-restrictions-fees' ),
                     ),
                 ),
                 'header_buttons' => array(
-                    'reset_all_text' => esc_html__( 'Reset All', 'woopcd-partialcod' ),
-                    'reset_section_text' => esc_html__( 'Reset Section', 'woopcd-partialcod' ),
-                    'save_section_text' => esc_html__( 'Save Section', 'woopcd-partialcod' ),
+                    'reset_all_text' => esc_html__( 'Reset All', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'reset_section_text' => esc_html__( 'Reset Section', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'save_section_text' => esc_html__( 'Save Section', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'footer_buttons' => array(
-                    'reset_all_text' => esc_html__( 'Reset All', 'woopcd-partialcod' ),
-                    'reset_section_text' => esc_html__( 'Reset Section', 'woopcd-partialcod' ),
-                    'save_section_text' => esc_html__( 'Save Section', 'woopcd-partialcod' ),
+                    'reset_all_text' => esc_html__( 'Reset All', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'reset_section_text' => esc_html__( 'Reset Section', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'save_section_text' => esc_html__( 'Save Section', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'page_links' => self::get_page_links(),
                 'social_links' => self::get_social_links(),
@@ -252,7 +256,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
 
 
             $in_sections[] = array(
-                'title' => esc_html__( 'General Settings', 'woopcd-partialcod' ),
+                'title' => esc_html__( 'General Settings', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'id' => 'settings',
                 'group' => 1,
             );
@@ -268,12 +272,14 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
 
             $in_sections[] = array(
                 'title' => $method[ 'method_title' ],
+                'header_title' => esc_html__( 'Settings & Restrictions', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'id' => $method_id . '-main',
                 'group' => $group_id,
             );
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Settings & Restrictions', 'woopcd-partialcod' ),
+                'title' => esc_html__( 'Settings & Restrictions', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'header_title' => esc_html__( 'Settings & Restrictions', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'id' => $method_id . '-rules',
                 'group' => $group_id,
                 'subsection' => true
@@ -282,8 +288,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             $group_id++;
 
             if ( WOOPCD_PartialCOD_Main::is_risky_method( $method_id ) ) {
+                
                 $in_sections[] = array(
-                    'title' => esc_html__( 'Partial Payments', 'woopcd-partialcod' ),
+                    'title' => esc_html__( 'Partial Payments', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'header_title' => esc_html__( 'Partial Payments', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'id' => $method_id . '-riskfree-rules',
                     'group' => $group_id,
                     'subsection' => true
@@ -293,7 +301,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             $group_id++;
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Gateway Fees', 'woopcd-partialcod' ),
+                'title' => esc_html__( 'Gateway Fees', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'header_title' => esc_html__( 'Gateway Fees', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'id' => $method_id . '-fee-rules',
                 'group' => $group_id,
                 'subsection' => true
@@ -302,7 +311,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             $group_id++;
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Cart Discounts', 'woopcd-partialcod' ),
+                'title' => esc_html__( 'Cart Discounts', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'header_title' => esc_html__( 'Cart Discounts', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'id' => $method_id . '-discount-rules',
                 'group' => $group_id,
                 'subsection' => true
@@ -311,7 +321,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             $group_id++;
 
             $in_sections[] = array(
-                'title' => esc_html__( 'Order Autopilots', 'woopcd-partialcod' ),
+                'title' => esc_html__( 'Order Autopilots', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'header_title' => esc_html__( 'Order Autopilots', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'id' => $method_id . '-activitys',
                 'group' => $group_id,
                 'subsection' => true
@@ -320,32 +331,18 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             return $in_sections;
         }
 
-        public function get_page_title( $in_title, $tab ) {
-
-            $in_title = 'Settings';
-
-            $section_titles = self::get_section_titles();
-
-            if ( isset( $section_titles[ $tab - 1 ] ) ) {
-
-                return $section_titles[ $tab - 1 ];
-            }
-
-            return $in_title;
-        }
-
         public static function get_premium_messages( $message_id = '' ) {
 
             $premium_url = "https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew";
 
-            $message = esc_html__( 'This feature is available on premium version', 'woopcd-partialcod' );
+            $message = esc_html__( 'This feature is available on premium version', 'partial-cod-payment-gateway-restrictions-fees' );
 
-            $link_text = esc_html__( 'Premium Feature', 'woopcd-partialcod' );
+            $link_text = esc_html__( 'Premium Feature', 'partial-cod-payment-gateway-restrictions-fees' );
 
 
             switch ( $message_id ) {
                 case 'short_message':
-                    $message = esc_html__( 'Available on premium version', 'woopcd-partialcod' );
+                    $message = esc_html__( 'Available on premium version', 'partial-cod-payment-gateway-restrictions-fees' );
                     return '<a href="' . esc_url( $premium_url ) . '" target="_blank">' . $link_text . '</a> - ' . $message;
 
                 default:
@@ -432,9 +429,9 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
 
                 unset( $links[ 'deactivate' ] );
 
-                $add_on_text = esc_html__( 'WooCommerce Partial COD - Premium (Add-On)', 'woopcd-partialcod' );
+                $add_on_text = esc_html__( 'WooCommerce Partial COD - Premium (Add-On)', 'partial-cod-payment-gateway-restrictions-fees' );
                 /* translators: 1: plugin name */
-                $required_text = sprintf( esc_html__( 'Required by %s', 'woopcd-partialcod' ), $add_on_text );
+                $required_text = sprintf( esc_html__( 'Required by %s', 'partial-cod-payment-gateway-restrictions-fees' ), $add_on_text );
 
                 $no_deactivate_tag = '<span style="color: #313639">' . $required_text . '</span>';
 
@@ -443,13 +440,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 return $links;
             }
 
-            $doc_link = '<a href="' . esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ) . '" target="_blank">' . esc_html__( 'Documentation', 'woopcd-partialcod' ) . '</a>';
+            $doc_link = '<a href="' . esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ) . '" target="_blank">' . esc_html__( 'Documentation', 'partial-cod-payment-gateway-restrictions-fees' ) . '</a>';
 
             array_unshift( $links, $doc_link );
 
             $settings_url = admin_url( 'admin.php?page=partialcod-settings' );
 
-            $settings_link = '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'woopcd-partialcod' ) . '</a>';
+            $settings_link = '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'partial-cod-payment-gateway-restrictions-fees' ) . '</a>';
 
             array_unshift( $links, $settings_link );
 
@@ -461,7 +458,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             $page_links = array(
                 array(
                     'id' => 'woopcd_documentation',
-                    'title' => esc_html__( 'Documentation', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'Documentation', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-file-text',
                     'href' => esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ),
                     'target' => '_blank',
@@ -473,7 +470,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
 
                 $page_links[] = array(
                     'id' => 'woopcd_help',
-                    'title' => esc_html__( 'Help', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'Help', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-question-circle',
                     'href' => esc_url( 'https://support.zendcrew.cc/portal/en/newticket' ),
                     'target' => '_blank',
@@ -483,7 +480,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
 
                 $page_links[] = array(
                     'id' => 'woopcd_get_premium',
-                    'title' => esc_html__( 'Premium Version', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'Premium Version', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-file-text-o',
                     'href' => esc_url( 'https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew' ),
                     'target' => '_blank',
@@ -499,28 +496,28 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             return array(
                 array(
                     'id' => 'woopcd_facebook',
-                    'title' => esc_html__( 'Facebook', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'Facebook', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-facebook',
                     'href' => esc_url( 'http://www.facebook.com/zendcrew' ),
                     'target' => '_blank',
                 ),
                 array(
                     'id' => 'woopcd_linkedin',
-                    'title' => esc_html__( 'LinkedIn', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'LinkedIn', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-linkedin',
                     'href' => esc_url( 'https://www.linkedin.com/company/zendcrew' ),
                     'target' => '_blank',
                 ),
                 array(
                     'id' => 'woopcd_stack_overflow',
-                    'title' => esc_html__( 'Stack Overflow', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'Stack Overflow', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-stack-overflow',
                     'href' => esc_url( 'https://stackoverflow.com/users/8692713/zendcrew' ),
                     'target' => '_blank',
                 ),
                 array(
                     'id' => 'woopcd_instagram',
-                    'title' => esc_html__( 'Instagram', 'table-rate-shipping-rates' ),
+                    'title' => esc_html__( 'Instagram', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'icon' => 'fa fa-instagram',
                     'href' => esc_url( 'https://www.instagram.com/zendcrew/' ),
                     'target' => '_blank',
@@ -528,42 +525,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             );
         }
 
-        private static function get_section_titles() {
-
-            $setion_titles = array();
-
-            foreach ( self::get_all_payment_method_ids() as $method_id ) {
-
-                $setion_titles[] = esc_html__( 'Settings & Restrictions', 'woopcd-partialcod' );
-
-                $setion_titles[] = esc_html__( 'Settings & Restrictions', 'woopcd-partialcod' );
-
-                if ( WOOPCD_PartialCOD_Main::is_risky_method( $method_id ) ) {
-
-                    $setion_titles[] = esc_html__( 'Partial Payments', 'woopcd-partialcod' );
-                }
-
-                $setion_titles[] = esc_html__( 'Gateway Fees', 'woopcd-partialcod' );
-
-                $setion_titles[] = esc_html__( 'Cart Discounts', 'woopcd-partialcod' );
-
-                $setion_titles[] = esc_html__( 'Order Autopilots', 'woopcd-partialcod' );
-            }
-
-            $setion_titles[] = esc_html__( 'General Settings', 'woopcd-partialcod' );
-
-            $setion_titles[] = esc_html__( 'Import / Export', 'woopcd-partialcod' );
-
-            return $setion_titles;
-        }
-
         private static function is_admin_page() {
 
             $options_name = '';
 
-            if ( isset( $_POST[ 'option_name' ] ) ) {
+            if ( isset( $_POST[ 'option_name' ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 
-                $options_name = sanitize_key( $_POST[ 'option_name' ] );
+                $options_name = sanitize_key( wp_unslash( $_POST[ 'option_name' ] ) );// phpcs:ignore WordPress.Security.NonceVerification.Missing
             }
 
             if ( self::get_option_name() == $options_name ) {
@@ -571,7 +539,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 return true;
             }
 
-            if ( isset( $_GET[ 'page' ] ) && $_GET[ 'page' ] == self::get_page_slug() ) {
+            if ( isset( $_GET[ 'page' ] ) && $_GET[ 'page' ] == self::get_page_slug() ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
                 return true;
             }

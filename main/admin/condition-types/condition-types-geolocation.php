@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -16,13 +20,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_GeoLocation' ) && !defin
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'geo_locations' ] = esc_html__( 'GeoIP Locations', 'woopcd-partialcod' );
+            $in_groups[ 'geo_locations' ] = esc_html__( 'GeoIP Locations', 'partial-cod-payment-gateway-restrictions-fees' );
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
-            $in_list[ 'prem_1' ] = esc_html__( 'GeoIP Continents (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_2' ] = esc_html__( 'GeoIP Countries (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_1' ] = esc_html__( 'GeoIP Continents (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_2' ] = esc_html__( 'GeoIP Countries (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             
             return $in_list;
         }

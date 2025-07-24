@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -38,16 +42,16 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Surface_Area' ) && !def
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'per_surface_areas' => esc_html__( 'Discount Per Surface Area', 'woopcd-partialcod' ),
-                    'prem_16' => esc_html__( 'Discount per surface area (Premium)', 'woopcd-partialcod' ),
-                    'prem_17' => esc_html__( 'Discount x surface area (Premium)', 'woopcd-partialcod' ),
+                    'per_surface_areas' => esc_html__( 'Discount Per Surface Area', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_16' => esc_html__( 'Discount per surface area (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_17' => esc_html__( 'Discount x surface area (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 );
             }
 
             return array(
-                'per_surface_areas' => esc_html__( 'Fee Per Surface Area', 'woopcd-partialcod' ),
-                'prem_16' => esc_html__( 'Fee per surface area (Premium)', 'woopcd-partialcod' ),
-                'prem_17' => esc_html__( 'Fee x surface area (Premium)', 'woopcd-partialcod' ),
+                'per_surface_areas' => esc_html__( 'Fee Per Surface Area', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_16' => esc_html__( 'Fee per surface area (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_17' => esc_html__( 'Fee x surface area (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
         }
 

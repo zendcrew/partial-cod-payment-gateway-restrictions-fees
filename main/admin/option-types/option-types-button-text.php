@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -17,10 +21,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Method_Options_Button_Text' ) && !d
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'order_button_text' ] = array(
-                'list_title' => esc_html__( 'Checkout - Button Text (Premium)', 'woopcd-partialcod' ),
-                'title' => esc_html__( 'Checkout - Button Text (Premium)', 'woopcd-partialcod' ),
+                'list_title' => esc_html__( 'Checkout - Button Text (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'title' => esc_html__( 'Checkout - Button Text (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'group_id' => 'checkout',
-                'tooltip' => esc_html__( 'Controls payment method order button text on checkout page', 'woopcd-partialcod' ),
+                'tooltip' => esc_html__( 'Controls payment method order button text on checkout page', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
 
             return $in_options;

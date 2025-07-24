@@ -60,7 +60,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Polylang' ) && class_exists( 'Polylang' )
                 return pll__( $string_value );
             } else if ( function_exists( 'icl_t' ) ) {
 
-                return icl_t( 'woopcd-partialcod', $string_id, $string_value );
+                return icl_t( 'partial-cod-payment-gateway-restrictions-fees', $string_id, $string_value );
             }
 
             return $string_value;
@@ -70,10 +70,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Polylang' ) && class_exists( 'Polylang' )
 
             if ( function_exists( 'icl_register_string' ) ) {
 
-                icl_register_string( 'woopcd-partialcod', $string_id, $string_value );
+                icl_register_string( 'partial-cod-payment-gateway-restrictions-fees', $string_id, $string_value );
             } else if ( function_exists( 'pll_register_string' ) ) {
 
-                pll_register_string( $string_id, $string_value, 'woopcd-partialcod', $is_multiline );
+                pll_register_string( $string_id, $string_value, 'partial-cod-payment-gateway-restrictions-fees', $is_multiline );
             }
         }
 

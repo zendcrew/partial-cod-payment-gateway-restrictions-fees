@@ -1,10 +1,15 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
 
 if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Types' ) ) {
+    
     WOOPCD_PartialCOD_Main::required_paths( dirname( __FILE__ ), array( 'amount-types.php' ) );
 
     class WOOPCD_PartialCOD_Admin_Amount_Types {
@@ -73,12 +78,12 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Types' ) ) {
         
         public static function get_amount_add_methods( $args ) {
             $options = array(
-                'add' => esc_html__( 'Add to previous amounts', 'woopcd-partialcod' )
+                'add' => esc_html__( 'Add to previous amounts', 'partial-cod-payment-gateway-restrictions-fees' )
             );
 
             if ( !defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
-                $options[ 'prem_1' ] = esc_html__( 'Subtract from previous amounts (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_2' ] = esc_html__( 'Override previous amounts (Premium)', 'woopcd-partialcod' );
+                $options[ 'prem_1' ] = esc_html__( 'Subtract from previous amounts (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_2' ] = esc_html__( 'Override previous amounts (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             }
 
             return apply_filters( 'woopcd_partialcod-admin/get-amount-add-methods', $options );

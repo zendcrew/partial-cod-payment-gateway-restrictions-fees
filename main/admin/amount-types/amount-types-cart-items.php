@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -40,22 +44,22 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Per_Items' ) && !define
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
                 return array(
-                    'per_items' => esc_html__( 'Discounts Per Items', 'woopcd-partialcod' ),
-                    'prem_3' => esc_html__( 'Discount per cart line (Premium)', 'woopcd-partialcod' ),
-                    'prem_4' => esc_html__( 'Discount per item quantity (Premium)', 'woopcd-partialcod' ),
-                    'prem_5' => esc_html__( 'Discount per product (Premium)', 'woopcd-partialcod' ),
-                    'prem_6' => esc_html__( 'Discount per variation (Premium)', 'woopcd-partialcod' ),
-                    'prem_7' => esc_html__( 'Percentage discount per item (Premium)', 'woopcd-partialcod' ),
+                    'per_items' => esc_html__( 'Discounts Per Items', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_3' => esc_html__( 'Discount per cart line (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_4' => esc_html__( 'Discount per item quantity (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_5' => esc_html__( 'Discount per product (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_6' => esc_html__( 'Discount per variation (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_7' => esc_html__( 'Percentage discount per item (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 );
             }
 
             return array(
-                'per_items' => esc_html__( 'Fee Per Items', 'woopcd-partialcod' ),
-                'prem_3' => esc_html__( 'Fee per cart lines (Premium)', 'woopcd-partialcod' ),
-                'prem_4' => esc_html__( 'Fee per item quantity (Premium)', 'woopcd-partialcod' ),
-                'prem_5' => esc_html__( 'Fee per product (Premium)', 'woopcd-partialcod' ),
-                'prem_6' => esc_html__( 'Fee per variation (Premium)', 'woopcd-partialcod' ),
-                'prem_7' => esc_html__( 'Percentage fee per item (Premium)', 'woopcd-partialcod' ),
+                'per_items' => esc_html__( 'Fee Per Items', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_3' => esc_html__( 'Fee per cart lines (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_4' => esc_html__( 'Fee per item quantity (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_5' => esc_html__( 'Fee per product (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_6' => esc_html__( 'Fee per variation (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'prem_7' => esc_html__( 'Percentage fee per item (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
         }
 

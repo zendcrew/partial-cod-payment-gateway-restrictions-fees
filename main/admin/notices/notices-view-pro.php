@@ -1,8 +1,14 @@
-<div class="notice notice-info woopcd-partialcod-notice is-dismissible" data-woopcd_partialcod_id="pro">
-    <p><?php echo wp_kses( __( 'Hey, I noticed you having been using <strong>WooCommerce Partial COD - Gateway Restrictions & Fees</strong>, that’s awesome! Could you please do me a favor and give it a 5-star rating to help us spread the word?', 'woopcd-partialcod' ), array( 'strong' => array() ) ); ?></p>
+<?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+?><div class="notice notice-info woopcd-partialcod-notice is-dismissible" data-woopcd_partialcod_id="pro">
+    <p><?php echo wp_kses( __( 'Hey, I noticed you having been using <strong>PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce</strong>, that’s awesome! Could you please do me a favor and give it a 5-star rating to help us spread the word?', 'partial-cod-payment-gateway-restrictions-fees' ), array( 'strong' => array() ) ); ?></p>
     <p>
-        <a href="https://codecanyon.net/downloads" class="woopcd-partialcod-btn" target="_blank"><span class="dashicons dashicons-external"></span><?php esc_html_e( esc_html__( 'Yes! You deserve it', 'woopcd-partialcod' ) ); ?></a>
-        <a href="#" class="woopcd-partialcod-btn woopcd-partialcod-btn-secondary" data-woopcd_partialcod_remind="yes"><span class="dashicons dashicons-calendar"></span><?php esc_html_e( esc_html__( 'Nah, maybe later', 'woopcd-partialcod' ) ); ?></a>
-        <a href="#" class="woopcd-partialcod-btn woopcd-partialcod-btn-secondary"><span class="dashicons dashicons-smiley"></span><?php esc_html_e( esc_html__( 'I already did', 'woopcd-partialcod' ) ); ?></a>
+        <a href="https://codecanyon.net/downloads" class="woopcd-partialcod-btn" target="_blank"><span class="dashicons dashicons-external"></span><?php echo esc_html__( 'Yes! You deserve it', 'partial-cod-payment-gateway-restrictions-fees' ); ?></a>
+        <a href="#" class="woopcd-partialcod-btn woopcd-partialcod-btn-secondary" data-woopcd_partialcod_remind="yes"><span class="dashicons dashicons-calendar"></span><?php echo esc_html__( 'Nah, maybe later', 'partial-cod-payment-gateway-restrictions-fees' ); ?></a>
+        <a href="#" class="woopcd-partialcod-btn woopcd-partialcod-btn-secondary"><span class="dashicons dashicons-smiley"></span><?php echo esc_html__( 'I already did', 'partial-cod-payment-gateway-restrictions-fees' ); ?></a>
     </p>
 </div>

@@ -1,17 +1,19 @@
 <?php
 
 /*
- * Plugin Name: WooCommerce Partial COD - Payment Gateway Restrictions & Fees
+ * Plugin Name: PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce
  * Plugin URI: https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew
  * Description: A powerful, flexible and easy-to-use WooCommerce extention that can be used to manage payment availability and other gateway options based on product rules and conditions.
- * Version: 1.3.4
+ * Version: 1.4
  * Author: zendcrew
  * Author URI: https://codecanyon.net/user/zendcrew?ref=zendcrew
- * Text Domain: woopcd-partialcod
+ * Text Domain: partial-cod-payment-gateway-restrictions-fees
  * Domain Path: /languages/
  * Requires at least: 5.8
  * Requires PHP: 5.6
  * WC requires at least: 5.6
+ * License: GPL v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * 
  * Tested up to: 6.8
  * WC tested up to: 9.9
@@ -28,7 +30,7 @@ if ( is_admin() ) {
 
 if ( !defined( 'WOOPCD_PARTIALCOD_VERSION' ) ) {
 
-    define( 'WOOPCD_PARTIALCOD_VERSION', '1.3.4' );
+    define( 'WOOPCD_PARTIALCOD_VERSION', '1.4' );
 }
 
 if ( !defined( 'WOOPCD_PARTIALCOD_FILE' ) ) {
@@ -61,7 +63,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
 
         public function load_textdomain() {
 
-            load_plugin_textdomain( 'woopcd-partialcod', false, dirname( plugin_basename( WOOPCD_PARTIALCOD_FILE ) ) . '/languages/' );
+            load_plugin_textdomain( 'partial-cod-payment-gateway-restrictions-fees', false, dirname( plugin_basename( WOOPCD_PARTIALCOD_FILE ) ) . '/languages/' );
         }
 
         public function plugin_loaded() {
@@ -88,7 +90,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
 
         public function missing_notice() {
 
-            echo '<div class="error"><p><strong>' . esc_html__( 'WooCommerce Partial COD - Payment Gateway Restrictions & Fees requires WooCommerce to be installed and activated.', 'woopcd-partialcod' ) . '</strong></p></div>';
+            echo '<div class="error"><p><strong>' . esc_html__( 'PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce requires WooCommerce to be installed and activated.', 'partial-cod-payment-gateway-restrictions-fees' ) . '</strong></p></div>';
         }
 
         private function init() {

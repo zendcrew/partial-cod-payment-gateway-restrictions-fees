@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -16,10 +20,10 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Method_Rule_Options_Description' ) 
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'description' ] = array(
-                'list_title' => esc_html__( 'Checkout - Description (Premium)', 'woopcd-partialcod' ),
-                'title' => esc_html__( 'Checkout - Description (Premium)', 'woopcd-partialcod' ),
+                'list_title' => esc_html__( 'Checkout - Description (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'title' => esc_html__( 'Checkout - Description (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'group_id' => 'checkout',
-                'tooltip' => esc_html__( 'Controls payment method description on checkout page', 'woopcd-partialcod' ),
+                'tooltip' => esc_html__( 'Controls payment method description on checkout page', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
 
             return $in_options;

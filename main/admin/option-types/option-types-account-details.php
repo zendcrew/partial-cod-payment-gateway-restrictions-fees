@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -18,8 +22,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Method_Options_Account_Details' ) &
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'account_details' ] = array(
-                'list_title' => esc_html__( 'Order - Account Details (Premium)', 'woopcd-partialcod' ),
-                'title' => esc_html__( 'Order - Account Details (Premium)', 'woopcd-partialcod' ),
+                'list_title' => esc_html__( 'Order - Account Details (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'title' => esc_html__( 'Order - Account Details (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'group_id' => 'order',
             );
 

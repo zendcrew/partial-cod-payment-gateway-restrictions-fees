@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -40,21 +44,21 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Amount_Type_Length' ) && !defined( 
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $d_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Discount per length ([0]) (Premium)', 'woopcd-partialcod' ) );
-                $d_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Discount x length ([0]) (Premium)', 'woopcd-partialcod' ) );
+                $d_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Discount per length ([0]) (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ) );
+                $d_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Discount x length ([0]) (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ) );
 
                 return array(
-                    'per_lengths' => esc_html__( 'Discount Per Length', 'woopcd-partialcod' ),
+                    'per_lengths' => esc_html__( 'Discount Per Length', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'prem_10' => $d_prem_10,
                     'prem_11' => $d_prem_11,
                 );
             }
 
-            $f_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Fee per length ([0]) (Premium)', 'woopcd-partialcod' ) );
-            $f_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Fee x length ([0]) (Premium)', 'woopcd-partialcod' ) );
+            $f_prem_10 = str_replace( '[0]', $length_unit, esc_html__( 'Fee per length ([0]) (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ) );
+            $f_prem_11 = str_replace( '[0]', $length_unit, esc_html__( 'Fee x length ([0]) (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ) );
 
             return array(
-                'per_lengths' => esc_html__( 'Fee Per Length', 'woopcd-partialcod' ),
+                'per_lengths' => esc_html__( 'Fee Per Length', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'prem_10' => $f_prem_10,
                 'prem_11' => $f_prem_11,
             );

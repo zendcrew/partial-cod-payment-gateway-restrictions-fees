@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -44,14 +48,14 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Min_Max')) {
                         'id' => 'amount_type',
                         'type' => 'select2',
                         'column_size' => 1,
-                        'column_title' => esc_html__('Fees Limit', 'woopcd-partialcod'),
-                        'tooltip' => esc_html__('Controls cart fees limit', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Fees Limit', 'partial-cod-payment-gateway-restrictions-fees'),
+                        'tooltip' => esc_html__('Controls cart fees limit', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => 'no',
                         'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                         'options' => array(
-                            'no' => esc_html__('No limit', 'woopcd-partialcod'),
-                            'prem_1' => esc_html__('Fixed amount (Premium)', 'woopcd-partialcod'),
-                            'prem_2' => esc_html__('Percentage amount (Premium)', 'woopcd-partialcod'),
+                            'no' => esc_html__('No limit', 'partial-cod-payment-gateway-restrictions-fees'),
+                            'prem_1' => esc_html__('Fixed amount (Premium)', 'partial-cod-payment-gateway-restrictions-fees'),
+                            'prem_2' => esc_html__('Percentage amount (Premium)', 'partial-cod-payment-gateway-restrictions-fees'),
                         ),
                         'width' => '100%',
                     ),

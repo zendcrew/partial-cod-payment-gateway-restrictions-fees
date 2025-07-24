@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -25,13 +29,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Logic_Types_Conditions' ) ) {
                     'type' => 'select2',
                     'full_width' => true,
                     'center_head' => true,
-                    'title' => esc_html__( 'Shop Conditions', 'woopcd-partialcod' ),
+                    'title' => esc_html__( 'Shop Conditions', 'partial-cod-payment-gateway-restrictions-fees' ),
                     'desc' => self::get_conditions_desc( $args ),
                     'default' => 'match_all',
                     'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                     'options' => array(
-                        'match_all' => esc_html__( 'All conditions should match', 'woopcd-partialcod' ),
-                        'prem_1' => esc_html__( 'At least one condition should match (Premium)', 'woopcd-partialcod' ),
+                        'match_all' => esc_html__( 'All conditions should match', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'prem_1' => esc_html__( 'At least one condition should match (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                     ),
                     'width' => '320px',
                 );
@@ -58,7 +62,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Logic_Types_Conditions' ) ) {
                 'template_adder' => array(
                     'position' => 'right',
                     'show_list' => false,
-                    'button_text' => esc_html__( 'Add Condition', 'woopcd-partialcod' ),
+                    'button_text' => esc_html__( 'Add Condition', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
             );
 
@@ -136,29 +140,29 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Logic_Types_Conditions' ) ) {
 
         private static function get_conditions_desc( $args ) {
 
-            $module_text = esc_html__( 'settings', 'woopcd-partialcod' );
+            $module_text = esc_html__( 'settings', 'partial-cod-payment-gateway-restrictions-fees' );
 
             if ( 'partial-payment' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'partial payment', 'woopcd-partialcod' );
+                $module_text = esc_html__( 'partial payment', 'partial-cod-payment-gateway-restrictions-fees' );
             }
 
             if ( 'method-options' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'method settings', 'woopcd-partialcod' );
+                $module_text = esc_html__( 'method settings', 'partial-cod-payment-gateway-restrictions-fees' );
             }
 
             if ( 'cart-discounts' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'cart discount', 'woopcd-partialcod' );
+                $module_text = esc_html__( 'cart discount', 'partial-cod-payment-gateway-restrictions-fees' );
             }
 
             if ( 'cart-fees' == $args[ 'module' ] ) {
 
-                $module_text = esc_html__( 'gateway fee', 'woopcd-partialcod' );
+                $module_text = esc_html__( 'gateway fee', 'partial-cod-payment-gateway-restrictions-fees' );
             }
             /* translators: 1: module name */
-            return sprintf( esc_html__( 'List of conditions in which this %s should apply, empty conditions will apply in all cases', 'woopcd-partialcod' ), $module_text );
+            return sprintf( esc_html__( 'List of conditions in which this %s should apply, empty conditions will apply in all cases', 'partial-cod-payment-gateway-restrictions-fees' ), $module_text );
         }
 
     }

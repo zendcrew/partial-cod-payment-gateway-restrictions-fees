@@ -1,4 +1,9 @@
-<div class="rn-repeater-section-head">
+<?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+?><div class="rn-repeater-section-head">
 
     <div class="rn-repeater-head-left">
         <?php
@@ -39,9 +44,8 @@
             $head_fields = $template['head']['fields'];
         }
 
-        $args['id'] = $template['id'];
-        $head_fields = apply_filters('roen/get-repeater-template-' . $template_args['filter_id'] . '-' . $template['id'] . '-head-fields', $head_fields, $args);
-
+        $head_fields = self::get_head_fields( $head_fields, $template_args['filter_id'], $template['id'], $args );
+        
         $heas_left = self::get_section_head_fields($head_fields, 'left');
         if (count($heas_left) > 0) {
             ?>

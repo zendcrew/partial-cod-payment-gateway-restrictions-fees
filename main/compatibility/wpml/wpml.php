@@ -57,7 +57,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_WPML' ) && function_exists( 'SitePress' )
 
             if ( function_exists( 'icl_t' ) ) {
 
-                return icl_t( 'woopcd-partialcod', $string_id, $string_value );
+                return icl_t( 'partial-cod-payment-gateway-restrictions-fees', $string_id, $string_value );
             }
 
             return $string_value;
@@ -67,7 +67,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_WPML' ) && function_exists( 'SitePress' )
 
             if ( function_exists( 'icl_register_string' ) ) {
 
-                icl_register_string( 'woopcd-partialcod', $string_id, $string_value );
+                icl_register_string( 'partial-cod-payment-gateway-restrictions-fees', $string_id, $string_value );
             }
         }
 

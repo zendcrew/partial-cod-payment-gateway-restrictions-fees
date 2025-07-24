@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -21,17 +25,17 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
 
         public static function get_groups( $in_groups, $args ) {
 
-            $in_groups[ 'shipping' ] = esc_html__( 'Shipping', 'woopcd-partialcod' );
+            $in_groups[ 'shipping' ] = esc_html__( 'Shipping', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
 
-            $in_list[ 'shipping_needed' ] = esc_html__( 'Needs Shipping', 'woopcd-partialcod' );
-            $in_list[ 'shipping_zones' ] = esc_html__( 'Shipping Zones', 'woopcd-partialcod' );
-            $in_list[ 'shipping_methods' ] = esc_html__( 'Shipping Methods', 'woopcd-partialcod' );
-            $in_list[ 'shipping_rates' ] = esc_html__( 'Shipping Rates', 'woopcd-partialcod' );
+            $in_list[ 'shipping_needed' ] = esc_html__( 'Needs Shipping', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'shipping_zones' ] = esc_html__( 'Shipping Zones', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'shipping_methods' ] = esc_html__( 'Shipping Methods', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'shipping_rates' ] = esc_html__( 'Shipping Rates', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $in_list;
         }
@@ -43,8 +47,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'yes',
                 'options' => array(
-                    'yes' => esc_html__( 'Yes', 'woopcd-partialcod' ),
-                    'no' => esc_html__( 'No', 'woopcd-partialcod' ),
+                    'yes' => esc_html__( 'Yes', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'no' => esc_html__( 'No', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '100%',
                 'box_width' => '100%',
@@ -61,11 +65,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'woopcd-partialcod' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'woopcd-partialcod' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -76,7 +80,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping zones...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Shipping zones...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'data' => 'wc:shipping_zones',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -90,11 +94,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'woopcd-partialcod' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'woopcd-partialcod' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -105,7 +109,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping methods...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Shipping methods...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'data' => 'wc:shipping_methods',
                 'width' => '100%',
                 'box_width' => '74%',
@@ -120,11 +124,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'default' => 'in_list',
                 'options' => array(
-                    'in_list' => esc_html__( 'Any in the list', 'woopcd-partialcod' ),
-                    'in_all_list' => esc_html__( 'All in the list', 'woopcd-partialcod' ),
-                    'in_list_only' => esc_html__( 'Only in the list', 'woopcd-partialcod' ),
-                    'in_all_list_only' => esc_html__( 'Only all in the list', 'woopcd-partialcod' ),
-                    'none' => esc_html__( 'None in the list', 'woopcd-partialcod' ),
+                    'in_list' => esc_html__( 'Any in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list' => esc_html__( 'All in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_list_only' => esc_html__( 'Only in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'in_all_list_only' => esc_html__( 'Only all in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'none' => esc_html__( 'None in the list', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '98%',
                 'box_width' => '26%',
@@ -135,7 +139,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping rates...', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( 'Shipping rates...', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'options' => WOOPCD_PartialCOD_Main::get_shipping_rates( $args ),
                 'width' => '100%',
                 'box_width' => '74%',

@@ -92,23 +92,27 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Shipping' ) ) {
             $zone_ids = array();
 
             if ( !count( $cart_rates ) ) {
+             
                 return $zone_ids;
             }
 
             $instance_ids = array();
 
             foreach ( $cart_rates as $cart_rate ) {
-                $instance_ids[] = esc_sql( $cart_rate[ 'instance_id' ] );
+              
+                $instance_ids[] = $cart_rate[ 'instance_id' ];
             }
 
             global $wpdb;
 
-            $instance_ids_sql = implode( ',', $instance_ids );
+            $instance_ids_sql = implode( ',', array_map( 'esc_sql', $instance_ids ) );
 
             $sql_hash = 'partialcod_zones_query_' . md5( $instance_ids_sql );
 
             $zones_cache = get_transient( $sql_hash );
+            
             if ( $zones_cache ) {
+            
                 return $zones_cache;
             }
 
@@ -118,12 +122,17 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Shipping' ) ) {
                 $sql = "SELECT zone_id FROM {$wpdb->prefix}woocommerce_shipping_zone_methods "
                         . "WHERE instance_id IN(" . $instance_ids_sql . ")";
 
-                $results = $wpdb->get_results( $sql, ARRAY_A );
+                $results = $wpdb->get_results( $sql, ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+                
                 foreach ( $results as $row ) {
+                
                     $zone_ids[] = $row[ 'zone_id' ];
                 }
+                
                 set_transient( $sql_hash, $zone_ids, MINUTE_IN_SECONDS + 30 );
+                
             } catch ( Exception $ex ) {
+            
                 return $zone_ids;
             }
 

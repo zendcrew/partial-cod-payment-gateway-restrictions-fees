@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -19,15 +23,15 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Method_Options_Instructions' ) && !
         }
 
         public static function get_groups( $in_groups, $method_id ) {
-            $in_groups[ 'order' ] = esc_html__( 'Order Settings', 'woopcd-partialcod' );
+            $in_groups[ 'order' ] = esc_html__( 'Order Settings', 'partial-cod-payment-gateway-restrictions-fees' );
             return $in_groups;
         }
 
         public static function get_option( $in_options, $method_id ) {
 
             $in_options[ 'instructions' ] = array(
-                'list_title' => esc_html__( 'Order - Instructions (Premium)', 'woopcd-partialcod' ),
-                'title' => esc_html__( 'Order - Instructions (Premium)', 'woopcd-partialcod' ),
+                'list_title' => esc_html__( 'Order - Instructions (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'title' => esc_html__( 'Order - Instructions (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'group_id' => 'order',
             );
 

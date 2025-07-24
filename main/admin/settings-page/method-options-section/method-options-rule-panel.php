@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -48,11 +52,11 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Method_Rule_Panel')) {
                     array(
                         'id' => 'admin_note',
                         'type' => 'textbox',
-                        'tooltip' => esc_html__('Adds a private note for reference purposes', 'woopcd-partialcod'),
+                        'tooltip' => esc_html__('Adds a private note for reference purposes', 'partial-cod-payment-gateway-restrictions-fees'),
                         'column_size' => 1,
-                        'column_title' => esc_html__('Admin Note', 'woopcd-partialcod'),
+                        'column_title' => esc_html__('Admin Note', 'partial-cod-payment-gateway-restrictions-fees'),
                         'default' => '',
-                        'placeholder' => esc_html__('Type here...', 'woopcd-partialcod'),
+                        'placeholder' => esc_html__('Type here...', 'partial-cod-payment-gateway-restrictions-fees'),
                         'width' => '100%',
                     ),
                 ),

@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -16,18 +20,18 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Purchase_History_Subtota
 
         public static function get_groups( $in_groups, $args ) {
             
-            $in_groups[ 'purchase_history_subtotal' ] = esc_html__( 'Purchase History Subtotal', 'woopcd-partialcod' );
+            $in_groups[ 'purchase_history_subtotal' ] = esc_html__( 'Purchase History Subtotal', 'partial-cod-payment-gateway-restrictions-fees' );
             
             return $in_groups;
         }
 
         public static function get_conditions( $in_list, $args ) {
            
-            $in_list[ 'prem_63' ] = esc_html__( 'Purchased Products Subtotal (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_64' ] = esc_html__( 'Purchased Variations Subtotal (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_65' ] = esc_html__( 'Purchased Categories Subtotal (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_66' ] = esc_html__( 'Purchased Tags Subtotal (Premium)', 'woopcd-partialcod' );
-            $in_list[ 'prem_67' ] = esc_html__( 'Purchased Attributes Subtotal (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_63' ] = esc_html__( 'Purchased Products Subtotal (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_64' ] = esc_html__( 'Purchased Variations Subtotal (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_65' ] = esc_html__( 'Purchased Categories Subtotal (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_66' ] = esc_html__( 'Purchased Tags Subtotal (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+            $in_list[ 'prem_67' ] = esc_html__( 'Purchased Attributes Subtotal (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             
             return $in_list;
         }

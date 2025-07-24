@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -15,23 +19,23 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart' )&& !defined( 'WOO
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'cart' ] = esc_html__( 'Cart', 'woopcd-partialcod' );
+            $in_groups[ 'cart' ] = esc_html__( 'Cart', 'partial-cod-payment-gateway-restrictions-fees' );
             return $in_groups;
         }
 
         public static function get_conditions($in_list, $args) {
-            $in_list[ 'prem_6' ] = esc_html__( 'Cart Total Quantity (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_6' ] = esc_html__( 'Cart Total Quantity (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
 
-            $weight_text = str_replace( '[0]', get_option( 'woocommerce_weight_unit' ), esc_html__( 'Cart Total Weight ([0])  (Premium)', 'woopcd-partialcod' ) );
+            $weight_text = str_replace( '[0]', get_option( 'woocommerce_weight_unit' ), esc_html__( 'Cart Total Weight ([0])  (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ) );
             $in_list[ 'prem_7' ] = $weight_text;
 
-            $in_list[ 'prem_8' ] = esc_html__( 'Number Of Cart Items (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_8' ] = esc_html__( 'Number Of Cart Items (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
 
 
-            $in_list[ 'prem_9' ] = esc_html__( 'Applied Coupons (Premium)', 'woopcd-partialcod' );
+            $in_list[ 'prem_9' ] = esc_html__( 'Applied Coupons (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
 
             if ( WOOPCD_PartialCOD_Main::is_risky_method( $args[ 'method_id' ] ) && 'method-options' != $args[ 'module' ] ) {
-                $in_list[ 'prem_10' ] = esc_html__( 'Partial Payment Method (Premium)', 'woopcd-partialcod' );
+                $in_list[ 'prem_10' ] = esc_html__( 'Partial Payment Method (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             }
             
             return $in_list;

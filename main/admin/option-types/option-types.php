@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Option_Types' ) ) {
 
     WOOPCD_PartialCOD_Main::required_paths( dirname( __FILE__ ), array( 'option-types.php' ) );

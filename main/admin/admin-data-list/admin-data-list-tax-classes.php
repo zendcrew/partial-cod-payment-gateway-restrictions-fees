@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -14,9 +18,9 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Data_List_Tax_Classes')) {
 
         public static function get_data_list($result, $data_args) {
 
-            $result['--1'] = esc_html__('Not taxable', 'woopcd-partialcod');
-            $result['--0'] = esc_html__('Based on items tax options', 'woopcd-partialcod');
-            $result[''] = esc_html__('Standard rates', 'woopcd-partialcod');
+            $result['--1'] = esc_html__('Not taxable', 'partial-cod-payment-gateway-restrictions-fees');
+            $result['--0'] = esc_html__('Based on items tax options', 'partial-cod-payment-gateway-restrictions-fees');
+            $result[''] = esc_html__('Standard rates', 'partial-cod-payment-gateway-restrictions-fees');
 
 
             if (!defined('WOOPCD_PARTIALCOD_PREMIUM')) {
@@ -26,7 +30,7 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Data_List_Tax_Classes')) {
 
 
                 for ($i = 0; $i < count($tax_classes); $i++) {
-                    $result['prem_' . ($i + 1)] = $tax_classes[$i] . esc_html__(' (Premium)', 'woopcd-partialcod');
+                    $result['prem_' . ($i + 1)] = $tax_classes[$i] . esc_html__(' (Premium)', 'partial-cod-payment-gateway-restrictions-fees');
                 }
             }
 

@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -21,7 +25,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Totals' ) ) {
         }
 
         public static function get_groups( $in_groups, $args ) {
-            $in_groups[ 'cart_totals' ] = esc_html__( 'Cart Totals', 'woopcd-partialcod' );
+            $in_groups[ 'cart_totals' ] = esc_html__( 'Cart Totals', 'partial-cod-payment-gateway-restrictions-fees' );
             return $in_groups;
         }
 
@@ -55,12 +59,12 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Totals' ) ) {
                 'type' => 'select2',
                 'default' => '>=',
                 'options' => array(
-                    '>=' => esc_html__( 'More than or equal to', 'woopcd-partialcod' ),
-                    '>' => esc_html__( 'More than', 'woopcd-partialcod' ),
-                    '<=' => esc_html__( 'Less than or equal to', 'woopcd-partialcod' ),
-                    '<' => esc_html__( 'Less than', 'woopcd-partialcod' ),
-                    '==' => esc_html__( 'Equal to', 'woopcd-partialcod' ),
-                    '!=' => esc_html__( 'Not equal to', 'woopcd-partialcod' ),
+                    '>=' => esc_html__( 'More than or equal to', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    '>' => esc_html__( 'More than', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    '<=' => esc_html__( 'Less than or equal to', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    '<' => esc_html__( 'Less than', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    '==' => esc_html__( 'Equal to', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    '!=' => esc_html__( 'Not equal to', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
                 'width' => '99%',
                 'box_width' => '50%',
@@ -71,7 +75,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Totals' ) ) {
                 'type' => 'textbox',
                 'input_type' => 'number',
                 'default' => '0.00',
-                'placeholder' => esc_html__( '0.00', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( '0.00', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'width' => '100%',
                 'box_width' => '50%',
                 'attributes' => array(
@@ -170,8 +174,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart_Totals' ) ) {
         private static function get_default_options() {
 
             return array(
-                '2234343' => esc_html__( 'Subtotal including tax', 'woopcd-partialcod' ),
-                '2234344' => esc_html__( 'Subtotal excluding tax', 'woopcd-partialcod' )
+                '2234343' => esc_html__( 'Subtotal including tax', 'partial-cod-payment-gateway-restrictions-fees' ),
+                '2234344' => esc_html__( 'Subtotal excluding tax', 'partial-cod-payment-gateway-restrictions-fees' )
             );
         }
 

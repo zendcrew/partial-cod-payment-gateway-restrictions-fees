@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -50,14 +54,14 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
                                     'id' => 'max_fee_type',
                                     'type' => 'select2',
                                     'column_size' => 2,
-                                    'column_title' => esc_html__( 'Gateway Fees Limit', 'woopcd-partialcod' ),
-                                    'tooltip' => esc_html__( 'Controls gateway fees limit', 'woopcd-partialcod' ),
+                                    'column_title' => esc_html__( 'Gateway Fees Limit', 'partial-cod-payment-gateway-restrictions-fees' ),
+                                    'tooltip' => esc_html__( 'Controls gateway fees limit', 'partial-cod-payment-gateway-restrictions-fees' ),
                                     'default' => 'no',
                                     'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                                     'options' => array(
-                                        'no' => esc_html__( 'No limit', 'woopcd-partialcod' ),
-                                        'prem_1' => esc_html__( 'Fixed amount (Premium)', 'woopcd-partialcod' ),
-                                        'prem_2' => esc_html__( 'Percentage amount (Premium)', 'woopcd-partialcod' ),
+                                        'no' => esc_html__( 'No limit', 'partial-cod-payment-gateway-restrictions-fees' ),
+                                        'prem_1' => esc_html__( 'Fixed amount (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
+                                        'prem_2' => esc_html__( 'Percentage amount (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                                     ),
                                     'width' => '100%',
                                 ),
@@ -65,8 +69,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
                                     'id' => 'mode',
                                     'type' => 'select2',
                                     'column_size' => 3,
-                                    'column_title' => esc_html__( 'Apply Mode', 'woopcd-partialcod' ),
-                                    'tooltip' => esc_html__( 'Controls fees apply mode', 'woopcd-partialcod' ),
+                                    'column_title' => esc_html__( 'Apply Mode', 'partial-cod-payment-gateway-restrictions-fees' ),
+                                    'tooltip' => esc_html__( 'Controls fees apply mode', 'partial-cod-payment-gateway-restrictions-fees' ),
                                     'default' => 'all',
                                     'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                                     'options' => apply_filters( 'woopcd_partialcod-admin/cart-fees/get-rules-apply-methods', self::get_rules_apply_methods() ),
@@ -97,7 +101,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
                 'clone_button' => true,
                 'width' => '100%',
                 'max_sections' => $max_sections,
-                'max_sections_msg' => esc_html__( 'Please upgrade to premium version in order to add more fees', 'woopcd-partialcod' ),
+                'max_sections_msg' => esc_html__( 'Please upgrade to premium version in order to add more fees', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'field_css_class' => array( 'partialcod_rules' ),
                 'css_class' => 'partialcod_gateway_rules',
                 'auto_expand' => array(
@@ -110,7 +114,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
                 'template_adder' => array(
                     'position' => 'right',
                     'show_list' => false,
-                    'button_text' => esc_html__( 'New Gateway Fee', 'woopcd-partialcod' ),
+                    'button_text' => esc_html__( 'New Gateway Fee', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
             );
 
@@ -125,7 +129,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
 
                 $method = WOOPCD_PartialCOD_Admin_Page::get_payment_method( $repeater_args[ 'field_args' ] );
 
-                $method_text = str_replace( '[0]', $method[ 'title' ], esc_html__( '[0] gateway fee', 'woopcd-partialcod' ) );
+                $method_text = str_replace( '[0]', $method[ 'title' ], esc_html__( '[0] gateway fee', 'partial-cod-payment-gateway-restrictions-fees' ) );
 
                 $in_templates[] = array(
                     'id' => 'fee_rule',
@@ -170,8 +174,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
                         'type' => 'select2',
                         'default' => 'yes',
                         'options' => array(
-                            'yes' => esc_html__( 'Enable', 'woopcd-partialcod' ),
-                            'no' => esc_html__( 'Disable', 'woopcd-partialcod' ),
+                            'yes' => esc_html__( 'Enable', 'partial-cod-payment-gateway-restrictions-fees' ),
+                            'no' => esc_html__( 'Disable', 'partial-cod-payment-gateway-restrictions-fees' ),
                         ),
                         'width' => '95px',
                     ),
@@ -233,29 +237,29 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rules_Page' ) ) {
 
         private static function get_rules_modes() {
             $rules_modes = array(
-                'with_others' => esc_html__( 'Apply this and other fees', 'woopcd-partialcod' ),
+                'with_others' => esc_html__( 'Apply this and other fees', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
 
             if ( !defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
-                $rules_modes[ 'prem_1' ] = esc_html__( 'Apply only this fee (Premium)', 'woopcd-partialcod' );
-                $rules_modes[ 'prem_2' ] = esc_html__( 'Apply if other fees are valid (Premium)', 'woopcd-partialcod' );
-                $rules_modes[ 'prem_3' ] = esc_html__( 'Apply if no other valid fees (Premium)', 'woopcd-partialcod' );
+                $rules_modes[ 'prem_1' ] = esc_html__( 'Apply only this fee (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $rules_modes[ 'prem_2' ] = esc_html__( 'Apply if other fees are valid (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $rules_modes[ 'prem_3' ] = esc_html__( 'Apply if no other valid fees (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             }
             return $rules_modes;
         }
 
         private static function get_rules_apply_methods() {
             $rules_apply_methods = array(
-                'all' => esc_html__( 'Apply all valid fees', 'woopcd-partialcod' ),
+                'all' => esc_html__( 'Apply all valid fees', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
 
             if ( !defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
-                $rules_apply_methods[ 'prem_1' ] = esc_html__( 'Apply first valid fee (Premium)', 'woopcd-partialcod' );
-                $rules_apply_methods[ 'prem_2' ] = esc_html__( 'Apply last valid fee (Premium)', 'woopcd-partialcod' );
-                $rules_apply_methods[ 'prem_3' ] = esc_html__( 'Apply the highest valid fee (Premium)', 'woopcd-partialcod' );
-                $rules_apply_methods[ 'prem_4' ] = esc_html__( 'Apply the lowest valid fee (Premium)', 'woopcd-partialcod' );
+                $rules_apply_methods[ 'prem_1' ] = esc_html__( 'Apply first valid fee (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $rules_apply_methods[ 'prem_2' ] = esc_html__( 'Apply last valid fee (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $rules_apply_methods[ 'prem_3' ] = esc_html__( 'Apply the highest valid fee (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $rules_apply_methods[ 'prem_4' ] = esc_html__( 'Apply the lowest valid fee (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             }
-            $rules_apply_methods[ 'no' ] = esc_html__( 'Do not apply any fee', 'woopcd-partialcod' );
+            $rules_apply_methods[ 'no' ] = esc_html__( 'Do not apply any fee', 'partial-cod-payment-gateway-restrictions-fees' );
 
             return $rules_apply_methods;
         }

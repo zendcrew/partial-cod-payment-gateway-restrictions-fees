@@ -1,13 +1,13 @@
 <?php
+
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 include_once 'fields-option-page.php';
 include_once 'fields-metabox.php';
 include_once 'fields-metabox-wc.php';
 include_once 'fields-fold.php';
-
-
-
-
-
 
 add_action( 'reon/render-hidden-field', 'reon_render_hidden_field', 10, 1 );
 if ( !function_exists( 'reon_render_hidden_field' ) ) {
@@ -133,7 +133,7 @@ if ( !function_exists( 'reon_render_fullwidth_field' ) ) {
         }
         $attributes = array( 'class' => ReonUtil::array_to_classes( apply_filters( 'reon/field-classes', $classes, $field ) ) );
         ?>
-        <tr <?php echo ReonUtil::array_to_attributes( apply_filters( 'reon/field-attributes', $attributes, $field ) ); ?>>
+        <tr <?php echo ReonUtil::array_to_attributes( apply_filters( 'reon/field-attributes', $attributes, $field ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
             <td class="rn-ui-block" colspan="2">
                 <?php
                 if ( $field[ 'title' ] != '' || $field[ 'desc' ] != '' ) {

@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -35,8 +39,8 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Method_Rules_Cart_Totals')) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__('Settings & Restrictions - Cart Totals Calculations', 'woopcd-partialcod'),
-                        'desc' => esc_html__('Use these settings to control what are included in the "cart totals" conditions', 'woopcd-partialcod'),
+                        'title' => esc_html__('Settings & Restrictions - Cart Totals Calculations', 'partial-cod-payment-gateway-restrictions-fees'),
+                        'desc' => esc_html__('Use these settings to control what are included in the "cart totals" conditions', 'partial-cod-payment-gateway-restrictions-fees'),
                     ),
                     array(
                         'id' => 'method_cart_totals',
@@ -57,7 +61,7 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Method_Rules_Cart_Totals')) {
                         'template_adder' => array(
                             'position' => 'right',
                             'show_list' => false,
-                            'button_text' => esc_html__('Add Option', 'woopcd-partialcod'),
+                            'button_text' => esc_html__('Add Option', 'partial-cod-payment-gateway-restrictions-fees'),
                         ),
                     ),
                 ),
@@ -96,8 +100,8 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Method_Rules_Cart_Totals')) {
                 $in_fields[] = array(
                     'id' => 'title',
                     'type' => 'textbox',
-                    'default' => esc_html__('Cart subtotal', 'woopcd-partialcod'),
-                    'placeholder' => esc_html__('Title here...', 'woopcd-partialcod'),
+                    'default' => esc_html__('Cart subtotal', 'partial-cod-payment-gateway-restrictions-fees'),
+                    'placeholder' => esc_html__('Title here...', 'partial-cod-payment-gateway-restrictions-fees'),
                     'width' => '98%',
                     'box_width' => '36%',
                 );
@@ -120,20 +124,20 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Method_Rules_Cart_Totals')) {
         public static function get_calc_options() {
 
             $options = array(
-                'subtotal' => esc_html__( 'Add subtotal', 'woopcd-partialcod' ),
-                'subtotal_tax' => esc_html__( 'Add subtotal tax', 'woopcd-partialcod' ),
+                'subtotal' => esc_html__( 'Add subtotal', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'subtotal_tax' => esc_html__( 'Add subtotal tax', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
 
             if ( !defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
 
-                $options[ 'prem_1' ] = esc_html__( 'Add coupons (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_2' ] = esc_html__( 'Add coupon taxes (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_3' ] = esc_html__( 'Subtract coupons (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_4' ] = esc_html__( 'Subtract coupon taxes (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_5' ] = esc_html__( 'Add fees (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_6' ] = esc_html__( 'Add fee taxes (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_7' ] = esc_html__( 'Add shipping cost (Premium)', 'woopcd-partialcod' );
-                $options[ 'prem_8' ] = esc_html__( 'Add shipping cost tax (Premium)', 'woopcd-partialcod' );                
+                $options[ 'prem_1' ] = esc_html__( 'Add coupons (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_2' ] = esc_html__( 'Add coupon taxes (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_3' ] = esc_html__( 'Subtract coupons (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_4' ] = esc_html__( 'Subtract coupon taxes (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_5' ] = esc_html__( 'Add fees (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_6' ] = esc_html__( 'Add fee taxes (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_7' ] = esc_html__( 'Add shipping cost (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
+                $options[ 'prem_8' ] = esc_html__( 'Add shipping cost tax (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );                
             }
 
             return apply_filters( 'woopcd_partialcod-admin/method-options/get-cart-totals-options', $options );
@@ -162,13 +166,13 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Method_Rules_Cart_Totals')) {
             return array(
                 array(
                     'calc_option_type' => 'calc_default',
-                    'title' => esc_html__('Subtotal including tax', 'woopcd-partialcod'),
+                    'title' => esc_html__('Subtotal including tax', 'partial-cod-payment-gateway-restrictions-fees'),
                     'include' => array('subtotal', 'subtotal_tax'),
                     'option_id' => '2234343',
                 ),
                 array(
                     'calc_option_type' => 'calc_option',
-                    'title' => esc_html__('Subtotal excluding tax', 'woopcd-partialcod'),
+                    'title' => esc_html__('Subtotal excluding tax', 'partial-cod-payment-gateway-restrictions-fees'),
                     'include' => array('subtotal'),
                     'option_id' => '2234344',
                 ),

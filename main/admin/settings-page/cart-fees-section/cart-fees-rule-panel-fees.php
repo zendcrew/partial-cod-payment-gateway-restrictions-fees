@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( !class_exists( 'Reon' ) ) {
     return;
 }
@@ -53,8 +57,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'type' => 'paneltitle',
                         'full_width' => true,
                         'center_head' => true,
-                        'title' => esc_html__( 'Fee Amounts', 'woopcd-partialcod' ),
-                        'desc' => esc_html__( 'List of fee amounts to apply, empty list will apply zero fee', 'woopcd-partialcod' ),
+                        'title' => esc_html__( 'Fee Amounts', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'desc' => esc_html__( 'List of fee amounts to apply, empty list will apply zero fee', 'partial-cod-payment-gateway-restrictions-fees' ),
                     )
                 ),
             );
@@ -84,7 +88,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                 ),
                 'template_adder' => array(
                     'position' => 'right',
-                    'button_text' => esc_html__( 'Add Amount', 'woopcd-partialcod' ),
+                    'button_text' => esc_html__( 'Add Amount', 'partial-cod-payment-gateway-restrictions-fees' ),
                 ),
             );
 
@@ -99,7 +103,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                     'id' => 'fee_amount',
                     'head' => array(
                         'title' => '',
-                        'defaut_title' => esc_html__('Gateway fee','woopcd-partialcod' ),
+                        'defaut_title' => esc_html__('Gateway fee','partial-cod-payment-gateway-restrictions-fees' ),
                         'title_field' => 'amount_type',
                     )
                 );
@@ -138,8 +142,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'id' => 'amount_type',
                         'type' => 'select2',
                         'column_size' => 2,
-                        'column_title' => esc_html__( 'Fee Type', 'woopcd-partialcod' ),
-                        'tooltip' => esc_html__( 'Controls fee amount type', 'woopcd-partialcod' ),
+                        'column_title' => esc_html__( 'Fee Type', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'tooltip' => esc_html__( 'Controls fee amount type', 'partial-cod-payment-gateway-restrictions-fees' ),
                         'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-grouped-list',
                         'default' => apply_filters( 'woopcd_partialcod-admin/get-amount-types-default', 'cart_fixed', $args ),
                         'options' => $amount_types,
@@ -153,8 +157,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'id' => 'add_type',
                         'type' => 'select2',
                         'column_size' => 2,
-                        'tooltip' => esc_html__( 'Controls how the amount should be added to previously calculated amounts', 'woopcd-partialcod' ),
-                        'column_title' => esc_html__( 'Addition / Subtraction', 'woopcd-partialcod' ),
+                        'tooltip' => esc_html__( 'Controls how the amount should be added to previously calculated amounts', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'column_title' => esc_html__( 'Addition / Subtraction', 'partial-cod-payment-gateway-restrictions-fees' ),
                         'default' => 'add',
                         'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                         'options' => WOOPCD_PartialCOD_Admin_Amount_Types::get_amount_add_methods( $args ),
@@ -164,8 +168,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                         'id' => 'set_conditions',
                         'type' => 'select2',
                         'column_size' => 1,
-                        'tooltip' => esc_html__( 'Validates amount conditions before amount calculation', 'woopcd-partialcod' ),
-                        'column_title' => esc_html__( 'Validate Conditions', 'woopcd-partialcod' ),
+                        'tooltip' => esc_html__( 'Validates amount conditions before amount calculation', 'partial-cod-payment-gateway-restrictions-fees' ),
+                        'column_title' => esc_html__( 'Validate Conditions', 'partial-cod-payment-gateway-restrictions-fees' ),
                         'default' => 'no',
                         'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                         'options' => self::get_set_condition_options(),
@@ -200,11 +204,11 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                 'id' => 'amount',
                 'type' => 'textbox',
                 'input_type' => 'number',
-                'tooltip' => esc_html__( 'Controls the amount to apply, based on fee type', 'woopcd-partialcod' ),
+                'tooltip' => esc_html__( 'Controls the amount to apply, based on fee type', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'column_size' => 2,
-                'column_title' => esc_html__( 'Amount', 'woopcd-partialcod' ),
+                'column_title' => esc_html__( 'Amount', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'default' => '0.00',
-                'placeholder' => esc_html__( '0.00', 'woopcd-partialcod' ),
+                'placeholder' => esc_html__( '0.00', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'width' => '100%',
                 'attributes' => array(
                     'min' => '0',
@@ -222,8 +226,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                 'id' => 'base_on',
                 'type' => 'select2',
                 'column_size' => 4,
-                'column_title' => esc_html__( 'Based On', 'woopcd-partialcod' ),
-                'tooltip' => esc_html__( 'Controls amount based on cart subtotals', 'woopcd-partialcod' ),
+                'column_title' => esc_html__( 'Based On', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'tooltip' => esc_html__( 'Controls amount based on cart subtotals', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'default' => '2234343',
                 'data' => 'partialcod:cartfees_carttotals',
                 'width' => '100%',
@@ -242,8 +246,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
                 'id' => 'taxable',
                 'type' => 'select2',
                 'column_size' => 4,
-                'column_title' => esc_html__( 'Tax Class', 'woopcd-partialcod' ),
-                'tooltip' => esc_html__( 'Controls fee tax class', 'woopcd-partialcod' ),
+                'column_title' => esc_html__( 'Tax Class', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'tooltip' => esc_html__( 'Controls fee tax class', 'partial-cod-payment-gateway-restrictions-fees' ),
                 'default' => '--1',
                 'disabled_list_filter' => 'woopcd_partialcod-admin/get-disabled-list',
                 'data' => 'partialcod:tax_options',
@@ -256,13 +260,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Fee_Rule_Panel_Fees' ) ) {
         private static function get_set_condition_options() {
             if ( !defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
                 return array(
-                    'no' => esc_html__( 'No', 'woopcd-partialcod' ),
-                    'prem_1' => esc_html__( 'Yes (Premium)', 'woopcd-partialcod' ),
+                    'no' => esc_html__( 'No', 'partial-cod-payment-gateway-restrictions-fees' ),
+                    'prem_1' => esc_html__( 'Yes (Premium)', 'partial-cod-payment-gateway-restrictions-fees' ),
                 );
             }
             return array(
-                'no' => esc_html__( 'No', 'woopcd-partialcod' ),
-                'yes' => esc_html__( 'Yes', 'woopcd-partialcod' ),
+                'no' => esc_html__( 'No', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'yes' => esc_html__( 'Yes', 'partial-cod-payment-gateway-restrictions-fees' ),
             );
         }
 

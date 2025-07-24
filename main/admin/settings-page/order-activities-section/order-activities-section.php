@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if (!class_exists('Reon')) {
     return;
 }
@@ -43,8 +47,8 @@ if (!class_exists('WOOPCD_PartialCOD_Admin_Order_Activity_Rules_Page')) {
                             'type' => 'paneltitle',
                             'full_width' => true,
                             'center_head' => true,
-                            'title' => esc_html__('Order Autopilots', 'woopcd-partialcod'),
-                            'desc' => esc_html__('Create unlimited number of order autopilots', 'woopcd-partialcod'),
+                            'title' => esc_html__('Order Autopilots', 'partial-cod-payment-gateway-restrictions-fees'),
+                            'desc' => esc_html__('Create unlimited number of order autopilots', 'partial-cod-payment-gateway-restrictions-fees'),
                         ),
                         array(
                             'id' => 'is_any',
