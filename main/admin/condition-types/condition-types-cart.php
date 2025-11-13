@@ -34,7 +34,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Cart' )&& !defined( 'WOO
 
             $in_list[ 'prem_9' ] = esc_html__( 'Applied Coupons (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
 
-            if ( WOOPCD_PartialCOD_Main::is_risky_method( $args[ 'method_id' ] ) && 'method-options' != $args[ 'module' ] ) {
+            if ( defined( 'DOING_AJAX' ) || WOOPCD_PartialCOD_Main::is_risky_method( $args[ 'method_id' ] ) && 'method-options' != $args[ 'module' ] ) {
                 $in_list[ 'prem_10' ] = esc_html__( 'Partial Payment Method (Premium)', 'partial-cod-payment-gateway-restrictions-fees' );
             }
             

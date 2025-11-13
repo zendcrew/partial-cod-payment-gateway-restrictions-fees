@@ -1,3 +1,8 @@
+= 1.5 - 13/11/2025 =
+[Update] - Updated Framework
+[Fix] - Fixed AJAX related vulnerabilities
+[Check] - WooCommerce 10.3 compatibility check
+
 = 1.4 - 22/07/2025 =
 [Update] - Updated Framework
 [Tweaks] - Changed Plugin name and banner

@@ -82,8 +82,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Logic_Types_Conditions' ) ) {
         }
 
         public static function get_condition_template_fields( $in_fields, $repeater_args ) {
+            
+            $args = array();
 
-            $args = $repeater_args[ 'field_args' ];
+            if ( isset( $repeater_args[ 'field_args' ] ) ) {
+                
+                $args = $repeater_args[ 'field_args' ];
+            }
 
             $list = array();
 

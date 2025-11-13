@@ -170,6 +170,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                 'width' => 'auto',
                 'page_id' => 'woopcd_partialcod_page',
                 'aside_width' => '210px',
+                'user_capability' => 'manage_woocommerce',
                 'display' => array(
                     'enabled' => true,
                     'image' => WOOPCD_PARTIALCOD_ASSETS_URL . 'images/aside_logo.png',
@@ -197,7 +198,6 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
                     'icon' => 'dashicons-admin-generic',
                     'priority' => 2,
                     'parent' => 'woocommerce',
-                    'capability' => 'manage_woocommerce',
                 ),
                 'import_export' => array(
                     'enable' => true,
