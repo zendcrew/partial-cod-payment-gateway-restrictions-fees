@@ -87,12 +87,12 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Main' ) ) {
         public static function get_shipping_rates( $args ) {
 
             $data_list_args = array(
-                'source' => 'wc:zones_shipping',
+                'source' => 'wc:shipping-rates',
                 'ajax' => false
             );
 
             $shipping_rates = ReonApi::get_data_list( $data_list_args );
-
+            //TODO: Remove this function later
             return apply_filters( 'woopcd_partialcod-admin/get-shipping-rates', $shipping_rates, $args );
         }
 

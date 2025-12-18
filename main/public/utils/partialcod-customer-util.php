@@ -9,7 +9,18 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Customer_Util' ) && !defined( 'WOOPCD_PAR
 
     class WOOPCD_PartialCOD_Customer_Util {
 
+        private static $instance;
         private static $users = array();
+
+        public static function get_instance(): self {
+
+            if ( is_null( self::$instance ) ) {
+
+                self::$instance = new self();
+            }
+
+            return self::$instance;
+        }
 
         public static function get_user_roles( $cart_data ) {
 

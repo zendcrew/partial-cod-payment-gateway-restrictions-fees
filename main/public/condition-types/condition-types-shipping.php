@@ -56,6 +56,7 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Shipping' ) ) {
             $method_ids = array();
 
             foreach ( $cart_data[ 'wc' ][ 'shipping_rates' ] as $rate ) {
+                
                 $method_ids[] = $rate[ 'method_id' ];
             }
 
@@ -95,47 +96,19 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Shipping' ) ) {
              
                 return $zone_ids;
             }
-
-            $instance_ids = array();
-
-            foreach ( $cart_rates as $cart_rate ) {
-              
-                $instance_ids[] = $cart_rate[ 'instance_id' ];
-            }
-
-            global $wpdb;
-
-            $instance_ids_sql = implode( ',', array_map( 'esc_sql', $instance_ids ) );
-
-            $sql_hash = 'partialcod_zones_query_' . md5( $instance_ids_sql );
-
-            $zones_cache = get_transient( $sql_hash );
             
-            if ( $zones_cache ) {
-            
-                return $zones_cache;
-            }
+             foreach ( $cart_rates as $rate ) {
 
-            try {
+                $zone_id = $rate[ 'zone_id' ];
 
+                if ( in_array( $zone_id, $zone_ids ) ) {
 
-                $sql = "SELECT zone_id FROM {$wpdb->prefix}woocommerce_shipping_zone_methods "
-                        . "WHERE instance_id IN(" . $instance_ids_sql . ")";
-
-                $results = $wpdb->get_results( $sql, ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
-                
-                foreach ( $results as $row ) {
-                
-                    $zone_ids[] = $row[ 'zone_id' ];
+                    continue;
                 }
-                
-                set_transient( $sql_hash, $zone_ids, MINUTE_IN_SECONDS + 30 );
-                
-            } catch ( Exception $ex ) {
-            
-                return $zone_ids;
-            }
 
+                $zone_ids[] = $zone_id;
+            }
+            
             return $zone_ids;
         }
 
@@ -150,11 +123,12 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Conditions_Shipping' ) ) {
 
             foreach ( $cart_rates as $rate ) {
 
-                $rate_id = $rate[ 'instance_id' ];
+                $rate_id = $rate[ 'id' ];
 
                 $rate_ids[] = $rate_id;
             }
 
+            // TODO: Remove this filter later
             if ( has_filter( 'woopcd_partialcod/get-shipping-rate-ids' ) ) {
 
                 $rate_ids = apply_filters( 'woopcd_partialcod/get-shipping-rate-ids', $rate_ids, $cart_rates );

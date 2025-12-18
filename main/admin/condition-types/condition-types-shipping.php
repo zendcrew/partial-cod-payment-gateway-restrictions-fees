@@ -54,8 +54,6 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'box_width' => '100%',
             );
 
-
-
             return $in_fields;
         }
 
@@ -80,8 +78,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping zones...', 'partial-cod-payment-gateway-restrictions-fees' ),
-                'data' => 'wc:shipping_zones',
+                'minimum_input_length' => 1,
+                'minimum_results_forsearch' => 10,
+                'placeholder' => esc_html__( 'Seach shipping zones...', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'data' => array(
+                    'source' => 'wc:shipping_zones',
+                    'ajax' => true,
+                ),
                 'width' => '100%',
                 'box_width' => '74%',
             );
@@ -109,8 +112,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping methods...', 'partial-cod-payment-gateway-restrictions-fees' ),
-                'data' => 'wc:shipping_methods',
+                'minimum_input_length' => 1,
+                'minimum_results_forsearch' => 10,
+                'placeholder' => esc_html__( 'Search shipping methods...', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'data' => array(
+                    'source' => 'wc:shipping_methods',
+                    'ajax' => true,
+                ),
                 'width' => '100%',
                 'box_width' => '74%',
             );
@@ -139,8 +147,13 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Conditions_Shipping' ) ) {
                 'type' => 'select2',
                 'multiple' => true,
                 'allow_clear' => true,
-                'placeholder' => esc_html__( 'Shipping rates...', 'partial-cod-payment-gateway-restrictions-fees' ),
-                'options' => WOOPCD_PartialCOD_Main::get_shipping_rates( $args ),
+                'minimum_input_length' => 1,
+                'minimum_results_forsearch' => 10,
+                'placeholder' => esc_html__( 'Search shipping rates...', 'partial-cod-payment-gateway-restrictions-fees' ),
+                'data' => array(
+                    'source' => 'wc:shipping-rates',
+                    'ajax' => true,
+                ),
                 'width' => '100%',
                 'box_width' => '74%',
             );
