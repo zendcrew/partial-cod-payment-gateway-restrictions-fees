@@ -4,7 +4,7 @@ Donate link:
 Tags: Cash on Delivery, COD, COD Extra Fee, Smart COD, WooCommerce
 Requires at least: 5.8
 Tested up to: 6.9
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,10 @@ Create/Manage multiple **Order Autopilots** based on **triggers** such as **Cron
 4. PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce - General Settings
 
 == Changelog ==
+
+= 1.5.2 - 13/03/2026 =
+[Update] - Updated Framework
+[Check] - WooCommerce 10.5 compatibility check
 
 = 1.5.1 - 18/12/2025 =
 [Update] - Updated Framework

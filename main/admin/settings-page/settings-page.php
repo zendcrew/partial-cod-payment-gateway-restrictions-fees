@@ -423,34 +423,17 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Admin_Page' ) ) {
             return wp_kses( $raw_option, $allowed_html );
         }
 
-        public static function get_plugin_links( $links ) {
+        public static function get_plugin_links( $actions ) {
 
-            if ( defined( 'WOOPCD_PARTIALCOD_PREMIUM' ) ) {
-
-                unset( $links[ 'deactivate' ] );
-
-                $add_on_text = esc_html__( 'WooCommerce Partial COD - Premium (Add-On)', 'partial-cod-payment-gateway-restrictions-fees' );
-                /* translators: 1: plugin name */
-                $required_text = sprintf( esc_html__( 'Required by %s', 'partial-cod-payment-gateway-restrictions-fees' ), $add_on_text );
-
-                $no_deactivate_tag = '<span style="color: #313639">' . $required_text . '</span>';
-
-                array_unshift( $links, $no_deactivate_tag );
-
-                return $links;
-            }
-
-            $doc_link = '<a href="' . esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ) . '" target="_blank">' . esc_html__( 'Documentation', 'partial-cod-payment-gateway-restrictions-fees' ) . '</a>';
-
-            array_unshift( $links, $doc_link );
-
+            $links = array();
+ 
             $settings_url = admin_url( 'admin.php?page=partialcod-settings' );
 
-            $settings_link = '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'partial-cod-payment-gateway-restrictions-fees' ) . '</a>';
+            $links[ 'pcod_settings' ] = '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings', 'partial-cod-payment-gateway-restrictions-fees' ) . '</a>';
 
-            array_unshift( $links, $settings_link );
+            $links[ 'pcod_doc' ] = '<a href="' . esc_url( 'https://support.zendcrew.cc/portal/en/kb/woocommerce-payment-gateway-restrictions-fees' ) . '" target="_blank">' . esc_html__( 'Documentation', 'partial-cod-payment-gateway-restrictions-fees' ) . '</a>';
 
-            return $links;
+            return array_merge( $links, $actions );
         }
 
         private static function get_page_links() {

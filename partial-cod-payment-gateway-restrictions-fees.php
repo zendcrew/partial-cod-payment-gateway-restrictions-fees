@@ -4,7 +4,7 @@
  * Plugin Name: PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce
  * Plugin URI: https://codecanyon.net/item/woocommerce-partial-cod-payment-gateway-restrictions-fees/41741012?ref=zendcrew
  * Description: A powerful, flexible and easy-to-use WooCommerce extention that can be used to manage payment availability and other gateway options based on product rules and conditions.
- * Version: 1.5.1
+ * Version: 1.5.2
  * Author: zendcrew
  * Author URI: https://codecanyon.net/user/zendcrew?ref=zendcrew
  * Text Domain: partial-cod-payment-gateway-restrictions-fees
@@ -16,7 +16,9 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * 
  * Tested up to: 6.9
- * WC tested up to: 10.3
+ * WC tested up to: 10.5
+ * 
+ * Requires Plugins: woocommerce
  */
 
 if ( !defined( 'ABSPATH' ) ) {
@@ -30,7 +32,7 @@ if ( is_admin() ) {
 
 if ( !defined( 'WOOPCD_PARTIALCOD_VERSION' ) ) {
 
-    define( 'WOOPCD_PARTIALCOD_VERSION', '1.5.1' );
+    define( 'WOOPCD_PARTIALCOD_VERSION', '1.5' );
 }
 
 if ( !defined( 'WOOPCD_PARTIALCOD_FILE' ) ) {
@@ -59,6 +61,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
             add_action( 'before_woocommerce_init', array( $this, 'before_woocommerce_init' ) );
 
             add_action( 'init', array( $this, 'load_textdomain' ) );
+            
+            add_filter( 'wp_plugin_dependencies_slug', array( $this, 'get_dependency_slug' ) );
         }
 
         public function load_textdomain() {
@@ -69,7 +73,8 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
         public function plugin_loaded() {
 
             if ( function_exists( 'WC' ) ) { // Check if WooCommerce is active
-                $this->init();
+               
+                $this->main();
             } else {
 
                 add_action( 'admin_notices', array( $this, 'missing_notice' ) );
@@ -92,8 +97,20 @@ if ( !class_exists( 'WOOPCD_PartialCOD_Init' ) ) {
 
             echo '<div class="error"><p><strong>' . esc_html__( 'PCOD – Partial COD, Payment Gateway Restrictions & Fees | for WooCommerce requires WooCommerce to be installed and activated.', 'partial-cod-payment-gateway-restrictions-fees' ) . '</strong></p></div>';
         }
+        
+        public function get_dependency_slug( $slug ) {
 
-        private function init() {
+            $dep_slug = '{{PCOD}}';
+
+            if ( $dep_slug != $slug ) {
+
+                return $slug;
+            }
+
+          return str_replace( $dep_slug, 'partial-cod-payment-gateway-restrictions-fees', $slug );
+        }
+
+        private function main() {
 
             //Partial COD Main
             if ( !class_exists( 'WOOPCD_PartialCOD_Main' ) ) {
